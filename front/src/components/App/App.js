@@ -1,6 +1,6 @@
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom"
 import { Provider } from "react-redux"
-import Map from "../Map/Map";
+import YandexMap from "../YandexMap/YandexMap";
 import store from "../../redux/store"
 
 function App() {
@@ -10,7 +10,7 @@ function App() {
 
         <Switch>
           <Route exact path="/map">
-            <Map />
+            <YandexMap />
           </Route>
 
         </Switch>
