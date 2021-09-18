@@ -3,37 +3,43 @@ import { Provider } from "react-redux"
 import YandexMap from "../YandexMap/YandexMap";
 import store from "../../redux/store"
 
-// import Logo from "../Logo/Logo";
+import Logo from "../Logo/Logo";
 // import MainPage from "../MainPage/MainPage";
-// import RunText from "../RunText/RunText";
+import RunText from "../RunText/RunText";
+import NewsList from "../NewsList/NewsList";
 
 function App() {
+
   return (
     <>
-     <Router>
-        {/* <Nav/>         */}
+      <Provider store={store}>
+        <Router>
+          {/* <Nav/>         */}
           <Switch>
-            <Route path="/" exact>  
+            <Route path="/" exact>
+              <RunText />
+              <Logo />
+              <NewsList />
+            </Route>
+            <Route path="/" exact>
 
             </Route>
             <Route path="/" exact>
-               
+
             </Route>
             <Route path="/" exact>
-              
+
             </Route>
             <Route path="/" exact>
-                 
+
             </Route>
-            <Route path="/" exact>
-               
+
+            <Route path="/map" exact>
+              <YandexMap />
             </Route>
-    
-       <Route path="/map" exact>
-            <YandexMap />
-          </Route>
-          </Switch>      
-     </Router>
+          </Switch>
+        </Router>
+      </Provider>
     </>
   );
 }
