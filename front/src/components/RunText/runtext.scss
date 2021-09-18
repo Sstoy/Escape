@@ -1,0 +1,32 @@
+/// @param {Number} $num 
+/// @param {Color} $color 
+@function longshadow($num,$color: white){
+  $shadow: '';
+  $i: 0;
+  @for $i from 1 through $num{
+    $shadow: $shadow + (1 * $i) + 'px' + ' ' + (1 * ($i * 2)) + 'px' + ' ' + $color;
+    @if $i < $num{
+      $shadow: $shadow + ', ';
+    }
+  }
+  @return unquote($shadow);
+}
+
+@import url(https://fonts.googleapis.com/css?family=Montserrat:700);
+
+$key: #55A4E9;
+
+html{
+  height: 100%;
+}
+body{
+  display: flex;
+  height: 100%;
+  background-color: $key;
+}
+.word{
+  margin: auto;
+  color: white;
+  font: 700 normal 4em/1.5 'Montserrat',sans-serif;
+  text-shadow: longshadow(10,darken($key,10%));
+}
