@@ -1,0 +1,13 @@
+@import url(https://fonts.googleapis.com/css?family=Montserrat:700);
+body{
+  margin:0;
+  width:90%; 
+  overflow:hidden;
+  background:hsla(0, 5%, 5%, 1);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-image: linear-gradient(to right top, hsla(0, 5%,15%, 0.5), hsla(0, 5%, 5%,1));
+}
+svg{
+  width:50%;
+}
