@@ -1,31 +1,41 @@
-import { BrowserRouter as Router, Switch, Route } from "react-router-dom"
-// import Logo from "../Logo/Logo";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import { Provider } from "react-redux";
+import store from "../../redux/store";
+
+
+import Logo from "../Logo/Logo";
 // import MainPage from "../MainPage/MainPage";
-// import RunText from "../RunText/RunText";
+import RunText from "../RunText/RunText";
+import NewsList from "../NewsList/NewsList";
 
 function App() {
+
   return (
     <>
-     <Router>
-        {/* <Nav/>         */}
+      <Provider store={store}>
+        <Router>
+          {/* <Nav/>         */}
           <Switch>
-            <Route path="/" exact>  
+            <Route path="/" exact>
+              <RunText />
+              <Logo />
+              <NewsList />
+            </Route>
+            <Route path="/" exact>
 
             </Route>
             <Route path="/" exact>
-               
+
             </Route>
             <Route path="/" exact>
-              
+
             </Route>
             <Route path="/" exact>
-                 
+
             </Route>
-            <Route path="/" exact>
-               
-            </Route>
-          </Switch>      
-     </Router>
+          </Switch>
+        </Router>
+      </Provider>
     </>
   );
 }

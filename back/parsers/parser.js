@@ -1,7 +1,7 @@
 const axios = require('axios');
 const cheerio = require('cheerio');
 
-const parse = async () => {
+module.exports = async () => {
   const getHtml = async (url) => {
     const { data } = await axios.get(url);
 
@@ -15,16 +15,14 @@ const parse = async () => {
   const allNews = [];
 
   newsList.each((i, element) => {
-    const news = selector(element).find('a.cs-news__link').text();
+    const text = selector(element).find('a.cs-news__link').text();
     const ref = selector(element).find('a.cs-news__link').attr('href');
     const newsObj = {
-      news,
-      ref,
+      text,
+      ref: `https://www.cybersport.ru/news${ref}`,
     };
 
     allNews.push(newsObj);
   });
   return allNews;
 };
-
-module.exports = parse;

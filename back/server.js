@@ -3,14 +3,14 @@ const session = require('express-session');
 const morgan = require('morgan');
 const FileStore = require('session-file-store')(session);
 const cors = require('cors');
-const parse = require('./parser/parser.js');
+const parse = require('./parsers/parser');
 
 const PORT = 4000;
 
 const app = express();
 
 const corsOptions = {
-  origin: ['*'],
+  origin: ['http://localhost:3000'],
   optionsSuccessStatus: 200,
 };
 
@@ -36,9 +36,9 @@ app.use(express.json());
 
 app.get('/', async (req, res) => {
   const news = await parse();
-  console.log(news);
   res.status(200).json(news);
 });
+
 app.listen(PORT, () => {
   console.log(`Сервер взлетел на ${PORT} порту`);
 });
