@@ -1,8 +1,32 @@
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom"
+// import Logo from "../Logo/Logo";
+// import MainPage from "../MainPage/MainPage";
+// import RunText from "../RunText/RunText";
+
 function App() {
   return (
-    <div className="App">
-      
-    </div>
+    <>
+     <Router>
+        {/* <Nav/>         */}
+          <Switch>
+            <Route path="/" exact>  
+
+            </Route>
+            <Route path="/" exact>
+               
+            </Route>
+            <Route path="/" exact>
+              
+            </Route>
+            <Route path="/" exact>
+                 
+            </Route>
+            <Route path="/" exact>
+               
+            </Route>
+          </Switch>      
+     </Router>
+    </>
   );
 }
 
