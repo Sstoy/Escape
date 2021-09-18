@@ -3,20 +3,39 @@ import { Provider } from "react-redux"
 import YandexMap from "../YandexMap/YandexMap";
 import store from "../../redux/store"
 
+// import Logo from "../Logo/Logo";
+// import MainPage from "../MainPage/MainPage";
+// import RunText from "../RunText/RunText";
+
 function App() {
   return (
-    <Provider store={store}>
-      <Router>
+    <>
+     <Router>
+        {/* <Nav/>         */}
+          <Switch>
+            <Route path="/" exact>  
 
-        <Switch>
-          <Route exact path="/map">
+            </Route>
+            <Route path="/" exact>
+               
+            </Route>
+            <Route path="/" exact>
+              
+            </Route>
+            <Route path="/" exact>
+                 
+            </Route>
+            <Route path="/" exact>
+               
+            </Route>
+    
+       <Route path="/map" exact>
             <YandexMap />
           </Route>
-
-        </Switch>
-      </Router>
-    </Provider>
-  )
+          </Switch>      
+     </Router>
+    </>
+  );
 }
 
 export default App
