@@ -1,84 +1,20 @@
 import React from 'react';
 
-function Club() {
+function Club({ club }) {
   return (
-    <>
-      <div className="container">
-
-        <div className="card">
-          <div className="face face1">
-            <div className="content">
-              <h2>
-                Lorem ipsum dolor, sit amet
-              </h2>
-              <p>
-                consectetur adipisicing elit. Hic neque quam harum consequatur consectetur id porro in, ratione esse
-                dolor
-                ex eos perspiciatis architecto laborum vero! Eaque inventore illum iusto?
-              </p>
-              <button>Цены</button>
-              <button>Компы</button>
-            </div>
-          </div>
-
+      <div className="face face1">
+        <div className="content">
+          <h2>
+            {club.name}
+          </h2>
+          <p>{club.address}</p>
+          <p>{club.phone}</p>
+          <p>{club.computers} игровых PC</p>
+          <p>Круглосуточно (24/7)</p>
+          <button>Цены</button>
+          <button>Компьютеры</button>
         </div>
-
-        <div className="card">
-          <div className="face face1">
-            <div className="content">
-              <h2>
-                Lorem ipsum dolor, sit amet
-              </h2>
-              <p>
-                consectetur adipisicing elit. Hic neque quam harum consequatur consectetur id porro in, ratione esse
-                dolor
-                ex eos perspiciatis architecto laborum vero! Eaque inventore illum iusto?
-              </p>
-              <button>Цены</button>
-              <button>Компы</button>
-            </div>
-          </div>
-
-        </div>
-
-        <div className="card">
-          <div className="face face1">
-            <div className="content">
-              <h2>
-                Lorem ipsum dolor, sit amet
-              </h2>
-              <p>
-                consectetur adipisicing elit. Hic neque quam harum consequatur consectetur id porro in, ratione esse
-                dolor
-                ex eos perspiciatis architecto laborum vero! Eaque inventore illum iusto?
-              </p>
-              <button>Цены</button>
-              <button>Компы</button>
-            </div>
-          </div>
-
-        </div>
-
-        <div className="card">
-          <div className="face face1">
-            <div className="content">
-              <h2>
-                Lorem ipsum dolor, sit amet
-              </h2>
-              <p>
-                consectetur adipisicing elit. Hic neque quam harum consequatur consectetur id porro in, ratione esse
-                dolor
-                ex eos perspiciatis architecto laborum vero! Eaque inventore illum iusto?
-              </p>
-              <button>Цены</button>
-              <button>Компы</button>
-            </div>
-          </div>
-
-        </div>
-
       </div>
-    </>
   );
 }
 

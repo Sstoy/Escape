@@ -7,6 +7,7 @@ import Logo from "../Logo/Logo";
 // import MainPage from "../MainPage/MainPage";
 import RunText from "../RunText/RunText";
 import NewsList from "../NewsList/NewsList";
+import ClubList from "../ClubList/ClubList"
 
 function App() {
 
@@ -21,16 +22,24 @@ function App() {
               <Logo />
               <NewsList />
             </Route>
-            <Route path="/" exact>
+            
+            <Route path="/clubs" exact>
+              <ClubList />
+            </Route>
+
+            <Route path="/aboutus" exact>
 
             </Route>
-            <Route path="/" exact>
+
+            <Route path="/prices" exact>
 
             </Route>
-            <Route path="/" exact>
+
+            <Route path="/news" exact>
 
             </Route>
-            <Route path="/" exact>
+            
+            <Route path="/contactus" exact>
 
             </Route>
 
