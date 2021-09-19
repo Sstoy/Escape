@@ -7,6 +7,7 @@ import SocialLink from "../SocialLink/SocialLink";
 import { Provider } from "react-redux"
 import YandexMap from "../YandexMap/YandexMap";
 import store from "../../redux/store"
+import Nav from '../Nav/Nav'
 
 import Logo from "../Logo/Logo";
 // import MainPage from "../MainPage/MainPage";
@@ -16,13 +17,11 @@ import RunText from "../RunText/RunText";
 function App() {
 
   return (
-    <Provider store={store}>
-     <Router>
-          <Loader/>
-       <RunText/>
-       <Logo/>
-  
-        {/* <Nav/>         */}
+    <>
+      <Provider store={store}>
+        <Router>
+          <Nav/>
+
           <Switch>
             <Route path="/" exact>  
           
