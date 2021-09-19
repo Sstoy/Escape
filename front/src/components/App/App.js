@@ -1,4 +1,9 @@
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom"
+// import ClubCards from "../ClubCards/ClubCards";
+// import FormReserve from "../FormReserve/FormReserve";
+import Loader from "../Loader/Loader";
+import SocialLink from "../SocialLink/SocialLink";
+// import Logo from "../Logo/Logo";
 import { Provider } from "react-redux"
 import YandexMap from "../YandexMap/YandexMap";
 import store from "../../redux/store"
@@ -7,7 +12,7 @@ import Nav from '../Nav/Nav'
 import Logo from "../Logo/Logo";
 // import MainPage from "../MainPage/MainPage";
 import RunText from "../RunText/RunText";
-import NewsList from "../NewsList/NewsList";
+// import NewsList from "../NewsList/NewsList";
 
 function App() {
 
@@ -16,14 +21,16 @@ function App() {
       <Provider store={store}>
         <Router>
           <Nav/>
+
           <Switch>
-            <Route path="/" exact>
-              <RunText />
-              <Logo />
-              <NewsList />
+            <Route path="/" exact>  
+          
+              {/* <FormReserve/> */}
+              <SocialLink/>
+              {/* <ClubCards/> */}
             </Route>
             <Route path="/" exact>
-
+            
             </Route>
             <Route path="/" exact>
 
@@ -39,9 +46,8 @@ function App() {
               <YandexMap />
             </Route>
           </Switch>
-        </Router>
+        </Router>  
       </Provider>
-    </>
   );
 }
 
