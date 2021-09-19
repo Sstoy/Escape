@@ -2,6 +2,7 @@ import { BrowserRouter as Router, Switch, Route } from "react-router-dom"
 import { Provider } from "react-redux"
 import YandexMap from "../YandexMap/YandexMap";
 import store from "../../redux/store"
+import Nav from '../Nav/Nav'
 
 import Logo from "../Logo/Logo";
 // import MainPage from "../MainPage/MainPage";
@@ -14,7 +15,7 @@ function App() {
     <>
       <Provider store={store}>
         <Router>
-          {/* <Nav/>         */}
+          <Nav/>
           <Switch>
             <Route path="/" exact>
               <RunText />
