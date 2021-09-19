@@ -11,21 +11,23 @@ import store from "../../redux/store"
 import Logo from "../Logo/Logo";
 // import MainPage from "../MainPage/MainPage";
 import RunText from "../RunText/RunText";
-import NewsList from "../NewsList/NewsList";
+// import NewsList from "../NewsList/NewsList";
 
 function App() {
 
   return (
-    <>
+    <Provider store={store}>
      <Router>
-       
-     {/* <Loader/> */}
+          <Loader/>
+       <RunText/>
+       <Logo/>
+  
         {/* <Nav/>         */}
           <Switch>
             <Route path="/" exact>  
           
               {/* <FormReserve/> */}
-              {/* <SocialLink/> */}
+              <SocialLink/>
               {/* <ClubCards/> */}
             </Route>
             <Route path="/" exact>
@@ -45,9 +47,8 @@ function App() {
               <YandexMap />
             </Route>
           </Switch>
-        </Router>
+        </Router>  
       </Provider>
-    </>
   );
 }
 
