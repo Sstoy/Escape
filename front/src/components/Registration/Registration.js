@@ -15,7 +15,7 @@ function Registration() {
       if (code == null) return;
       e.confirm(code).then(function (result) {
         console.log(result.user, 'user')
-        document.querySelector('span').textContent = result.user.phoneNumber + " Number verified"
+        document.querySelector('span').textContent = "Скажите номер телефона администратору"
       }).catch((error) => {
         console.log(error)
       })
