@@ -4,11 +4,10 @@ import { useDispatch } from 'react-redux';
 import Club from '../Club/Club';
 import './clubs.css'
 
-function ClubList(props) {
+function ClubList() {
   
   const dispatch = useDispatch();
   const clubs = useSelector(state => state.clubs?.clubs);
-console.log(clubs);
   useEffect(() => {
     fetch('http://localhost:4000/api/clublist', { credential: true })
     .then((res) => res.json())
