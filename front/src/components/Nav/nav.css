@@ -1,6 +1,11 @@
-header img {
+.nav img {
   height: 80px;
   margin-left: 40px;
+}
+.nav{
+  background-image: linear-gradient(
+210deg
+, rgba(174, 36, 192, 0) 100%, #000000 90%);
 }
 /* body {
   height: 125vh;
@@ -11,12 +16,17 @@ header img {
   padding: 30px;
 } */
 
-main {
+/* main {
   color: black;
+} */
+.logo_img{
+  opacity: .4;
+  }
+.logo_img:hover{
+opacity: 1;
 }
-
-header {
-  background-color: black;
+.nav {
+  /* background-color: rgb(49, 8, 61); */
   position: fixed;
   top: 0;
   left: 0;
@@ -25,19 +35,22 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  box-shadow: 0 0 25px 0 black;
+  box-shadow: 0 0 25px 0 rgb(209, 39, 224);
 }
 
 header * {
   display: inline;
 }
 
-header li {
+.nav li {
   margin: 20px;
 }
 
-header li a {
-  color: blue;
+.nav li a {
+  color: white;
   text-decoration: none;
   font-size: 25px;
+}
+.nav li a:hover {
+color: rgb(146, 65, 221);
 }
