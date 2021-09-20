@@ -16,8 +16,7 @@ import RunText from "../RunText/RunText";
 // import NewsList from "../NewsList/NewsList";
 import NewsList from "../NewsList/NewsList";
 import Game from "../Game/Game";
-import Nav1 from "../nav1/Nav1";
-import Review from "../Review/Review";
+// import Nav1 from "../nav1/Nav1";
 
 
 function App() {
@@ -28,21 +27,19 @@ function App() {
        <Nav/>      
        <Loader/>            
           <Switch>
-            <Route path="/" exact> 
-            <Nav1/>
+            <Route path="/" exact>            
               <RunText/>
               <Logo/>           
               {/* <FormReserve/> */}             
               {/* <ClubCards/> */}
             </Route>
-            <Route path="/" exact>
-            
+            <Route path="/" exact>            
             </Route>
-            <Route path="/" exact>
-
+            <Route path="/clubs" exact>
+             <Game/>
             </Route>
             <Route path="/galery" exact>
-            <Game/>
+            
             </Route>
             <Route path="/contacts" exact>        
               <SocialLink/>
