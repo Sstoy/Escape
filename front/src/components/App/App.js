@@ -6,6 +6,7 @@ import SocialLink from "../SocialLink/SocialLink";
 // import Logo from "../Logo/Logo";
 import { Provider } from "react-redux"
 import YandexMap from "../YandexMap/YandexMap";
+import RegisterPhone from "../RegisterPhone/RegisterPhone";
 import store from "../../redux/store"
 import Nav from '../Nav/Nav'
 
@@ -17,6 +18,7 @@ import RunText from "../RunText/RunText";
 function App() {
 
   return (
+
     <>
       <Provider store={store}>
         <Router>
@@ -45,10 +47,15 @@ function App() {
             <Route path="/map" exact>
               <YandexMap />
             </Route>
+
+          <Route exact path="/registerphone">
+            <RegisterPhone />
+          </Route>
           </Switch>
         </Router>  
       </Provider>
   );
+
 }
 
 export default App
