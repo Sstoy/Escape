@@ -1,18 +1,19 @@
-import React from 'react';
+import React, { useState, useSelector } from 'react';
 // подключение библиотеки yandex-map, на 22 строчке можно задать api-ключ
 import { YMaps, Map, Placemark, ZoomControl } from 'react-yandex-maps';
-import { useState } from 'react';
 import coords from './coords.json';
 import logo from './logo.png';
 import { useHistory } from 'react-router-dom'
 // стили задаем для изменения цвета фона карты, фильтр меняет также цвет лого-меток, поэтому перезаписываем стили на лого, чтобы вернуть прежний цвет лого
 import './YandexMap.css';
+import { Link } from 'react-router-dom'
 
 function YandexMap({ key }) {
   const [lat, setLat] = useState(0);
   const [lng, setLng] = useState(0);
 
   const history = useHistory();
+
 
   // задает центровые координаты при загрузке карты
   const mapState = {
@@ -21,24 +22,18 @@ function YandexMap({ key }) {
   }
 
   const redirectToAddress = (event) => {
-    console.log(event.originalEvent.target.geometry._coordinates[0] === coords[0].coords[0])
-    // history.push('/clubs/3)
-    // component Club.js // useParams
 
-    // if (event.id === '1') {
-    //   // <Link to={`/componentone`}>componentone</Link>
-    //   history.push('/componentone');
-    // } else if (event.id === '2') {
-    //   // <Link to={`/componenttwo`}>componenttwo</Link>
-    //   history.push('/componenttwo');
-    // } else if (event.id === '3') {
-    //   // <Link to={`/componentthree`}>componentthree</Link>
-    //   history.push('/componentthree');
-    // } else {
-    //   // <Link to={`/componentfour`}>componentfour</Link>
-    //   history.push('/componentfour');
-    // }
+    if (event.originalEvent.target.geometry._coordinates[0] === coords[0].coords[0]) {
+      history.push('/clubs/2');
+    } else if (event.originalEvent.target.geometry._coordinates[0] === coords[1].coords[0]) {
+      history.push('/clubs/4');
+    } else if (event.originalEvent.target.geometry._coordinates[0] === coords[2].coords[0]) {
+      history.push('/clubs/3');
+    } else {
+      history.push('/clubs/1');
+    }
   }
+
 
   return (
     <>

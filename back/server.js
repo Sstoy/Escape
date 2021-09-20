@@ -4,6 +4,7 @@ const morgan = require('morgan');
 const FileStore = require('session-file-store')(session);
 const cors = require('cors');
 const parse = require('./parsers/parser');
+const { Club } = require('./database/models')
 
 const PORT = 4000;
 
@@ -37,6 +38,11 @@ app.use(express.json());
 app.get('/', async (req, res) => {
   const news = await parse();
   res.status(200).json(news);
+});
+
+app.get('/api/clublist', async (req, res) => {
+  const allClubs = await Club.findAll();
+  return res.json(allClubs);
 });
 
 app.listen(PORT, () => {
