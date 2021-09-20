@@ -20,9 +20,9 @@ import RunText from "../RunText/RunText";
 // import Registration from "../Registration/Registration";
 // import NewsList from "../NewsList/NewsList";
 import NewsList from "../NewsList/NewsList";
+
+
 import Game from "../Game/Game";
-// import Nav1 from "../nav1/Nav1";
-// import Review from "../Review/Review";
 
 
 function App() {
@@ -31,31 +31,26 @@ function App() {
 
     <>
       <Provider store={store}>
-     <Nav/> 
-       <NewsList/>      
-       <Loader/>  
-      <Switch>
+     
         <Router>
-            {/* <Route path="/" exact>  
-          
-              <SocialLink/>
-
-            </Route> */}
-
-            <Route path="/" exact> 
-              <RunText/>
-              <Logo/>           
-              {/* <FormReserve/> */}             
-              {/* <ClubCards/> */}
-            </Route>
+        <Nav/>
+          <Switch>
             <Route path="/" exact>
+              <RunText />
+              <Logo />
+              <NewsList />
+            </Route>
             
+            <Route path="/clubs" exact>
+              <ClubList />
             </Route>
-            <Route path="/" exact>
+
+            <Route path="/aboutus" exact>
 
             </Route>
+
             <Route path="/galery" exact>
-            <Game/>
+           
             </Route>
             <Route path="/contacts" exact>        
               <SocialLink/>
@@ -68,9 +63,6 @@ function App() {
               <ClubList />
             </Route>
 
-          <Route exact path="/registerphone">
-            {/* <RegisterPhone /> */}
-          </Route>
           <Route exact path="/register">
             <Registration/>
           </Route>

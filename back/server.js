@@ -4,7 +4,7 @@ const morgan = require('morgan');
 const FileStore = require('session-file-store')(session);
 const cors = require('cors');
 const parse = require('./parsers/parser');
-const { Club } = require('./database/models')
+const apiRouter = require('./routes/apiRouter');
 
 const PORT = 4000;
 
@@ -40,10 +40,9 @@ app.get('/', async (req, res) => {
   res.status(200).json(news);
 });
 
-app.get('/api/clublist', async (req, res) => {
-  const allClubs = await Club.findAll();
-  return res.json(allClubs);
-});
+
+app.use('/api', apiRouter);
+
 
 app.listen(PORT, () => {
   console.log(`Сервер взлетел на ${PORT} порту`);
