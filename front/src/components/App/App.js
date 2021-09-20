@@ -44,8 +44,7 @@ function App() {
             <Route path="/galery" exact>
             <Game/>
             </Route>
-            <Route path="/contacts" exact>
-              {/* <Review/> */}
+            <Route path="/contacts" exact>        
               <SocialLink/>
             </Route>
             <Route path="/map" exact>
