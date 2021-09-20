@@ -9,7 +9,8 @@ import YandexMap from "../YandexMap/YandexMap";
 import RegisterPhone from "../RegisterPhone/RegisterPhone";
 import store from "../../redux/store"
 import Nav from '../Nav/Nav'
-
+import ModalClub from '../ModalClub/ModalClub'
+import ClubList from '../ClubList/ClubList'
 import Logo from "../Logo/Logo";
 // import MainPage from "../MainPage/MainPage";
 import RunText from "../RunText/RunText";
@@ -18,34 +19,24 @@ import RunText from "../RunText/RunText";
 function App() {
 
   return (
-
     <>
       <Provider store={store}>
         <Router>
-          <Nav/>
+          {/* <Nav/> */}
 
           <Switch>
-            <Route path="/" exact>  
+            {/* <Route path="/" exact>  
           
-              {/* <FormReserve/> */}
               <SocialLink/>
-              {/* <ClubCards/> */}
-            </Route>
-            <Route path="/" exact>
-            
-            </Route>
-            <Route path="/" exact>
 
-            </Route>
-            <Route path="/" exact>
-
-            </Route>
-            <Route path="/" exact>
-
-            </Route>
+            </Route> */}
 
             <Route path="/map" exact>
               <YandexMap />
+            </Route>
+
+            <Route path="/clubs/:id" exact>
+              <ClubList />
             </Route>
 
           <Route exact path="/registerphone">
@@ -54,6 +45,7 @@ function App() {
           </Switch>
         </Router>  
       </Provider>
+      </>
   );
 
 }
