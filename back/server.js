@@ -19,6 +19,7 @@ app.use(cors(corsOptions));
 const sessionConfig = {
   store: new FileStore(),
   name: 'user_sid',
+  // !!!!!!!!!!!! Поменять
   secret: 'secret',
   resave: true,
   saveUninitialized: true,
