@@ -3,7 +3,7 @@ import './SocialLink.css'
 function SocialLink(props) {
   return (
     <div className='socialmedia'>
-           <h1>Escape in Social Media:</h1>
+           {/* <h1>Escape in Social Media:</h1> */}
       <ul>
 
         <li>
