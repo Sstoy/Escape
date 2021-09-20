@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Switch, Route } from "react-router-dom"
 import FormReserve from "../FormReserve/FormReserve";
 import Loader from "../Loader/Loader";
 import SocialLink from "../SocialLink/SocialLink";
+import Footer from "../Footer/Footer";
 import { Provider } from "react-redux"
 import YandexMap from "../YandexMap/YandexMap";
 import RegisterPhone from "../RegisterPhone/RegisterPhone";
@@ -31,34 +32,35 @@ function App() {
 
     <>
       <Provider store={store}>
-     <Nav/> 
-       <NewsList/>      
-       <Loader/>  
-      <Switch>
         <Router>
+          <Nav />
+          <NewsList />
+          <Loader />
+          <Switch>
             {/* <Route path="/" exact>  
           
               <SocialLink/>
 
             </Route> */}
 
-            <Route path="/" exact> 
-              <RunText/>
-              <Logo/>           
-              {/* <FormReserve/> */}             
+            <Route path="/" exact>
+              <RunText />
+              <Logo />
+              {/* <FormReserve/> */}
               {/* <ClubCards/> */}
+              <Footer />
             </Route>
             <Route path="/" exact>
-            
+
             </Route>
             <Route path="/" exact>
 
             </Route>
             <Route path="/galery" exact>
-            <Game/>
+              <Game />
             </Route>
-            <Route path="/contacts" exact>        
-              <SocialLink/>
+            <Route path="/contacts" exact>
+              <SocialLink />
             </Route>
             <Route path="/map" exact>
               <YandexMap />
@@ -68,16 +70,16 @@ function App() {
               <ClubList />
             </Route>
 
-          <Route exact path="/registerphone">
-            {/* <RegisterPhone /> */}
-          </Route>
-          <Route exact path="/register">
-            <Registration/>
-          </Route>
+            <Route exact path="/registerphone">
+              {/* <RegisterPhone /> */}
+            </Route>
+            <Route exact path="/register">
+              <Registration />
+            </Route>
           </Switch>
-        </Router>  
+        </Router>
       </Provider>
-      </>
+    </>
   );
 
 }

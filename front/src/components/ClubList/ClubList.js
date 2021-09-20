@@ -6,13 +6,12 @@ function ClubList(props) {
 
   const dispatch = useDispatch();
   const clubs = useSelector(state => state.reducer.clubs);
-console.log('clubs', clubs)
 
   useEffect(() => {
     fetch('http://localhost:4000/api/clublist', { credential: true })
       .then((res) => res.json())
       .then((data) => dispatch({ type: 'INIT_CLUBS', payload: data }))
-     
+
   }, [dispatch])
 
 
