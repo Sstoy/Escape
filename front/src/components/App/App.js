@@ -10,7 +10,7 @@ import store from "../../redux/store"
 import Nav from '../Nav/Nav'
 import Registration from '../Registration/Registration'
 import Logo from "../Logo/Logo";
-import MainPage from "../MainPage/MainPage";
+// import MainPage from "../MainPage/MainPage";
 import RunText from "../RunText/RunText";
 // import Registration from "../Registration/Registration";
 // import NewsList from "../NewsList/NewsList";
@@ -24,7 +24,8 @@ function App() {
   return (
     <Provider store={store}>
      <Router>
-       <Nav/>      
+       <Nav/> 
+       <NewsList/>      
        <Loader/>            
           <Switch>
             <Route path="/" exact>            
