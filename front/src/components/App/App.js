@@ -8,7 +8,7 @@ import YandexMap from "../YandexMap/YandexMap";
 import RegisterPhone from "../RegisterPhone/RegisterPhone";
 import store from "../../redux/store"
 import Nav from '../Nav/Nav'
-
+import Registration from '../Registration/Registration'
 import Logo from "../Logo/Logo";
 import MainPage from "../MainPage/MainPage";
 import RunText from "../RunText/RunText";
@@ -54,7 +54,7 @@ function App() {
             {/* <RegisterPhone /> */}
           </Route>
           <Route exact path="/register">
-            {/* <Registration /> */}
+            <Registration/>
           </Route>
           </Switch>
         </Router>  
