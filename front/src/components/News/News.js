@@ -1,13 +1,14 @@
 import React from 'react';
-import './news.css'
+import './news.scss'
 
 
 function News({ news }) {
   console.log(news);
   return (
-    <div>
-      <a href={news?.ref} target="_blank" rel="noreferrer">{news?.text}</a>
-    </div >
+    <>
+    
+    <a href={news?.ref} target="_blank" rel="noreferrer">{news?.text}</a>
+    </>
   );
 }
 

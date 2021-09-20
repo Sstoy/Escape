@@ -3,7 +3,9 @@ const cheerio = require('cheerio');
 
 module.exports = async () => {
   const getHtml = async (url) => {
-    const { data } = await axios.get(url);
+    const { data } = await axios.get(url, {
+      maxRedirects: 100,
+    });
 
     return cheerio.load(data);
   };
@@ -11,6 +13,7 @@ module.exports = async () => {
   const selector = await getHtml('https://www.cybersport.ru/news');
 
   const newsList = selector('.cs-news__text');
+  // console.log(newsList);
 
   const allNews = [];
 
@@ -21,7 +24,6 @@ module.exports = async () => {
       text,
       ref: `https://www.cybersport.ru${ref}`,
     };
-
     allNews.push(newsObj);
   });
   return allNews;
