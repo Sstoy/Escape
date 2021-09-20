@@ -3,9 +3,7 @@
   flex-direction: column;
   align-items: center; 
 }
-h1 {
-  margin-bottom: 250px;
-}
+
 .ul{
   position: absolute;
   top: 50%;

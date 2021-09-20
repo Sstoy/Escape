@@ -16,6 +16,7 @@ import RunText from "../RunText/RunText";
 // import NewsList from "../NewsList/NewsList";
 import NewsList from "../NewsList/NewsList";
 import Game from "../Game/Game";
+import Slider from "../Slider/Slider";
 // import Nav1 from "../nav1/Nav1";
 
 
@@ -24,23 +25,19 @@ function App() {
   return (
     <Provider store={store}>
      <Router>
-       <Nav/> 
-       <NewsList/>      
+       <Nav/>       
        <Loader/>            
           <Switch>
             <Route path="/" exact>            
               <RunText/>
-              <Logo/>           
-              {/* <FormReserve/> */}             
-              {/* <ClubCards/> */}
-            </Route>
-            <Route path="/" exact>            
-            </Route>
+              <Logo/>   
+              <YandexMap />     
+            </Route>        
             <Route path="/clubs" exact>
-             <Game/>
+              <Game/>
             </Route>
             <Route path="/galery" exact>
-            
+            <Slider/>
             </Route>
             <Route path="/contacts" exact>        
               <SocialLink/>
