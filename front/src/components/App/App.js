@@ -8,27 +8,33 @@ import YandexMap from "../YandexMap/YandexMap";
 import RegisterPhone from "../RegisterPhone/RegisterPhone";
 import store from "../../redux/store"
 import Nav from '../Nav/Nav'
-
+import Registration from '../Registration/Registration'
 import Logo from "../Logo/Logo";
 import MainPage from "../MainPage/MainPage";
 import RunText from "../RunText/RunText";
-import Registration from "../Registration/Registration";
+// import Registration from "../Registration/Registration";
 // import NewsList from "../NewsList/NewsList";
 import NewsList from "../NewsList/NewsList";
+import Game from "../Game/Game";
+import Nav1 from "../nav1/Nav1";
+// import Review from "../Review/Review";
+
 
 function App() {
 
   return (
-      <Provider store={store}>
-        <Router>
-          <Nav/>
+    <Provider store={store}>
+     <Router>
+       <Nav/>
+       <NewsList/>      
+       <Loader/>   
 
-            <NewsList/>
           <Switch>
-            <Route path="/" exact>  
-          
-              {/* <FormReserve/> */}
-             
+            <Route path="/" exact> 
+            <Nav1/>
+              <RunText/>
+              <Logo/>           
+              {/* <FormReserve/> */}             
               {/* <ClubCards/> */}
             </Route>
             <Route path="/" exact>
@@ -37,22 +43,21 @@ function App() {
             <Route path="/" exact>
 
             </Route>
-            <Route path="/" exact>
-
+            <Route path="/galery" exact>
+            <Game/>
             </Route>
-            <Route path="/contacts" exact>
+            <Route path="/contacts" exact>        
               <SocialLink/>
             </Route>
-
             <Route path="/map" exact>
               <YandexMap />
             </Route>
 
           <Route exact path="/registerphone">
-            <RegisterPhone />
+            {/* <RegisterPhone /> */}
           </Route>
           <Route exact path="/register">
-            <Registration />
+            <Registration/>
           </Route>
           </Switch>
         </Router>  

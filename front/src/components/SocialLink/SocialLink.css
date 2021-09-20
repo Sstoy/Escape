@@ -123,3 +123,17 @@ h1 {
   .ul .li:hover:nth-child(5) .a:after{
   background: linear-gradient(#400080, transparent), linear-gradient(200deg, #d047d1, #ff0000, #ffff00);
   }
+
+  .reviewsmap{
+    width:560px;height:800px;overflow:hidden;position:relative;
+  }
+  .iframe {
+    width:100%;height:100%;border:1px solid #e6e6e6;border-radius:8px;box-sizing:border-box
+  }
+  .amap {
+    box-sizing:border-box;text-decoration:none;color:#b3b3b3;font-size:10px;font-family:YS Text,sans-serif;padding:0 20px;position:absolute;bottom:8px;width:100%;text-align:center;left:0
+  }
+  .yandex_review {
+    margin-top: 800px;
+  }
+  
