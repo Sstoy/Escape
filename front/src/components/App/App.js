@@ -17,6 +17,7 @@ import RunText from "../RunText/RunText";
 import NewsList from "../NewsList/NewsList";
 import Game from "../Game/Game";
 import Nav1 from "../nav1/Nav1";
+import Review from "../Review/Review";
 
 
 function App() {
@@ -44,6 +45,7 @@ function App() {
             <Game/>
             </Route>
             <Route path="/contacts" exact>
+              {/* <Review/> */}
               <SocialLink/>
             </Route>
             <Route path="/map" exact>
