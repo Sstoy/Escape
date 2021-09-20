@@ -32,7 +32,7 @@
 }
 
 .layer:after {
-  font: 70px/0.65 "Pacifico", "Kaushan Script", Futura, "Roboto", "Trebuchet MS", Helvetica, sans-serif;
+  font: 170px/0.65    Helvetica, sans-serif;
   content: "Escape";
   white-space: pre;
   text-align: center;
@@ -40,7 +40,7 @@
   width: 100%;
   position: absolute;
   top: 50px;
-  color: whitesmoke;
+  color: rgb(203, 185, 218);
   letter-spacing: -2px;
   text-shadow: 4px 0 10px rgba(0, 0, 0, 0.13);
 }
@@ -130,12 +130,12 @@
 }
 
 .layer:nth-child(n+11):after {
-  -webkit-text-stroke: 15px dodgerblue;
+  -webkit-text-stroke: 15px rgb(21, 77, 133);
   text-shadow: 6px 0 6px #00366b, 5px 5px 5px #002951, 0 6px 6px #00366b;
 }
 
 .layer:nth-child(n+12):after {
-  -webkit-text-stroke: 15px #0077ea;
+  -webkit-text-stroke: 15px rgb(133, 23, 223);
 }
 
 .layer:last-child:after {
@@ -143,7 +143,7 @@
 }
 
 .layer:first-child:after {
-  color: #fff;
+  color: rgb(255, 255, 255);
   text-shadow: none;
 }
 

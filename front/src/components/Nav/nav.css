@@ -1,0 +1,56 @@
+.nav img {
+  height: 80px;
+  margin-left: 40px;
+}
+.nav{
+  background-image: linear-gradient(
+210deg
+, rgba(174, 36, 192, 0) 100%, #000000 90%);
+}
+/* body {
+  height: 125vh;
+  background-image: url('https://codetheweb.blog/assets/img/posts/style-a-navigation-bar-css/background.jpg');
+  background-size: cover;
+  font-family: sans-serif;
+  margin-top: 80px;
+  padding: 30px;
+} */
+
+/* main {
+  color: black;
+} */
+.logo_img{
+  opacity: .4;
+  }
+.logo_img:hover{
+opacity: 1;
+}
+.nav {
+  /* background-color: rgb(49, 8, 61); */
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 80px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 0 25px 0 rgb(209, 39, 224);
+}
+
+header * {
+  display: inline;
+}
+
+.nav li {
+  margin: 20px;
+}
+
+.nav li a {
+  color: white;
+  text-decoration: none;
+  font-size: 25px;
+}
+.nav li a:hover {
+color: rgb(146, 65, 221);
+}

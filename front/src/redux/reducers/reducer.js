@@ -1,4 +1,6 @@
+
 const initialState = { news: [], clubs: [], prices: [] };
+
 
 const reducer = (state = initialState, action) => {
   switch (action.type) {

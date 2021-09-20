@@ -1,12 +1,11 @@
 @import url(https://fonts.googleapis.com/css?family=Montserrat:700);
 body{
   margin:0;
-  width:90%; 
-  overflow:hidden;
+  width:90%;
   background:hsla(0, 5%, 5%, 1);
   background-repeat: no-repeat;
   background-attachment: fixed;
-  background-image: linear-gradient(to right top, hsla(0, 5%,15%, 0.5), hsla(0, 5%, 5%,1));
+  background-image: url('https://phonoteka.org/uploads/posts/2021-05/1620162517_3-phonoteka_org-p-fon-dlya-strima-komnata-3.jpg');
 }
 svg{
   width:50%;
