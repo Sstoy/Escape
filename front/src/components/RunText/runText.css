@@ -1,8 +1,7 @@
 @import url(https://fonts.googleapis.com/css?family=Montserrat:700);
 body{
   margin:0;
-  width:90%; 
-  overflow:hidden;
+  width:90%;
   background:hsla(0, 5%, 5%, 1);
   background-repeat: no-repeat;
   background-attachment: fixed;

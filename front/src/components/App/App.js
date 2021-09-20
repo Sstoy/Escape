@@ -10,14 +10,14 @@ import store from "../../redux/store"
 import Nav from '../Nav/Nav'
 import Registration from '../Registration/Registration'
 import Logo from "../Logo/Logo";
-import MainPage from "../MainPage/MainPage";
+// import MainPage from "../MainPage/MainPage";
 import RunText from "../RunText/RunText";
 // import Registration from "../Registration/Registration";
 // import NewsList from "../NewsList/NewsList";
 import NewsList from "../NewsList/NewsList";
 import Game from "../Game/Game";
-import Nav1 from "../nav1/Nav1";
-import Review from "../Review/Review";
+// import Nav1 from "../nav1/Nav1";
+// import Review from "../Review/Review";
 
 
 function App() {
@@ -25,11 +25,11 @@ function App() {
   return (
     <Provider store={store}>
      <Router>
-       <Nav/>      
+       <Nav/> 
+       <NewsList/>      
        <Loader/>            
           <Switch>
             <Route path="/" exact> 
-            <Nav1/>
               <RunText/>
               <Logo/>           
               {/* <FormReserve/> */}             
