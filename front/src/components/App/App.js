@@ -23,6 +23,7 @@ function App() {
         <Router>
           <Nav/>
 
+            <NewsList/>
           <Switch>
             <Route path="/" exact>  
           
