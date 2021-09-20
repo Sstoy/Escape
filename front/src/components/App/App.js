@@ -11,6 +11,7 @@ import Registration from '../Registration/Registration'
 import Logo from "../Logo/Logo";
 import RunText from "../RunText/RunText";
 import NewsList from "../NewsList/NewsList";
+import Promo from '../Promo/Promo';
 
 function App() {
 
@@ -25,6 +26,7 @@ function App() {
               <RunText />
               <Logo />
               <NewsList />
+              <Promo />
             </div>
           </Route>
 
