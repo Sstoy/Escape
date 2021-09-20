@@ -31,9 +31,9 @@ function App() {
 
     <>
       <Provider store={store}>
-     
         <Router>
         <Nav/>
+        <Loader/>
           <Switch>
             <Route path="/" exact>
               <RunText />

@@ -40,9 +40,7 @@ app.get('/', async (req, res) => {
   res.status(200).json(news);
 });
 
-
 app.use('/api', apiRouter);
-
 
 app.listen(PORT, () => {
   console.log(`Сервер взлетел на ${PORT} порту`);
