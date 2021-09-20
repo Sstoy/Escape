@@ -130,12 +130,12 @@
 }
 
 .layer:nth-child(n+11):after {
-  -webkit-text-stroke: 15px dodgerblue;
+  -webkit-text-stroke: 15px rgb(22, 127, 233);
   text-shadow: 6px 0 6px #00366b, 5px 5px 5px #002951, 0 6px 6px #00366b;
 }
 
 .layer:nth-child(n+12):after {
-  -webkit-text-stroke: 15px #0077ea;
+  -webkit-text-stroke: 15px rgb(133, 23, 223);
 }
 
 .layer:last-child:after {
