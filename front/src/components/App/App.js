@@ -8,58 +8,68 @@ import YandexMap from "../YandexMap/YandexMap";
 import RegisterPhone from "../RegisterPhone/RegisterPhone";
 import store from "../../redux/store"
 import Nav from '../Nav/Nav'
+
+import ModalClub from '../ModalClub/ModalClub'
+import ClubList from '../ClubList/ClubList'
+
 import Registration from '../Registration/Registration'
+
 import Logo from "../Logo/Logo";
 // import MainPage from "../MainPage/MainPage";
 import RunText from "../RunText/RunText";
 // import Registration from "../Registration/Registration";
 // import NewsList from "../NewsList/NewsList";
 import NewsList from "../NewsList/NewsList";
+
+
 import Game from "../Game/Game";
-// import Nav1 from "../nav1/Nav1";
-// import Review from "../Review/Review";
 
 
 function App() {
 
   return (
-    <Provider store={store}>
-      <Router>
-        <Nav />
-        <Loader />
-        <Switch>
-          <Route path="/" exact>
-            <NewsList />
-            <RunText />
-            <Logo />
-            {/* <FormReserve/> */}
-            {/* <ClubCards/> */}
-          </Route>
-          <Route path="/" exact>
 
-          </Route>
-          <Route path="/" exact>
+    <>
+      <Provider store={store}>
+     
+        <Router>
+        <Nav/>
+          <Switch>
+            <Route path="/" exact>
+              <RunText />
+              <Logo />
+              <NewsList />
+            </Route>
+            
+            <Route path="/clubs" exact>
+              <ClubList />
+            </Route>
 
-          </Route>
-          <Route path="/galery" exact>
-            <Game />
-          </Route>
-          <Route path="/contacts" exact>
-            <SocialLink />
-          </Route>
-          <Route path="/map" exact>
-            <YandexMap />
-          </Route>
+            <Route path="/aboutus" exact>
 
-          <Route exact path="/registerphone">
-            {/* <RegisterPhone /> */}
-          </Route>
+            </Route>
+
+            <Route path="/galery" exact>
+           
+            </Route>
+            <Route path="/contacts" exact>        
+              <SocialLink/>
+            </Route>
+            <Route path="/map" exact>
+              <YandexMap />
+            </Route>
+
+            <Route path="/clubs/:id" exact>
+              <ClubList />
+            </Route>
+
           <Route exact path="/register">
             <Registration />
           </Route>
-        </Switch>
-      </Router>
-    </Provider>
+          </Switch>
+        </Router>  
+      </Provider>
+      </>
   );
 
 }
