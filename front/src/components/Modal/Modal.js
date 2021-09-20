@@ -8,7 +8,7 @@ function Modal({ active, setActive, prices }) {
   const dispatch = useDispatch();
 
   useEffect(() => {
-    fetch('http://localhost:4000/api/prices', { credential: true })
+    fetch('http://localhost:5000/api/prices', { credential: true })
       .then((res) => res.json())
       .then((data) => dispatch({ type: 'INIT_PRICES', payload: data }))
   }, [dispatch])

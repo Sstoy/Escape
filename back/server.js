@@ -6,7 +6,7 @@ const cors = require('cors');
 const parse = require('./parsers/parser');
 const apiRouter = require('./routes/apiRouter');
 
-const PORT = 4000;
+const PORT = 5000;
 
 const app = express();
 
@@ -20,6 +20,7 @@ app.use(cors(corsOptions));
 const sessionConfig = {
   store: new FileStore(),
   name: 'user_sid',
+  // !!!!!!!!!!!! Поменять
   secret: 'secret',
   resave: true,
   saveUninitialized: true,
@@ -37,6 +38,7 @@ app.use(express.json());
 
 app.get('/', async (req, res) => {
   const news = await parse();
+  // console.log(news);
   res.status(200).json(news);
 });
 

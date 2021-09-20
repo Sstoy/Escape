@@ -10,24 +10,21 @@ function NewsList() {
 
   useEffect(() => {
 
-    fetch('http://localhost:4000/')
+    fetch('http://localhost:5000/')
       .then(res => res.json())
       // .then(data => console.log(data))
 
-      .then(news => dispatch({ type: 'INIT_NEWS', payload: news.slice(0, 8) }))
+      .then(news => dispatch({ type: 'INIT_NEWS', payload: news.slice(0, 5) }))
 
   }, [dispatch])
 
-  // const x = useSelector(state => state)
-
-  // console.log(x.news);
-
   const allNews = useSelector(state => state.news)
-  // console.log(allNews);
 
   return (
-    <div>
-      {allNews?.map((news) => < News key={uuid()} news={news} />)}
+    <div className='news-list'>
+      <ol className="gradient-list">
+        {allNews?.map((news) => <li> < News key={uuid()} news={news} /> </li>)}
+      </ol>
     </div>
 
   );
