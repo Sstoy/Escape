@@ -1,7 +1,10 @@
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Loader from "../Loader/Loader";
 import SocialLink from "../SocialLink/SocialLink";
-import { Provider } from "react-redux";
+
+import Footer from "../Footer/Footer";
+import { Provider } from "react-redux"
+
 import YandexMap from "../YandexMap/YandexMap";
 import store from "../../redux/store";
 
@@ -30,25 +33,62 @@ function App() {
             </div>
           </Route>
 
+
+    <>
+      <Provider store={store}>
+        <Router>
+          <Nav />
+          <NewsList />
+          <Loader />
+          <Switch>
+            {/* <Route path="/" exact>  
+          
+              <SocialLink/>
+
           <Route path="/clubs" exact>
             <div className="content" style={{ padding: '80px' }}>
               <ClubList />
             </div>
           </Route>
 
+
           <Route path="/aboutus" exact>
 
-          </Route>
 
-          <Route path="/galery" exact>
+            <Route path="/" exact>
+              <RunText />
+              <Logo />
+              {/* <FormReserve/> */}
+              {/* <ClubCards/> */}
+              <Footer />
+            </Route>
+            <Route path="/" exact>
 
-          </Route>
-          <Route path="/contacts" exact>
-            <SocialLink />
-          </Route>
-          <Route path="/map" exact>
-            <YandexMap />
-          </Route>
+            </Route>
+            <Route path="/" exact>
+
+            </Route>
+            <Route path="/galery" exact>
+              <Game />
+            </Route>
+            <Route path="/contacts" exact>
+              <SocialLink />
+            </Route>
+            <Route path="/map" exact>
+              <YandexMap />
+            </Route>
+
+
+            <Route exact path="/registerphone">
+              {/* <RegisterPhone /> */}
+            </Route>
+            <Route exact path="/register">
+              <Registration />
+            </Route>
+          </Switch>
+        </Router>
+      </Provider>
+    </>
 
           <Route path="/clubs/:id" exact>
             <ClubList />
@@ -60,6 +100,7 @@ function App() {
         </Switch>
       </Router>
     </Provider>
+
   );
 
 }
