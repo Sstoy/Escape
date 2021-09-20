@@ -1,34 +1,38 @@
-import { BrowserRouter as Router, Switch, Route } from "react-router-dom"
-// import ClubCards from "../ClubCards/ClubCards";
-import FormReserve from "../FormReserve/FormReserve";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Loader from "../Loader/Loader";
 import SocialLink from "../SocialLink/SocialLink";
+
 import Footer from "../Footer/Footer";
 import { Provider } from "react-redux"
+
 import YandexMap from "../YandexMap/YandexMap";
-import RegisterPhone from "../RegisterPhone/RegisterPhone";
-import store from "../../redux/store"
+import store from "../../redux/store";
+
 import Nav from '../Nav/Nav'
-
-import ModalClub from '../ModalClub/ModalClub'
 import ClubList from '../ClubList/ClubList'
-
 import Registration from '../Registration/Registration'
-
 import Logo from "../Logo/Logo";
-// import MainPage from "../MainPage/MainPage";
 import RunText from "../RunText/RunText";
-// import Registration from "../Registration/Registration";
-// import NewsList from "../NewsList/NewsList";
 import NewsList from "../NewsList/NewsList";
-import Game from "../Game/Game";
-// import Nav1 from "../nav1/Nav1";
-// import Review from "../Review/Review";
-
+import Promo from '../Promo/Promo';
 
 function App() {
 
   return (
+    <Provider store={store}>
+      <Router>
+        <Loader />
+        <Nav />
+        <Switch>
+          <Route path="/" exact>
+            <div className="content" style={{ padding: '80px' }}>
+              <RunText />
+              <Logo />
+              <NewsList />
+              <Promo />
+            </div>
+          </Route>
+
 
     <>
       <Provider store={store}>
@@ -41,7 +45,15 @@ function App() {
           
               <SocialLink/>
 
-            </Route> */}
+          <Route path="/clubs" exact>
+            <div className="content" style={{ padding: '80px' }}>
+              <ClubList />
+            </div>
+          </Route>
+
+
+          <Route path="/aboutus" exact>
+
 
             <Route path="/" exact>
               <RunText />
@@ -66,9 +78,6 @@ function App() {
               <YandexMap />
             </Route>
 
-            <Route path="/clubs/:id" exact>
-              <ClubList />
-            </Route>
 
             <Route exact path="/registerphone">
               {/* <RegisterPhone /> */}
@@ -80,6 +89,18 @@ function App() {
         </Router>
       </Provider>
     </>
+
+          <Route path="/clubs/:id" exact>
+            <ClubList />
+          </Route>
+
+          <Route exact path="/register">
+            <Registration />
+          </Route>
+        </Switch>
+      </Router>
+    </Provider>
+
   );
 
 }
