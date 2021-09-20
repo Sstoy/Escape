@@ -1,5 +1,9 @@
 import React from 'react';
+<<<<<<< HEAD
+// import './SocialLink.css'
+=======
 import  './SocialLink.css'
+>>>>>>> fe50ed8ca327f0604c2f721c1311137a1e8f5f5e
 function SocialLink(props) {
   return (
     <div className='socialmedia'>

@@ -12,14 +12,13 @@ import Nav from '../Nav/Nav'
 import Logo from "../Logo/Logo";
 import MainPage from "../MainPage/MainPage";
 import RunText from "../RunText/RunText";
+import Registration from "../Registration/Registration";
+// import NewsList from "../NewsList/NewsList";
 import NewsList from "../NewsList/NewsList";
 
 function App() {
 
   return (
-
-
-    <>
       <Provider store={store}>
         <Router>
           <Nav/>
@@ -50,6 +49,9 @@ function App() {
 
           <Route exact path="/registerphone">
             <RegisterPhone />
+          </Route>
+          <Route exact path="/register">
+            <Registration />
           </Route>
           </Switch>
         </Router>  
