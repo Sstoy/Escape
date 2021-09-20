@@ -34,11 +34,9 @@ function ClubList() {
 
   return (
     <div className="container">
-// <<<<<<< ClubComponent
+
       {clubs?.map((club) => <Club id={club.id} club={club} />)}
-// =======
-//       {clubs?.map((club) => <ModalClub id={club.id} club={club} />)}
-// >>>>>>> devtest
+
     </div>
   );
 }
