@@ -13,3 +13,10 @@
 	-moz-filter:  invert(1) contrast(1.3) saturate(1.4);
 	-o-filter:  invert(1) contrast(1.3) saturate(1.4);
 }
+.ymaps-2-1-79-map{
+  opacity: .8;
+  -webkit-border-radius: 50px;
+     -moz-border-radius: 50px;
+          border-radius: 50px;
+          -webkit-mask-box-image: url('Map.png') 500 500 0 0 round round;
+}

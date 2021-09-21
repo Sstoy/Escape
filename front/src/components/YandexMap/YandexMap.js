@@ -16,7 +16,8 @@ function YandexMap({ key }) {
 
   // задает центровые координаты при загрузке карты
   const mapState = {
-    center: [59.91807199347784, 30.304908500000003],
+    center: [60.016680757513846, 30.31585049999999],
+    // [59.91807199347784, 30.304908500000003],
     zoom: 9
   }
 
@@ -39,7 +40,7 @@ function YandexMap({ key }) {
       {/* <YMaps query={{ apikey: '27544797-3131-4759-9f4b-54f17c827eb2&lang=ru_RU', }} version={"2.1"}> */}
       <YMaps>
         <div className='mapContainer'>
-          <Map state={mapState} width='40%'
+          <Map state={mapState} width='100%'
             height='450px' >
             <ZoomControl options={{ float: 'left' }} />
             <Placemark geometry={[lat, lng]} />
