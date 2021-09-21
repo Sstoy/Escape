@@ -1,11 +1,15 @@
 import React, { useState }from 'react';
-import Modal from '../Modal/Modal'
+import ModalPrices from '../ModalPrices/ModalPrices'
+import ModalComps from '../ModalComps/ModalComps'
 import { useSelector } from 'react-redux';
 
 function Club({ club }) {
   console.log('!!!!!!!!!!');
   const [modalActive, setModalActive] = useState(false);
+  const [modalCompActive, setModalCompActive] = useState(false);
   const prices = useSelector(state => state?.prices.prices);
+  const computers = useSelector(state => state?.computers);
+  const clubComputers = computers?.filter((el) => el.ClubId === club.id);
   const clubPrice = prices?.filter((el) => el.ClubId === club.id);
 
   console.log(club);
@@ -21,8 +25,9 @@ function Club({ club }) {
           <p>{club.computers} игровых PC</p>
           <p>Круглосуточно (24/7)</p>
           <button onClick={() => setModalActive(true)}>Цены</button>
-          <button>Компьютеры</button>
-          <Modal prices={clubPrice} active={modalActive} setActive={setModalActive}/>
+          <button onClick={() => setModalCompActive(true)}>Компьютеры</button>
+          <ModalPrices prices={clubPrice} active={modalActive} setActive={setModalActive}/>
+          <ModalComps computers={clubComputers} active={modalCompActive} setActive={setModalCompActive}/>
         </div>
       </div>
   );

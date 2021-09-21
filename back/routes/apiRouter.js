@@ -1,6 +1,6 @@
 const router = require('express').Router();
 const parse = require('../parsers/parser');
-const { Club, Price, News } = require('../database/models');
+const { Club, Price, News, Computer } = require('../database/models');
 
 // eslint-disable-next-line consistent-return
 router.get('/news', async (req, res) => {
@@ -75,6 +75,28 @@ router.get('/prices', async (req, res) => {
       raw: true,
     });
     res.json({ prices });
+  } catch (error) {
+    console.error(error);
+  }
+});
+
+router.get('/computers', async (req, res) => {
+  try {
+    const computers = await Computer.findAll({
+      attributes: [
+        'id',
+        'ClubId',
+        'room',
+        'graphics',
+        'cpu',
+        'monitor',
+        'ram',
+        'keyboard',
+        'mouse',
+      ],
+      raw: true,
+    });
+    res.json(computers);
   } catch (error) {
     console.error(error);
   }
