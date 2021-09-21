@@ -16,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/Sstoy/Escape/issues"
   },
-  "homepage": "https://github.com/Sstoy/Escape#readme"
+  "homepage": "https://github.com/Sstoy/Escape#readme",
+  "dependencies": {
+    "axios": "^0.21.4"
+  }
 }
