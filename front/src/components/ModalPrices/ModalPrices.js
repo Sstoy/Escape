@@ -1,9 +1,8 @@
 import './modal.css';
 import React, { useEffect } from 'react';
-import { useSelector } from 'react-redux';
 import { useDispatch } from 'react-redux';
 
-function Modal({ active, setActive, prices }) {
+function ModalPrices({ active, setActive, prices }) {
 
   const dispatch = useDispatch();
 
@@ -12,7 +11,6 @@ function Modal({ active, setActive, prices }) {
       .then((res) => res.json())
       .then((data) => dispatch({ type: 'INIT_PRICES', payload: data }))
   }, [dispatch])
-
 
   return (
     <div className={active ? "modal active" : "modal"} onClick={() => setActive(false)}>
@@ -41,4 +39,4 @@ function Modal({ active, setActive, prices }) {
   );
 }
 
-export default Modal;
+export default ModalPrices;

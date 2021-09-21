@@ -1,28 +1,43 @@
 import React, { useRef, useState } from 'react';
 import firebase from '../firebase'
 import Success from '../Success/Success'
+import Fail from '../Fail/Fail'
 import styles from './Reg.module.css'
 
 function Registration() {
   const inputPhone = useRef(null)
   const [modal, setModal] = useState(false)
+  const [message, setMessage] = useState(null)
 
-  const handleClick = () => {
-    let recaptcha = new firebase.auth.RecaptchaVerifier('recaptcha-container');
-    let number = inputPhone.current.value
-    firebase.auth().signInWithPhoneNumber(number, recaptcha).then(function (e) {
-      let code = prompt('Enter your otp', '') //сделать не промпт, а инпут. как?????????????
-      if (code == null) return;
-      e.confirm(code).then(function (result) {
-        console.log(result.user, 'user')
-        setModal(true)
-      }).catch((error) => {
-        console.log(error)
-      })
+  const handleBase = () => {
+    fetch('http://localhost:5000/api/user', {
+      method: 'POST',
+      body: JSON.stringify({ userPhone: inputPhone.current.value }),
+      headers: { 'Content-Type': 'application/json' },
     })
-    console.log(inputPhone.current.value)
-    
+      .then(res => res.json())
+      .then(data => {
+        console.log(data)
+      if (data.message) {
+          let recaptcha = new firebase.auth.RecaptchaVerifier('recaptcha-container');
+          let number = inputPhone.current.value
+          setMessage(null)
+          firebase.auth().signInWithPhoneNumber(number, recaptcha).then(function (e) {
+            let code = prompt('Enter your otp', '') //сделать не промпт, а инпут. как?????????????
+            if (code == null) return;
+            e.confirm(code).then(function (result) {
+              console.log(result.user, 'user')
+              setModal(true)
+            }).catch((error) => {
+              console.log(error)
+            })
+          })
+      } else {
+        setMessage('Вы уже зарегистрированы')
+      }
+    })
   }
+  
   return (
     <>
     {modal? <Success /> : <div className={styles.form}>
@@ -34,8 +49,8 @@ function Registration() {
         <label htmlFor="phone" className={styles.placeholder}>Телефон</label>
       </div>
       <div id="recaptcha-container"></div>
-      <span></span>
-      <button type="text" onClick={handleClick} className={styles.submit}>Отправить</button>
+      <span>{message ? <Fail/> : ''}</span>
+      <button type="text" onClick={handleBase} className={styles.submit}>Отправить</button>
     </div>}
     </>
   );
