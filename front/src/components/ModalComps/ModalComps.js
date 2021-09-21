@@ -3,15 +3,6 @@ import React, { useEffect } from 'react';
 import { useDispatch } from 'react-redux';
 
 function ModalComps({ active, setActive, computers }) {
-  
-  const dispatch = useDispatch();
-
-  useEffect(() => {
-    fetch('http://localhost:5000/api/computers', { credential: true })
-      .then((res) => res.json())
-      .then((data) => dispatch({ type: 'INIT_COMPUTERS', payload: data }))
-  }, [dispatch])
-  
   return (
     <div className={active ? "modal active" : "modal"} onClick={() => setActive(false)}>
       <div className={active ? "modal__content active" : "modal__content"} onClick={e => e.stopPropagation()}>
