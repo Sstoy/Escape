@@ -22,7 +22,9 @@ module.exports = async () => {
     const ref = selector(element).find('a.cs-news__link').attr('href');
     const newsObj = {
       text,
-      ref: `https://www.cybersport.ru${ref}`,
+      href: `https://www.cybersport.ru${ref}`,
+      createdAt: new Date(),
+      updatedAt: new Date(),
     };
     allNews.push(newsObj);
   });

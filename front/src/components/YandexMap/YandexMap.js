@@ -6,7 +6,6 @@ import logo from './logo.png';
 import { useHistory } from 'react-router-dom'
 // стили задаем для изменения цвета фона карты, фильтр меняет также цвет лого-меток, поэтому перезаписываем стили на лого, чтобы вернуть прежний цвет лого
 import './YandexMap.css';
-import { Link } from 'react-router-dom'
 
 function YandexMap({ key }) {
   const [lat, setLat] = useState(0);

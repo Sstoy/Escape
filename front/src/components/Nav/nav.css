@@ -3,9 +3,10 @@
   margin-left: 40px;
 }
 .nav{
+  z-index: 2200;
   background-image: linear-gradient(
 210deg
-, rgba(174, 36, 192, 0) 100%, #000000 90%);
+, rgba(174, 36, 192, 0) 100%, #000000 70%);
 }
 /* body {
   height: 125vh;
