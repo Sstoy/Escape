@@ -20,6 +20,8 @@ import Slider from "../Slider/Slider";
 
 import Promo from '../Promo/Promo';
 import YandexReview from "../YandexReview/YandexReview";
+import ClubInfo from "../ClubInfo/ClubInfo";
+
 
 
 function App() {
@@ -27,25 +29,22 @@ function App() {
   return (
     <Provider store={store}>
       <Router>
-        <Loader />
+        <Loader />   
         <Nav />
         <Switch>
-          <Route path="/" exact>
-            <div className="content" style={{ margin: '80px' }}>
+          <Route path="/" exact>            
               <RunText />
               <Logo />
               <YandexMap />
               <NewsList />
               <Promo />
-              <Footer />
-            </div>
+              <Footer />         
           </Route>
 
           <Route path="/clubs" exact>
-            <div className="content" style={{ margin: '80px' }}>
               <ClubList />
               <Game />
-            </div>
+        
           </Route>
 
           <Route path="/galery" exact>
@@ -62,7 +61,7 @@ function App() {
           </Route>
 
           <Route path="/clubs/:id" exact>
-            <ClubList />
+            <ClubInfo />
           </Route>
 
           <Route exact path="/register">

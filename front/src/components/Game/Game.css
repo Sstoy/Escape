@@ -1,3 +1,4 @@
+
 .spanDesc {
   font-size: 17px;
   color: aliceblue;
@@ -6,10 +7,23 @@
   font-size: 30px;
   color: aliceblue;
 }
-.gameblock{
-  margin-top: 10%;
+.h1_game {
+  text-align: center;
+  color: #f0f0f0;
+}
+.row {
+  margin-bottom: 50px;
   display: flex;
-  justify-content: center;
+  flex-direction: row;
+}
+.gameblock{
+
+  flex-direction: row;
+  height: 1400px;
+  width: 1800px;
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
   align-items: center;
   flex-wrap: wrap;
 }
@@ -22,8 +36,7 @@
 .dota {  
   -webkit-transition: all 0.5s ease;
   -moz-transition: all 0.5s ease;
-  transition: all 0.5s ease;
- 
+  transition: all 0.5s ease; 
   background-position: center center;
   background-size: cover;
   background-image: url('https://youplay24.ru/wp-content/uploads/2019/08/dota_youplay.jpg');
