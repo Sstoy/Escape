@@ -10,7 +10,7 @@ module.exports = (sequelize, DataTypes) => {
      * The `models/index` file will call this method automatically.
      */
     static associate({ Club }) {
-      Price.belongsTo(Club);
+      Price.belongsTo(Club, { onDelete: 'cascade', onUpdate: 'cascade' });
     }
   }
   Price.init({
