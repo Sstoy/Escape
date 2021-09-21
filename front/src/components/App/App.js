@@ -1,60 +1,73 @@
-import { BrowserRouter as Router, Switch, Route } from "react-router-dom"
-// import ClubCards from "../ClubCards/ClubCards";
-import FormReserve from "../FormReserve/FormReserve";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Loader from "../Loader/Loader";
 import SocialLink from "../SocialLink/SocialLink";
+
+import Footer from "../Footer/Footer";
 import { Provider } from "react-redux"
+
 import YandexMap from "../YandexMap/YandexMap";
-import RegisterPhone from "../RegisterPhone/RegisterPhone";
-import store from "../../redux/store"
+import store from "../../redux/store";
+
 import Nav from '../Nav/Nav'
+import ClubList from '../ClubList/ClubList'
 import Registration from '../Registration/Registration'
 import Logo from "../Logo/Logo";
-// import MainPage from "../MainPage/MainPage";
 import RunText from "../RunText/RunText";
-// import Registration from "../Registration/Registration";
-// import NewsList from "../NewsList/NewsList";
 import NewsList from "../NewsList/NewsList";
+
 import Game from "../Game/Game";
 import Slider from "../Slider/Slider";
-// import Nav1 from "../nav1/Nav1";
+
+import Promo from '../Promo/Promo';
 
 
 function App() {
 
   return (
     <Provider store={store}>
-     <Router>
-       <Nav/>       
-       <Loader/>            
-          <Switch>
-            <Route path="/" exact>            
-              <RunText/>
-              <Logo/>   
-              <YandexMap />     
-            </Route>        
-            <Route path="/clubs" exact>
+      <Router>
+        <Loader />
+        <Nav />
+        <Switch>
+          <Route path="/" exact>
+            <div className="content" style={{ padding: '80px' }}>
+              <RunText />
+              <Logo />
+              <YandexMap /> 
+              <NewsList />
+              <Promo />
+              <Footer />
+            </div>
+          </Route>
+
+          <Route path="/clubs" exact>
+            <div className="content" style={{ padding: '80px' }}>
+              <ClubList />
               <Game/>
-            </Route>
-            <Route path="/galery" exact>
-            <Slider/>
-            </Route>
-            <Route path="/contacts" exact>        
-              <SocialLink/>
-            </Route>
-            <Route path="/map" exact>
-              <YandexMap />
+            </div>
+          </Route>
+
+<Route path="/galery" exact>
+              <Slider/>
             </Route>
 
-          <Route exact path="/registerphone">
-            {/* <RegisterPhone /> */}
+<Route path="/contacts" exact>
+              <SocialLink />
+            </Route>
+    
+        
+<Route path="/clubs/:id" exact>
+            <ClubList />
           </Route>
-          <Route exact path="/register">
-            <Registration/>
-          </Route>
+
+            <Route exact path="/register">
+              <Registration />
+            </Route>
+
           </Switch>
-        </Router>  
+        </Router>
       </Provider>
+
   );
 
 }
