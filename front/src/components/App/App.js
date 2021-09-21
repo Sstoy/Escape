@@ -34,7 +34,7 @@ function App() {
         <Switch>
           <Route path="/" exact>            
               <RunText />
-              <Logo />
+              {/* <Logo /> */}
               <YandexMap />
               <NewsList />
               <Promo />
