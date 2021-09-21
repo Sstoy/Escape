@@ -1,9 +1,10 @@
-const { clubs, prices } = require('./SeedArray');
+const { clubs, computers } = require('../SeedArray');
 
 module.exports = {
   up: async (queryInterface, Sequelize) => {
     await queryInterface.bulkInsert('Clubs', clubs, {});
-    await queryInterface.bulkInsert('Prices', prices, {});
+    await queryInterface.bulkInsert('Computers', computers, {});
+
     /**
      * Add seed commands here.
      *
@@ -16,8 +17,9 @@ module.exports = {
   },
 
   down: async (queryInterface, Sequelize) => {
+    await queryInterface.bulkDelete('Computers', null, {});
     await queryInterface.bulkDelete('Clubs', null, {});
-    await queryInterface.bulkDelete('Prices', null, {});
+
     /**
      * Add commands to revert seed here.
      *
