@@ -1,28 +1,13 @@
-const { clubs } = require('../SeedArray');
+const { clubs, computers } = require('../SeedArray');
 
 module.exports = {
   up: async (queryInterface, Sequelize) => {
     await queryInterface.bulkInsert('Clubs', clubs, {});
-    
-    /**
-     * Add seed commands here.
-     *
-     * Example:
-     * await queryInterface.bulkInsert('People', [{
-     *   name: 'John Doe',
-     *   isBetaMember: false
-     * }], {});
-     */
+    await queryInterface.bulkInsert('Computers', computers, {});
   },
 
   down: async (queryInterface, Sequelize) => {
-    
+    await queryInterface.bulkDelete('Computers', null, {});
     await queryInterface.bulkDelete('Clubs', null, {});
-    /**
-     * Add commands to revert seed here.
-     *
-     * Example:
-     * await queryInterface.bulkDelete('People', null, {});
-     */
   },
 };

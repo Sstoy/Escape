@@ -106,6 +106,26 @@ router.post('/user', async (req, res) => {
   } catch (error) {
     console.error(error)
     // res.json({ message: false, reason: 'нет связи с базой данных' });
+
+router.get('/computers', async (req, res) => {
+  try {
+    const computers = await Computer.findAll({
+      attributes: [
+        'id',
+        'ClubId',
+        'room',
+        'graphics',
+        'cpu',
+        'monitor',
+        'ram',
+        'keyboard',
+        'mouse',
+      ],
+      raw: true,
+    });
+    res.json(computers);
+  } catch (error) {
+    console.error(error);
   }
 });
 
