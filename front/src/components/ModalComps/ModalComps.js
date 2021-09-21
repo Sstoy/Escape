@@ -18,7 +18,11 @@ function ModalComps({ active, setActive, computers }) {
         {computers?.map((el) => {
           return <div className="prices">
             <div className="price">
-              <p>Зал: {el.room}</p>
+              {
+                el.room === 'common' ?              
+                <p>Общий зал:</p> : 
+                <p>VIP зал:</p> 
+              }
               <p>Видеокарта: {el.graphics}</p>
               <p>Процессор: {el.cpu}</p>
               <p>Монитор: {el.monitor}</p>
