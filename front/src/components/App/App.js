@@ -61,7 +61,6 @@ function App() {
               {/* <FormReserve/> */}
               {/* <ClubCards/> */}
               <Footer />
-            </Route>
             <Route path="/" exact>
 
             </Route>
