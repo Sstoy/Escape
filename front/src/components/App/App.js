@@ -1,25 +1,21 @@
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Loader from "../Loader/Loader";
 import SocialLink from "../SocialLink/SocialLink";
-
 import Footer from "../Footer/Footer";
 import { Provider } from "react-redux"
-
 import YandexMap from "../YandexMap/YandexMap";
 import store from "../../redux/store";
-
 import Nav from '../Nav/Nav'
 import ClubList from '../ClubList/ClubList'
 import Registration from '../Registration/Registration'
 import Logo from "../Logo/Logo";
 import RunText from "../RunText/RunText";
 import NewsList from "../NewsList/NewsList";
-
 import Game from "../Game/Game";
 import Slider from "../Slider/Slider";
-
 import Promo from '../Promo/Promo';
 import YandexReview from "../YandexReview/YandexReview";
+import NavBurg from "../NavBurg/NavBurg";
 
 
 
@@ -29,11 +25,12 @@ function App() {
     <Provider store={store}>
       <Router>
         <Loader />   
-        <Nav />
+        <NavBurg/>
+        {/* <Nav /> */}
         <Switch>
           <Route path="/" exact>            
               <RunText />
-              <Logo />
+              {/* <Logo /> */}
               <YandexMap />
               <NewsList />
               <Promo />
