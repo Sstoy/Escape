@@ -1,9 +1,11 @@
 import React from 'react';
 import './Game.css'
-function Game(props) {
+function Game() {
   return (
+    <>
+    <h1 className='h1_game'>У нас вы можете поиграть в:</h1>
     <div className='gameblock'>
-    <div className='row'>
+       <div className='row'>
        <div className="game dota"><span className='span'>Dota 2 <br /><span className='spanDesc'>играем на РС</span></span></div> 
        <div className="game warface"><span className='span'>Warfaсe <br /><span className='spanDesc'>играем на РС</span></span></div>   
        <div className="game gta"><span className='span'>GTA 5<br /><span className='spanDesc'>играем на РС</span></span></div>  
@@ -18,6 +20,7 @@ function Game(props) {
        <div className="game fifa"><span className='span'>PES 2022<br /><span className='spanDesc'>играем на РС</span></span></div>               
     </div>
    </div>
+   </>
   );
 }
 

@@ -1,15 +1,5 @@
 @import url('https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900');
 
-body {
-  margin: 0px 20px;
-  padding: 0;
-  display: flex;
-  justify-content: space-between;
-  /* align-items: center; */
-  min-height: 100vh;
-  font-family: 'Poppins', sans-serif;
-}
-
 .container {
   max-width: 1200px;
   display: flex;
@@ -24,11 +14,11 @@ body {
   height: 400px;
   margin: 0 auto;
   background: #fff;
-  border: 1px solid black;
-  text-shadow: 0 15px 60px rgba(0, 0, 0, .5);
+  border: 1px solid rgb(34, 34, 34);
 }
 
 .container .card .face {
+  color:cornsilk;
   position: absolute;
   bottom: 0;
   left: 0;
@@ -50,11 +40,9 @@ body {
 }
 
 .container .card .face.face2 {
-  background: #111;
+  background: rgb(139, 134, 134);
   transition: .5s;
 }
-
-/* Button */
 
 input[type="submit"],
 input[type="reset"],

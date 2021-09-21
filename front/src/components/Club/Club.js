@@ -2,17 +2,15 @@ import React, { useState }from 'react';
 import ModalPrices from '../ModalPrices/ModalPrices'
 import ModalComps from '../ModalComps/ModalComps'
 import { useSelector } from 'react-redux';
+import '../ClubList/clubs.css'
 
 function Club({ club }) {
-  console.log('!!!!!!!!!!');
   const [modalActive, setModalActive] = useState(false);
   const [modalCompActive, setModalCompActive] = useState(false);
   const prices = useSelector(state => state?.prices.prices);
   const computers = useSelector(state => state?.computers);
   const clubComputers = computers?.filter((el) => el.ClubId === club.id);
   const clubPrice = prices?.filter((el) => el.ClubId === club.id);
-
-  console.log(club);
 
   return (
       <div className="face face1">
