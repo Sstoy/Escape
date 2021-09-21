@@ -19,6 +19,7 @@ import Game from "../Game/Game";
 import Slider from "../Slider/Slider";
 
 import Promo from '../Promo/Promo';
+import YandexReview from "../YandexReview/YandexReview";
 
 
 function App() {
@@ -55,6 +56,10 @@ function App() {
             <SocialLink />
           </Route>
 
+          <Route path="/yandexreview" exact>
+            <YandexReview />
+            <Footer />
+          </Route>
 
           <Route path="/clubs/:id" exact>
             <ClubList />
