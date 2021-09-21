@@ -1,0 +1,277 @@
+footer, section {
+	display: block;}
+
+.footer ol, ul {
+	list-style: none;
+}
+
+.footer	a {
+		color: inherit;
+		text-decoration: none;
+	}
+
+
+.footer	h1, .footer h2, .footer h3, .footer h4, .footer h5, .footer h6 {
+		color: #ffffff;
+		font-weight: 600;
+		line-height: 1.65;
+		margin: 0 0 1em 0;
+	}
+
+	.footer	h1 a, .footer h2 a, .footer h3 a, .footer h4 a, .footer h5 a, .footer h6 a {
+			color: inherit;
+			border-bottom: 0;
+		}
+
+
+
+.footer #wrapper {
+  -moz-transition: -moz-filter 0.35s ease, -webkit-filter 0.35s ease, opacity 0.375s ease-out;
+  -webkit-transition: -webkit-filter 0.35s ease, -webkit-filter 0.35s ease, opacity 0.375s ease-out;
+  -ms-transition: -ms-filter 0.35s ease, -webkit-filter 0.35s ease, opacity 0.375s ease-out;
+  transition: filter 0.35s ease, -webkit-filter 0.35s ease, opacity 0.375s ease-out;
+  padding-top: 3.25em;
+}
+
+ .footer #wrapper > * > .inner {
+    padding: 4em 0 2em 0 ;
+    margin: 0 auto;
+    max-width: 65em;
+    width: calc(100% - 6em);
+  }
+
+.footer #contact {
+  border-bottom: solid 1px rgba(212, 212, 255, 0.1);
+  overflow-x: hidden;
+}
+
+ .footer #contact > .inner {
+    display: -moz-flex;
+    display: -webkit-flex;
+    display: -ms-flex;
+    display: flex;
+    padding: 0 !important;
+  }
+
+ .footer #contact > .inner > :nth-child(2n - 1) {
+      padding: 4em 3em 2em 0 ;
+      border-right: solid 1px rgba(212, 212, 255, 0.1);
+      width: 60%;
+    }
+
+   .footer #contact > .inner > :nth-child(2n) {
+      padding-left: 3em;
+      width: 40%;
+    }
+
+  .footer  #contact > .inner > .split {
+      padding: 0;
+    }
+
+   .footer #contact > .inner > .split > * {
+        padding: 3em 0 1em 3em ;
+        position: relative;
+      }
+
+    .footer #contact > .inner > .split > *:before {
+          border-top: solid 1px rgba(212, 212, 255, 0.1);
+          content: '';
+          display: block;
+          margin-left: -3em;
+          position: absolute;
+          top: 0;
+          width: calc(100vw + 3em);
+        }
+
+  .footer #contact > .inner > .split > :first-child:before {
+        display: none;
+      }
+
+.contact_method {
+  margin: 0 0 2em 0;
+  padding-left: 3.25em;
+  position: relative;
+}
+
+  .contact_method .icon {
+    left: 0;
+    position: absolute;
+    top: 0;
+  }
+
+  .contact-method h3 {
+    margin: 0 0 0.5em 0;
+  }
+
+#footerMini .copyright {
+  font-size: 0.8em;
+  list-style: none;
+  padding-left: 0;
+}
+
+  #footerMini .copyright li {
+    border-left: solid 1px rgba(212, 212, 255, 0.1);
+    color: rgba(244, 244, 255, 0.2);
+    display: inline-block;
+    line-height: 1;
+    margin-left: 1em;
+    padding-left: 1em;
+  }
+
+    #footerMini .copyright li:first-child {
+      border-left: 0;
+      margin-left: 0;
+      padding-left: 0;
+    }
+
+.footer form {
+  margin: 0 0 2em 0;
+}
+
+ .footer form > :last-child {
+    margin-bottom: 0;
+  }
+
+ .footer form > .fields {
+    display: -moz-flex;
+    display: -webkit-flex;
+    display: -ms-flex;
+    display: flex;
+    -moz-flex-wrap: wrap;
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    width: calc(100% + 3em);
+    margin: -1.5em 0 2em -1.5em;
+  }
+
+  .footer  form > .fields > .field {
+      -moz-flex-grow: 0;
+      -webkit-flex-grow: 0;
+      -ms-flex-grow: 0;
+      flex-grow: 0;
+      -moz-flex-shrink: 0;
+      -webkit-flex-shrink: 0;
+      -ms-flex-shrink: 0;
+      flex-shrink: 0;
+      padding: 1.5em 0 0 1.5em;
+      width: calc(100% - 1.5em);
+    }
+
+   .footer form > .fields > .field.half {
+        width: calc(50% - 0.75em);
+      }
+
+   .footer form > .fields > .field.third {
+        width: calc(100%/3 - 0.5em);
+      }
+
+    .footer form > .fields > .field.quarter {
+        width: calc(25% - 0.375em);
+      }
+
+     .footer input[type="submit"].primary,
+     .footer input[type="reset"].primary,
+     .footer input[type="button"].primary,
+     .footer button.primary,
+     .footer .button.primary {
+        background-color: #ffffff;
+        box-shadow: none;
+        color: #242943;
+      }
+  
+
+     .footer input[type="submit"].primary:active,
+      .footer input[type="reset"].primary:active,
+       .footer input[type="button"].primary:active,
+       .footer button.primary:active,
+        .button.primary:active {
+          background-color: #53e3fb;
+        }
+
+      ul.actions {
+        display: -moz-flex;
+        display: -webkit-flex;
+        display: -ms-flex;
+        display: flex;
+        cursor: default;
+        list-style: none;
+        margin-left: -1em;
+        padding-left: 0;
+      }
+    
+        ul.actions li {
+          padding: 0 0 0 1em;
+          vertical-align: middle;
+        }
+
+.footer label {
+  color: #ffffff;
+  display: block;
+  font-size: 0.8em;
+  font-weight: 600;
+  letter-spacing: 0.25em;
+  margin: 0 0 1em 0;
+  text-transform: uppercase;
+}
+
+.footer input[type="text"],
+.footer input[type="password"],
+.footer input[type="email"],
+.footer input[type="tel"],
+.footer input[type="search"],
+.footer input[type="url"],
+.footer select,
+.footer textarea {
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  -ms-appearance: none;
+  appearance: none;
+  background: rgba(212, 212, 255, 0.035);
+  border: none;
+  border-radius: 0;
+  color: inherit;
+  display: block;
+  outline: 0;
+  padding: 0 1em;
+  text-decoration: none;
+  width: 100%;
+}
+
+  .footer input[type="text"]:invalid,
+ .footer input[type="password"]:invalid,
+ .footer input[type="email"]:invalid,
+ .footer input[type="tel"]:invalid,
+ .footer input[type="search"]:invalid,
+ .footer input[type="url"]:invalid,
+ .footer select:invalid,
+ .footer textarea:invalid {
+    box-shadow: none;
+  }
+
+ .footer input[type="text"]:focus,
+ .footer input[type="password"]:focus,
+ .footer input[type="email"]:focus,
+ .footer input[type="tel"]:focus,
+ .footer input[type="search"]:focus,
+ .footer input[type="url"]:focus,
+ .footer select:focus,
+ .footer textarea:focus {
+    border-color: #9bf1ff;
+    box-shadow: 0 0 0 2px #9bf1ff;
+  }
+
+.footer input[type="text"],
+.footer input[type="password"],
+.footer input[type="email"],
+.footer input[type="tel"],
+.footer input[type="search"],
+.footer input[type="url"],
+.footer select {
+  height: 2.75em;
+}
+
+.footer textarea {
+  padding: 0.75em 1em;
+}
+

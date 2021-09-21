@@ -1,16 +1,26 @@
 module.exports = {
   up: async (queryInterface, Sequelize) => {
-    await queryInterface.createTable('News', {
+    await queryInterface.createTable('Admins', {
       id: {
         allowNull: false,
         autoIncrement: true,
         primaryKey: true,
         type: Sequelize.INTEGER,
       },
-      text: {
+      login: {
+        allowNull: false,
         type: Sequelize.STRING,
       },
-      href: {
+      email: {
+        allowNull: false,
+        type: Sequelize.STRING,
+      },
+      phone: {
+        allowNull: false,
+        type: Sequelize.STRING,
+      },
+      password: {
+        allowNull: false,
         type: Sequelize.STRING,
       },
       createdAt: {
@@ -24,6 +34,6 @@ module.exports = {
     });
   },
   down: async (queryInterface, Sequelize) => {
-    await queryInterface.dropTable('News');
+    await queryInterface.dropTable('Admins');
   },
 };

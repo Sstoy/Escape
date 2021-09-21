@@ -1,60 +1,76 @@
-import { BrowserRouter as Router, Switch, Route } from "react-router-dom"
-// import ClubCards from "../ClubCards/ClubCards";
-import FormReserve from "../FormReserve/FormReserve";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Loader from "../Loader/Loader";
 import SocialLink from "../SocialLink/SocialLink";
+
+import Footer from "../Footer/Footer";
 import { Provider } from "react-redux"
+
 import YandexMap from "../YandexMap/YandexMap";
-import RegisterPhone from "../RegisterPhone/RegisterPhone";
-import store from "../../redux/store"
+import store from "../../redux/store";
+
 import Nav from '../Nav/Nav'
+import ClubList from '../ClubList/ClubList'
 import Registration from '../Registration/Registration'
 import Logo from "../Logo/Logo";
-// import MainPage from "../MainPage/MainPage";
 import RunText from "../RunText/RunText";
-// import Registration from "../Registration/Registration";
-// import NewsList from "../NewsList/NewsList";
 import NewsList from "../NewsList/NewsList";
+
 import Game from "../Game/Game";
 import Slider from "../Slider/Slider";
-// import Nav1 from "../nav1/Nav1";
+
+import Promo from '../Promo/Promo';
+import YandexReview from "../YandexReview/YandexReview";
+
 
 
 function App() {
 
   return (
     <Provider store={store}>
-     <Router>
-       <Nav/>       
-       <Loader/>            
-          <Switch>
-            <Route path="/" exact>            
-              <RunText/>
-              <Logo/>   
-              <YandexMap />     
-            </Route>        
-            <Route path="/clubs" exact>
-              <Game/>
-            </Route>
-            <Route path="/galery" exact>
-            <Slider/>
-            </Route>
-            <Route path="/contacts" exact>        
-              <SocialLink/>
-            </Route>
-            <Route path="/map" exact>
+      <Router>
+        <Loader />   
+        <Nav />
+        <Switch>
+          <Route path="/" exact>            
+              <RunText />
+              <Logo />
               <YandexMap />
-            </Route>
+              <NewsList />
+              <Promo />
+              <Footer />         
+          </Route>
 
-          <Route exact path="/registerphone">
-            {/* <RegisterPhone /> */}
+          <Route path="/clubs" exact>
+              <ClubList />
+              <Game />
+        
           </Route>
+
+          <Route path="/galery" exact>
+            <Slider />
+          </Route>
+
+          <Route path="/contacts" exact>
+            <SocialLink />
+          </Route>
+
+          <Route path="/yandexreview" exact>
+            <YandexReview />
+            <Footer />
+          </Route>
+
+          <Route path="/clubs/:id" exact>
+            {/* <ClubList /> */}
+          </Route>
+
           <Route exact path="/register">
-            <Registration/>
+            <Registration />
           </Route>
-          </Switch>
-        </Router>  
-      </Provider>
+
+        </Switch>
+      </Router>
+    </Provider>
+
   );
 
 }

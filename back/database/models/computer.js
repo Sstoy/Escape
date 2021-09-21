@@ -3,17 +3,17 @@ const {
 } = require('sequelize');
 
 module.exports = (sequelize, DataTypes) => {
-  class Price extends Model {
+  class Computer extends Model {
     /**
      * Helper method for defining associations.
      * This method is not a part of Sequelize lifecycle.
      * The `models/index` file will call this method automatically.
      */
     static associate({ Club }) {
-      Price.belongsTo(Club, { onDelete: 'cascade', onUpdate: 'cascade' });
+      Computer.belongsTo(Club);
     }
   }
-  Price.init({
+  Computer.init({
     ClubId: {
       type: DataTypes.INTEGER,
       references: {
@@ -26,30 +26,27 @@ module.exports = (sequelize, DataTypes) => {
     room: {
       type: DataTypes.STRING,
     },
-    onehour: {
-      type: DataTypes.INTEGER,
+    graphics: {
+      type: DataTypes.STRING,
     },
-    fivehours: {
-      type: DataTypes.INTEGER,
+    cpu: {
+      type: DataTypes.STRING,
     },
-    nightweekday: {
-      type: DataTypes.INTEGER,
+    monitor: {
+      type: DataTypes.STRING,
     },
-    nightweekend: {
-      type: DataTypes.INTEGER,
+    ram: {
+      type: DataTypes.STRING,
     },
-    morning: {
-      type: DataTypes.INTEGER,
+    keyboard: {
+      type: DataTypes.STRING,
     },
-    twentyfourhours: {
-      type: DataTypes.INTEGER,
-    },
-    PS: {
-      type: DataTypes.INTEGER,
+    mouse: {
+      type: DataTypes.STRING,
     },
   }, {
     sequelize,
-    modelName: 'Price',
+    modelName: 'Computer',
   });
-  return Price;
+  return Computer;
 };
