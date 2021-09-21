@@ -14,8 +14,8 @@ module.exports = (sequelize, DataTypes) => {
     }
   }
   News.init({
-    news: DataTypes.STRING,
-    link: DataTypes.STRING,
+    text: DataTypes.STRING,
+    href: DataTypes.STRING,
   }, {
     sequelize,
     modelName: 'News',

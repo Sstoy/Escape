@@ -5,7 +5,7 @@
   box-sizing: border-box;
   height: 500px;
   padding: 20px;
-  width: 320px;
+  width: 100%;
 }
 
 .title {
@@ -19,7 +19,7 @@
 .subtitle {
   color: #eee;
   font-family: sans-serif;
-  font-size: 16px;
+  font-size: 14px;
   font-weight: 600;
   margin-top: 10px;
 }
@@ -60,11 +60,11 @@
   top: -20px;
   transform: translateY(0);
   transition: transform 200ms;
-  width: 76px;
+  width: 115px;
 }
 
 .cut_short {
-  width: 50px;
+  width: 110px;
 }
 
 .input:focus ~ .cut,
