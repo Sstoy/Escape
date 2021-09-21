@@ -1,7 +1,7 @@
 const router = require('express').Router();
 const parse = require('../parsers/parser');
 const {
-  Club, Price, News, User,
+  Club, Price, News, User, Computer,
 } = require('../database/models');
 
 // eslint-disable-next-line consistent-return
@@ -93,7 +93,7 @@ router.post('/user', async (req, res) => {
         },
       },
     );
-    console.log(user)
+    console.log(user);
     if (user) {
       res.json({ message: false });
     } else {
@@ -104,8 +104,10 @@ router.post('/user', async (req, res) => {
       res.json({ message: true });
     }
   } catch (error) {
-    console.error(error)
-    // res.json({ message: false, reason: 'нет связи с базой данных' });
+    console.error(error);
+    res.json({ message: false, reason: 'нет связи с базой данных' });
+  }
+});
 
 router.get('/computers', async (req, res) => {
   try {
