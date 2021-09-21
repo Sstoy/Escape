@@ -31,7 +31,7 @@ function App() {
         <Nav />
         <Switch>
           <Route path="/" exact>
-            <div className="content" style={{ padding: '80px' }}>
+            <div className="content" style={{ margin: '80px' }}>
               <RunText />
               <Logo />
               <YandexMap />
@@ -42,7 +42,7 @@ function App() {
           </Route>
 
           <Route path="/clubs" exact>
-            <div className="content" style={{ padding: '80px' }}>
+            <div className="content" style={{ margin: '80px' }}>
               <ClubList />
               <Game />
             </div>
@@ -60,7 +60,6 @@ function App() {
             <YandexReview />
             <Footer />
           </Route>
-
 
           <Route path="/clubs/:id" exact>
             <ClubList />
