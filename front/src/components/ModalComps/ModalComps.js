@@ -1,5 +1,6 @@
-import './modal.css';
-import React from 'react';
+import styles from './Modal.module.css';
+import React, { useEffect } from 'react';
+import { useDispatch } from 'react-redux';
 
 function ModalComps({ active, setActive, computers }) {
   return (
