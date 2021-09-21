@@ -20,6 +20,7 @@ import Slider from "../Slider/Slider";
 
 import Promo from '../Promo/Promo';
 import YandexReview from "../YandexReview/YandexReview";
+import ClubInfo from "../ClubInfo/ClubInfo";
 
 
 function App() {
@@ -62,7 +63,7 @@ function App() {
           </Route>
 
           <Route path="/clubs/:id" exact>
-            <ClubList />
+            <ClubInfo />
           </Route>
 
           <Route exact path="/register">

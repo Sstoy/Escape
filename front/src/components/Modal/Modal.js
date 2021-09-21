@@ -1,18 +1,20 @@
 import './modal.css';
 import React, { useEffect } from 'react';
-import { useSelector } from 'react-redux';
+// import { useSelector } from 'react-redux';
 import { useDispatch } from 'react-redux';
 
 function Modal({ active, setActive, prices }) {
 
   const dispatch = useDispatch();
+  // const prices = useSelector(state => state.prices)
 
   useEffect(() => {
-    fetch('http://localhost:5000/api/prices', { credential: true })
-      .then((res) => res.json())
-      .then((data) => dispatch({ type: 'INIT_PRICES', payload: data }))
+    if(prices.length === 0) {
+      fetch('http://localhost:5000/api/prices', { credential: true })
+        .then((res) => res.json())
+        .then((data) => dispatch({ type: 'INIT_PRICES', payload: data }))
+    }
   }, [dispatch])
-  console.log(prices);
 
   return (
     <div className={active ? "modal active" : "modal"} onClick={() => setActive(false)}>

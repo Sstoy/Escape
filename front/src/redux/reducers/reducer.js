@@ -10,7 +10,7 @@ const reducer = (state = initialState, action) => {
       return { ...state, news: action.payload };
 
     case 'INIT_CLUBS':
-      console.log('INIT INIT_CLUBS');
+      // console.log('INIT INIT_CLUBS');
 
       return { ...state, clubs: action.payload }
 

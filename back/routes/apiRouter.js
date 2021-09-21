@@ -51,7 +51,7 @@ router.get('/clublist', async (req, res) => {
       attributes: ['id', 'name', 'address', 'phone', 'computers'],
       raw: true,
     });
-    res.json({ clubs });
+    res.json(clubs);
   } catch (error) {
     console.error(error);
   }
@@ -74,7 +74,7 @@ router.get('/prices', async (req, res) => {
       ],
       raw: true,
     });
-    res.json({ prices });
+    res.json(prices);
   } catch (error) {
     console.error(error);
   }

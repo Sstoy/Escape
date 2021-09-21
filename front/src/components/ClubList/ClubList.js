@@ -1,7 +1,6 @@
 import React, { useEffect } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
 
-import { useSelector } from 'react-redux';
-import { useDispatch } from 'react-redux';
 import Club from '../Club/Club';
 import './clubs.css'
 
@@ -9,15 +8,16 @@ function ClubList() {
   
   const dispatch = useDispatch();
 
-  const clubs = useSelector(state => state.clubs?.clubs);
+  const clubs = useSelector(state => state.clubs);
+
   useEffect(() => {
-    fetch('http://localhost:5000/api/clublist', { credential: true })
-    .then((res) => res.json())
-    .then((data) => dispatch({ type: 'INIT_CLUBS', payload: data }))
+    if(clubs.length === 0) {
+      fetch('http://localhost:5000/api/clublist', { credential: true })
+      .then((res) => res.json())
+      .then((data) => dispatch({ type: 'INIT_CLUBS', payload: data }))
+    }
 
-  }, [dispatch])
-
-  
+  }, [clubs.length, dispatch])
 
   return (
     <div className="container">

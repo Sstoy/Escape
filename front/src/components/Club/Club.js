@@ -3,12 +3,9 @@ import Modal from '../Modal/Modal'
 import { useSelector } from 'react-redux';
 
 function Club({ club }) {
-  console.log('!!!!!!!!!!');
   const [modalActive, setModalActive] = useState(false);
-  const prices = useSelector(state => state?.prices.prices);
+  const prices = useSelector(state => state.prices);
   const clubPrice = prices?.filter((el) => el.ClubId === club.id);
-
-  console.log(club);
 
   return (
       <div className="face face1">
