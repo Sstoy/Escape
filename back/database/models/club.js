@@ -10,7 +10,7 @@ module.exports = (sequelize, DataTypes) => {
      * The `models/index` file will call this method automatically.
      */
     static associate({ Price }) {
-      Club.hasMany(Price);
+      Club.hasMany(Price, { onDelete: 'cascade', onUpdate: 'cascade' });
     }
   }
   Club.init({
