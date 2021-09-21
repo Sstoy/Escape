@@ -1,14 +1,29 @@
-import React, { useState }from 'react';
+import React, { useState, useEffect }from 'react';
 import ModalPrices from '../ModalPrices/ModalPrices'
 import ModalComps from '../ModalComps/ModalComps'
-import { useSelector } from 'react-redux';
+import { useSelector, useDispatch } from 'react-redux';
 import '../ClubList/clubs.css'
 
 function Club({ club }) {
   const [modalActive, setModalActive] = useState(false);
   const [modalCompActive, setModalCompActive] = useState(false);
+  const dispatch = useDispatch();
+
   const computers = useSelector(state => state.computers);
   const prices = useSelector(state => state.prices);
+
+  useEffect(() => {
+    if (computers.length === 0) {
+      fetch('http://localhost:5000/api/computers', { credential: true })
+        .then((res) => res.json())
+        .then((data) => dispatch({ type: 'INIT_COMPUTERS', payload: data }))
+    }
+    if (prices.length === 0) {
+      fetch('http://localhost:5000/api/prices', { credential: true })
+        .then((res) => res.json())
+        .then((data) => dispatch({ type: 'INIT_PRICES', payload: data }))
+    }
+  }, [computers.length, prices.length, dispatch])
 
   const clubComputers = computers.filter((el) => el.ClubId === club.id);
   const clubPrice = prices.filter((el) => el.ClubId === club.id);

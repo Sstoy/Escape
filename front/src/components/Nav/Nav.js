@@ -8,7 +8,9 @@ import img1 from './logo.png'
 function Nav() {
   return (
     <header className='nav'>
+      <Link to='/'>
       <img className='logo_img' src={img1} alt=""/>
+      </Link>
       <nav>
         <ul>
           <li><Link to="/">Главная</Link></li>
