@@ -7,10 +7,10 @@ module.exports = {
         primaryKey: true,
         type: Sequelize.INTEGER,
       },
-      news: {
+      text: {
         type: Sequelize.STRING,
       },
-      link: {
+      href: {
         type: Sequelize.STRING,
       },
       createdAt: {

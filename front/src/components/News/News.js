@@ -7,7 +7,7 @@ function News({ news }) {
   return (
     <>
     
-    <a href={news?.ref} target="_blank" rel="noreferrer">{news?.text}</a>
+    <a href={news?.href} target="_blank" rel="noreferrer">{news?.text}</a>
     </>
   );
 }
