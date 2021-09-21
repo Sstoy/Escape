@@ -30,10 +30,10 @@ function App() {
         <Nav />
         <Switch>
           <Route path="/" exact>
-            <div className="content" style={{ padding: '80px' }}>
+            <div className="content" style={{ margin: '80px' }}>
               <RunText />
               <Logo />
-              <YandexMap /> 
+              <YandexMap />
               <NewsList />
               <Promo />
               <Footer />
@@ -41,32 +41,32 @@ function App() {
           </Route>
 
           <Route path="/clubs" exact>
-            <div className="content" style={{ padding: '80px' }}>
+            <div className="content" style={{ margin: '80px' }}>
               <ClubList />
-              <Game/>
+              <Game />
             </div>
           </Route>
 
-<Route path="/galery" exact>
-              <Slider/>
-            </Route>
+          <Route path="/galery" exact>
+            <Slider />
+          </Route>
 
-<Route path="/contacts" exact>
-              <SocialLink />
-            </Route>
-    
-        
-<Route path="/clubs/:id" exact>
+          <Route path="/contacts" exact>
+            <SocialLink />
+          </Route>
+
+
+          <Route path="/clubs/:id" exact>
             <ClubList />
           </Route>
 
-            <Route exact path="/register">
-              <Registration />
-            </Route>
+          <Route exact path="/register">
+            <Registration />
+          </Route>
 
-          </Switch>
-        </Router>
-      </Provider>
+        </Switch>
+      </Router>
+    </Provider>
 
   );
 

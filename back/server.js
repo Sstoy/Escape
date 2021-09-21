@@ -3,7 +3,6 @@ const session = require('express-session');
 const morgan = require('morgan');
 const FileStore = require('session-file-store')(session);
 const cors = require('cors');
-const parse = require('./parsers/parser');
 const apiRouter = require('./routes/apiRouter');
 
 const PORT = 5000;
@@ -35,12 +34,6 @@ app.use(session(sessionConfig));
 app.use(morgan('dev'));
 
 app.use(express.json());
-
-app.get('/', async (req, res) => {
-  const news = await parse();
-  // console.log(news);
-  res.status(200).json(news);
-});
 
 app.use('/api', apiRouter);
 

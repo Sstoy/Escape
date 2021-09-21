@@ -10,9 +10,8 @@ function NewsList() {
 
   useEffect(() => {
 
-    fetch('http://localhost:5000/')
+    fetch('http://localhost:5000/api/news')
       .then(res => res.json())
-      // .then(data => console.log(data))
 
       .then(news => dispatch({ type: 'INIT_NEWS', payload: news.slice(0, 5) }))
 
