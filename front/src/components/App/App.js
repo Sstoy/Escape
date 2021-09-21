@@ -16,6 +16,7 @@ import Slider from "../Slider/Slider";
 import Promo from '../Promo/Promo';
 import YandexReview from "../YandexReview/YandexReview";
 import NavBurg from "../NavBurg/NavBurg";
+import ClubInfo from "../ClubInfo/ClubInfo";
 
 
 
@@ -57,7 +58,7 @@ function App() {
           </Route>
 
           <Route path="/clubs/:id" exact>
-            {/* <ClubList /> */}
+            <ClubInfo />
           </Route>
 
           <Route exact path="/register">
