@@ -2,7 +2,7 @@ import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 
 import Club from '../Club/Club';
-// import './clubs.css'
+import './clubs.css'
 
 function ClubList() {
   
