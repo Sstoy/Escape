@@ -13,3 +13,14 @@
 	-moz-filter:  invert(1) contrast(1.3) saturate(1.4);
 	-o-filter:  invert(1) contrast(1.3) saturate(1.4);
 }
+.ymaps-2-1-79-map{
+  opacity: .8;
+  -webkit-border-radius: 50px;
+     -moz-border-radius: 50px;
+          border-radius: 50px;
+          -webkit-mask-box-image: url('SaintP.png') 850 150 0 0 round round;
+}
+
+.ymaps-2-1-79-gotoymaps__text, .ymaps-2-1-79-controls-pane, .ymaps-2-1-79-map-copyrights-promo{
+  display: none;
+}

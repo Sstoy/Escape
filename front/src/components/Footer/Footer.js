@@ -22,15 +22,15 @@ function Footer(props) {
                 <form method="post" action="#">
                   <div className={styles.fields}>
                     <div className={`${styles.field} ${styles.half}`}>
-                      <label for="name">Ваше имя</label>
+                      <label htmlFor="name">Ваше имя</label>
                       <input type="text" name="name" id="name" />
                     </div>
                     <div className={`${styles.field} ${styles.half}`}>
-                      <label for="email">Ваш email</label>
+                      <label htmlFor="email">Ваш email</label>
                       <input type="text" name="email" id="email" />
                     </div>
                     <div className={styles.field}>
-                      <label for="message">Оставьте сообщение</label>
+                      <label htmlFor="message">Оставьте сообщение</label>
                       <textarea name="message" id="message" rows="6"></textarea>
                     </div>
                   </div>
@@ -43,7 +43,6 @@ function Footer(props) {
               <section className={styles.split}>
                 <section>
                   <div className={styles.contact_method}>
-                    {/* подключить иконки */}
                     <span className={`${styles.icon} ${styles.solid} ${styles.alt} fa-envelope`}><FontAwesomeIcon icon={faEnvelope} style={{ "color": "white" }} /></span>
                     <h3>Email</h3>
                     <span style={{ "color": "white" }}>georgy@escape24.ru</span>
@@ -54,10 +53,10 @@ function Footer(props) {
                     <span className={`${styles.icon} ${styles.solid} ${styles.alt} fa-phone`}><FontAwesomeIcon icon={faPhone} style={{ "color": "white" }} /></span>
                     <h3>Наши телефоны</h3>
                     <span style={{ "color": "white" }}>
-                      <a href="tel:+79315826324">+7 (931) 582 63 24</a><br />
-                      <a href="tel:+79095773683">+7 (909) 577 36 83</a><br />
-                      <a href="tel:+79315808281">+7 (931) 580 82 81</a><br />
-                      <a href="tel:+79533410192">+7 (953) 341 01 92</a><br />
+                      <p>Escape Проспект Большевиков: </p> <a href="tel:+79315826324">+7 (931) 582 63 24</a><br />
+                      <p>Escape Парнас: </p> <a href="tel:+79095773683">+7 (909) 577 36 83</a><br />
+                      <p>Escape Чкаловская: </p> <a href="tel:+79315808281">+7 (931) 580 82 81</a><br />
+                      <p>Escape Ленинский проспект: </p>  <a href="tel:+79533410192">+7 (953) 341 01 92</a><br />
                     </span>
                   </div>
                 </section>
