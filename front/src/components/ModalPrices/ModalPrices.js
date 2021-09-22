@@ -9,8 +9,11 @@ function ModalPrices({ active, setActive, prices }) {
         {prices?.map((el) => {
           return <div className="prices">
             <div className="price">
-              <p>Зал: {el.room}</p>
-              <p>Цена за 1 час: {el.onehour}</p>
+              {
+                el.room === 'common' ?              
+                <p>Общий зал:</p> : 
+                <p>VIP зал:</p> 
+              }              <p>Цена за 1 час: {el.onehour}</p>
               <p>Цена за 5 часов: {el.fivehours}</p>
               <p>Ночной пакет будни: {el.nightweekday}</p>
               <p>Ночной пакет выходные: {el.nightweekend}</p>

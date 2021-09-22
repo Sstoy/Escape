@@ -8,7 +8,7 @@ const clubs = [
     updatedAt: new Date(),
   },
   {
-    name: 'Ленинский проспект',
+    name: 'Ленинский',
     address: 'Ленинский проспект, д. 92к1',
     phone: '+7 (953) 341 01 92',
     computers: 25,
@@ -16,7 +16,7 @@ const clubs = [
     updatedAt: new Date(),
   },
   {
-    name: 'Проспект Большевиков',
+    name: 'Большевиков',
     address: 'Проспект Пятилеток, д. 8к1',
     phone: '+7 (931) 582 63 24',
     computers: 25,
