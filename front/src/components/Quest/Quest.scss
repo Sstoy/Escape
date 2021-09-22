@@ -1,12 +1,14 @@
 .faqcont {
+
   display: flex;
   justify-content: center;
   margin-bottom: 150px;
-  opacity: .8;
+  opacity: .7;
 }
 .faq-row-wrapper {
+  padding: 20px;
   border-radius: 13px;
-  width: 500px;
+  width: 580px;
   background-color: rgb(162, 52, 212);
   .faq-title { 
  
