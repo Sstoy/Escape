@@ -9,15 +9,15 @@
 .gameblock{
   margin-top: 10%;
   display: flex;
-  justify-content: center;
+  /* justify-content: center;
   align-items: center;
-  flex-wrap: wrap;
+  flex-wrap: wrap; */
 }
 .game {
   border-radius: 15px;
   text-align: center;
-  width: 250px;
-  height: 350px;  
+  width: 200px;
+  height: 300px;  
 }
 .dota {  
   -webkit-transition: all 0.5s ease;
