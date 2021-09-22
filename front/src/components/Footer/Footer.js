@@ -53,22 +53,23 @@ function Footer(props) {
                     </div>
                   </div>
                   <ul className={styles.actions}>
-                    <li><input onClick={sendMessage} type="submit" value="Отправить сообщение" className={styles.button} style={{ "color": "white" }} /></li>
-                    <li><input type="reset" value="Отменить" className={styles.button} style={{ "color": "white" }} /></li>
+
+                    <li><input type="submit" value="Отправить сообщение" className={styles.primary} /></li>
+                    <li><input onClick={sendMessage} type="submit" value="Отправить сообщение" className={styles.primary} /></li>
                   </ul>
                 </form>
               </section>
               <section className={styles.split}>
                 <section>
                   <div className={styles.contact_method}>
-                    <span className={`${styles.icon} ${styles.solid} ${styles.alt} fa-envelope`}><FontAwesomeIcon icon={faEnvelope} style={{ "color": "white" }} /></span>
+                    <span className={`${styles.icon} ${styles.solid} ${styles.alt} `}><FontAwesomeIcon icon={faEnvelope} style={{ "color": "white" }} /></span>
                     <h3>Email</h3>
                     <span style={{ "color": "white" }}>georgy@escape24.ru</span>
                   </div>
                 </section>
                 <section>
                   <div className={styles.contact_method}>
-                    <span className={`${styles.icon} ${styles.solid} ${styles.alt} fa-phone`}><FontAwesomeIcon icon={faPhone} style={{ "color": "white" }} /></span>
+                    <span className={`${styles.icon} ${styles.solid} ${styles.alt} `}><FontAwesomeIcon icon={faPhone} style={{ "color": "white" }} /></span>
                     <h3>Наши телефоны</h3>
                     <span style={{ "color": "white" }}>
                       <p>Escape Проспект Большевиков: </p> <a href="tel:+79315826324">+7 (931) 582 63 24</a><br />
@@ -80,7 +81,7 @@ function Footer(props) {
                 </section>
                 <section>
                   <div className={styles.contact_method}>
-                    <span className={`${styles.icon} ${styles.solid} ${styles.alt} fa-home`}><FontAwesomeIcon icon={faHome} style={{ "color": "white" }} /></span>
+                    <span className={`${styles.icon} ${styles.solid} ${styles.alt} `}><FontAwesomeIcon icon={faHome} style={{ "color": "white" }} /></span>
 
                     <span style={{ "color": "white" }}> ИП СПИРИДОНОВ Г.И.<br />
                       ИНН 784106878441<br />
@@ -93,8 +94,7 @@ function Footer(props) {
 
           <footer id={styles.footerMini}>
             <div className={styles.inner}>
-
-              <button type="button" onClick={redirectToYandexReviews} className={styles.button} style={{ "color": "white" }}>Отзывы на Яндекс</button>
+              <button type="button" onClick={redirectToYandexReviews} className={styles.primary} >Отзывы на Яндекс</button>
               <ul className={styles.copyright}>
                 <li>&copy; Made by</li><li>Elbrus Team</li>
               </ul>

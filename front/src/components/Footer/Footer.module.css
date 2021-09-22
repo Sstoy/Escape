@@ -1,5 +1,7 @@
 footer, section {
-	display: block;}
+	display: block;
+  
+}
 
 .footer ol, ul {
 	list-style: none;
@@ -176,6 +178,7 @@ footer, section {
      .footer button.primary,
      .footer .button.primary {
         background-color: #ffffff;
+        opacity: 0.75;
         box-shadow: none;
         color: #242943;
       }
@@ -227,15 +230,16 @@ footer, section {
   -webkit-appearance: none;
   -ms-appearance: none;
   appearance: none;
-  background: rgba(212, 212, 255, 0.035);
-  border: none;
-  border-radius: 0;
-  color: inherit;
-  display: block;
+  border-radius: 12px;
+  border: 0;
+  color: #eee;
+  cursor: pointer;
+  font-size: 18px;
+  margin-top: 38px;
   outline: 0;
-  padding: 0 1em;
-  text-decoration: none;
+  text-align: center;
   width: 100%;
+  opacity: 0.75;
 }
 
   .footer input[type="text"]:invalid,

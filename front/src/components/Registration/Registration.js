@@ -58,7 +58,7 @@ function Registration() {
       {modal ? <Success /> :
         <>
           <div className={styles.form}>
-            <div className={styles.title}>Компьютерный клуб ESCAPE</div>
+            <div className={styles.title}>ВВЕДИТЕ НОМЕР ТЕЛЕФОНА В ФОРМАТЕ +7ХХХХХХХХХХ</div>
             <div className={styles.subtitle}></div>
             <div className={`${styles.input_container} ${styles.ic2}`}>
               <input ref={inputPhone}
