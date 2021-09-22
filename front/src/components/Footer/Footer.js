@@ -53,8 +53,6 @@ function Footer(props) {
                     </div>
                   </div>
                   <ul className={styles.actions}>
-
-                    <li><input type="submit" value="Отправить сообщение" className={styles.primary} /></li>
                     <li><input onClick={sendMessage} type="submit" value="Отправить сообщение" className={styles.primary} /></li>
                   </ul>
                 </form>
