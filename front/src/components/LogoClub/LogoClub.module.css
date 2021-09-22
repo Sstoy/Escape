@@ -1,0 +1,11 @@
+.logo_img{
+  position: fixed;
+  opacity: .7;
+  height: 90px;
+  margin-top: 10px;
+  margin-left: 40px;
+}
+.logo_img:hover{
+  opacity: 1;
+}
+
