@@ -4,18 +4,21 @@
   background-position: center center;
   border-color: transparent;
   border-style: solid;
-  width: 100%;
+  width: 30%;
+  margin-top: 2em;
   height: 25em;
   display: flex;
   align-items: center;
   flex-direction: column;
   justify-content: space-around;
-  opacity: 0.8;
+  opacity: 0.75;
 }
 
 .span {
-  font-family: "Roboto", sans-serif;
-  color: white;
+  font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-size: 40px;
+  font-weight: 600;
+  color:rebeccapurple;
   
 }
 
@@ -23,7 +26,7 @@
   border: 2px solid #d2bdff;
   height: 80px;
   width: 200px;
-  border-radius: 4px;
+  border-radius: 10px;
   position: relative;
   cursor: pointer;
   font-family: "Roboto", sans-serif;

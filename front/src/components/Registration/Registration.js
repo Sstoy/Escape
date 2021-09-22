@@ -10,9 +10,10 @@ function Registration() {
   const [message, setMessage] = useState(null)
 
   const handleBase = () => {
+
     const regexp = /[\+][7]\d{3}\d{3}\d{2}\d{2}/gm;
-    console.log(inputPhone.current.value)
-    console.log(inputPhone.current.value.match(regexp))
+    // console.log(inputPhone.current.value)
+    // console.log(inputPhone.current.value.match(regexp))
     if (inputPhone.current.value.match(regexp)) {
         fetch('http://localhost:5000/api/user', {
           method: 'POST',
@@ -21,7 +22,7 @@ function Registration() {
         })
           .then(res => res.json())
           .then(data => {
-            console.log(data)
+            // console.log(data)
             if (data.message) {
               let recaptcha = new firebase.auth.RecaptchaVerifier('recaptcha-container');
               let number = inputPhone.current.value
@@ -44,6 +45,7 @@ function Registration() {
               setMessage('Вы уже зарегистрированы')
             }
           })
+
         } else {
           console.log('dsklfdsjf')
           document.getElementById('invalidPhone').textContent = 'Неправильный номер телефона'
@@ -58,7 +60,7 @@ function Registration() {
       {modal ? <Success /> :
         <>
           <div className={styles.form}>
-            <div className={styles.title}>Компьютерный клуб ESCAPE</div>
+            <div className={styles.title}>ВВЕДИТЕ НОМЕР ТЕЛЕФОНА В ФОРМАТЕ +7ХХХХХХХХХХ</div>
             <div className={styles.subtitle}></div>
             <div className={`${styles.input_container} ${styles.ic2}`}>
               <input ref={inputPhone}

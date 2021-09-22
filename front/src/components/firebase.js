@@ -1,4 +1,4 @@
-import firebase from 'firebase/app'; // if lomatsa delete app
+import firebase from 'firebase/app'; // if it started to creating some troubles - delete /app
 import 'firebase/auth';
 
 const config = {
