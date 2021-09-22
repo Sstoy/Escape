@@ -1,4 +1,6 @@
 import React, { useState } from 'react';
+import uuid from 'react-uuid';
+
 import Slide from '../Slide/Slide';
 import style from './styles.module.css'
 
@@ -35,7 +37,7 @@ function Slider(props) {
     <>
       <h1 className={style.h1}>Наша атмосфера</h1>
     <div className={style.container}>
-      {images.map((slide) => < Slide slideActive= {slideActive} setSlideActive ={setSlideActive} src ={slide.src} id={slide.id}/>)}
+      {images.map((slide) => < Slide  key={uuid()} slideActive= {slideActive} setSlideActive ={setSlideActive} src ={slide.src} id={slide.id}/>)}
     </div>
     </>
   );
