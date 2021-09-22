@@ -25,11 +25,11 @@
   height: 400px;
   margin: 0 auto;
   background: #fff;
-  border: 1px solid black;
-  text-shadow: 0 15px 60px rgba(0, 0, 0, .5);
+  border: 1px solid rgb(34, 34, 34);
 }
 
 .container .card .face {
+  color:cornsilk;
   position: absolute;
   bottom: 0;
   left: 0;
@@ -51,12 +51,9 @@
 }
 
 .container .card .face.face2 {
-  background: #111;
+  background: rgb(139, 134, 134);
   transition: .5s;
 }
-
- 
-
 
 input[type="submit"],
 input[type="reset"],

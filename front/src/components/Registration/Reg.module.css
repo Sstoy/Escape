@@ -112,6 +112,22 @@
   width: 100%;
 }
 
+.submitMini{
+  background-color: rebeccapurple;
+  border-radius: 12px;
+  border: 0;
+  box-sizing: border-box;
+  color: #eee;
+  cursor: pointer;
+  font-size: 14px;
+  height: 50px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  outline: 0;
+  text-align: center;
+  width: 20%;
+}
+
 .submit:active {
   background-color: #06b;
 }

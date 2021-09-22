@@ -1,19 +1,20 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
 import React from 'react';
-import './nav.css'
+import { Link } from 'react-router-dom';
+import styles from './Nav.module.css'
 import img1 from './logo.png'
 
 function Nav() {
   return (
-    <header className='nav'>
-      <img className='logo_img' src={img1} alt=""/>
+    <header className={styles.nav}>
+      <img className={styles.logo_img} src={img1} alt=""/>
       <nav>
         <ul>
-          <li><a href="/">Главная</a></li>
-          <li><a href="/clubs">Клубы</a></li>
-          <li><a href="/about">О нас</a></li>
-          <li><a href="/galery">Галерея</a></li>
-          <li><a href="/contacts">Контакты</a></li>
+          <li className={styles.li}><Link className={styles.a} to="/">Главная</Link></li>
+          <li className={styles.li}><Link className={styles.a} to="/clubs">Клубы</Link></li>
+          <li className={styles.li}><Link className={styles.a} to="/about">О нас</Link></li>
+          <li className={styles.li}><Link className={styles.a} to="/galery">Галерея</Link></li>
+          <li className={styles.li}><Link className={styles.a} to="/contacts">Контакты</Link></li>
         </ul>
       </nav>
     </header>

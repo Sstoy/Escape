@@ -1,23 +1,26 @@
 import React from 'react';
-import './Game.css'
-function Game(props) {
+import styles from './Game.module.css'
+function Game() {
   return (
-    <div className='gameblock'>
-    <div className='row'>
-       <div className="game dota"><span className='span'>Dota 2 <br /><span className='spanDesc'>играем на РС</span></span></div> 
-       <div className="game warface"><span className='span'>Warfaсe <br /><span className='spanDesc'>играем на РС</span></span></div>   
-       <div className="game gta"><span className='span'>GTA 5<br /><span className='spanDesc'>играем на РС</span></span></div>  
-       <div className="game csgo"><span className='span'>CS:GO <br /><span className='spanDesc'>играем на РС</span></span></div>  
-       <div className="game overwatch"><span className='span'>Overwatch<br /><span className='spanDesc'>играем на РС</span></span></div>               
+    <>
+    <h1 className={styles.h1_game}>У нас вы можете поиграть в:</h1>
+    <div className={styles.gameblock}>
+       <div className={styles.row}>
+       <div className={`${styles.game} ${styles.dota}`}><span className={styles.span}>Dota 2 <br /><span className={styles.spanDesc}>играем на РС</span></span></div> 
+       <div className={`${styles.game} ${styles.warface}`}><span className={styles.span}>Warfaсe <br /><span className={styles.spanDesc}>играем на РС</span></span></div>   
+       <div className={`${styles.game} ${styles.gta}`}><span className={styles.span}>GTA 5<br /><span className={styles.spanDesc}>играем на РС</span></span></div>  
+       <div className={`${styles.game} ${styles.csgo}`}><span className={styles.span}>CS:GO <br /><span className={styles.spanDesc}>играем на РС</span></span></div>  
+       <div className={`${styles.game} ${styles.overwatch}`}><span className={styles.span}>Overwatch<br /><span className={styles.spanDesc}>играем на РС</span></span></div>               
     </div>
-    <div className='row'>
-       <div className="game pubg"><span className='span'>Pubg<br /><span className='spanDesc'>играем на РС</span></span></div> 
-       <div className="game apex"><span className='span'>Apex<br /><span className='spanDesc'>играем на РС</span></span></div>   
-       <div className="game mortal"><span className='span'>Mortal<br /><span className='spanDesc'>играем на РС</span></span></div>  
-       <div className="game ufc"><span className='span'>UFC<br /><span className='spanDesc'>играем на РС</span></span></div>  
-       <div className="game fifa"><span className='span'>PES 2022<br /><span className='spanDesc'>играем на РС</span></span></div>               
+    <div className={styles.row}>
+       <div className={`${styles.game} ${styles.pubg}`}><span className={styles.span}>Pubg<br /><span className={styles.spanDesc}>играем на РС</span></span></div> 
+       <div className={`${styles.game} ${styles.apex}`}><span className={styles.span}>Apex<br /><span className={styles.spanDesc}>играем на РС</span></span></div>   
+       <div className={`${styles.game} ${styles.mortal}`}><span className={styles.span}>Mortal<br /><span className={styles.spanDesc}>играем на РС</span></span></div>  
+       <div className={`${styles.game} ${styles.ufc}`}><span className={styles.span}>UFC<br /><span className={styles.spanDesc}>играем на РС</span></span></div>  
+       <div className={`${styles.game} ${styles.fifa}`}><span className={styles.span}>PES 2022<br /><span className={styles.spanDesc}>играем на РС</span></span></div>               
     </div>
    </div>
+   </>
   );
 }
 

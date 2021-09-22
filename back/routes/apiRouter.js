@@ -1,6 +1,8 @@
 const router = require('express').Router();
 const parse = require('../parsers/parser');
-const { Club, Price, News, Computer } = require('../database/models');
+const {
+  Club, Price, News, User, Computer,
+} = require('../database/models');
 
 // eslint-disable-next-line consistent-return
 router.get('/news', async (req, res) => {
@@ -51,7 +53,7 @@ router.get('/clublist', async (req, res) => {
       attributes: ['id', 'name', 'address', 'phone', 'computers'],
       raw: true,
     });
-    res.json({ clubs });
+    res.json(clubs);
   } catch (error) {
     console.error(error);
   }
@@ -74,9 +76,36 @@ router.get('/prices', async (req, res) => {
       ],
       raw: true,
     });
-    res.json({ prices });
+    res.json(prices);
   } catch (error) {
     console.error(error);
+  }
+});
+
+router.post('/user', async (req, res) => {
+  const { userPhone } = req.body;
+  console.log(userPhone);
+  try {
+    const user = await User.findOne(
+      {
+        where: {
+          phone: userPhone,
+        },
+      },
+    );
+    console.log(user);
+    if (user) {
+      res.json({ message: false });
+    } else {
+      await User.create({
+        email: null,
+        phone: userPhone,
+      });
+      res.json({ message: true });
+    }
+  } catch (error) {
+    console.error(error);
+    res.json({ message: false, reason: 'нет связи с базой данных' });
   }
 });
 
