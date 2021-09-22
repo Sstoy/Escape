@@ -4,12 +4,18 @@
   flex-direction: column;
 }
 .runtext {
-  display: block;
-  margin: 0 1000px 0 auto;
+  display: flex;
+  align-self: center;
+  
  
 }
 .map_promo {
-  display: flex;
+  display:flex;
+  justify-content: space-around;
   align-self: stretch;
 }
 
+.news {
+  display:flex;
+  align-self: center;
+}

@@ -1,11 +1,11 @@
 import React from 'react';
 import Footer from '../Footer/Footer';
-import News from '../News/News';
 import Promo from '../Promo/Promo';
 import RunText from '../RunText/RunText';
 import YandexMap from '../YandexMap/YandexMap';
 
 import styles from './MainPage.module.css'
+import NewsList from '../NewsList/NewsList';
 
 function MainPage(props) {
   return (
@@ -14,10 +14,12 @@ function MainPage(props) {
       <RunText />
       </div>
       <div className={styles.map_promo}>
-      <YandexMap />
       <Promo />
+      <YandexMap />
       </div>
-      <News />
+      <div className={styles.news}>
+      <NewsList />
+      </div>
       <Footer />
     </div>
   );

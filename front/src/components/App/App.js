@@ -18,6 +18,7 @@ import YandexReview from "../YandexReview/YandexReview";
 import NavBurg from "../NavBurg/NavBurg";
 import ClubInfo from "../ClubInfo/ClubInfo";
 import LogoClub from "../LogoClub/LogoClub";
+import MainPage from "../MainPage/MainPage";
 
 function App() {
 
