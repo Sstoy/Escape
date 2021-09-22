@@ -10,6 +10,7 @@ function Registration() {
   const [message, setMessage] = useState(null)
 
   const handleBase = () => {
+
     const regexp = /[\+][7]\d{3}\d{3}\d{2}\d{2}/gm;
     // console.log(inputPhone.current.value)
     // console.log(inputPhone.current.value.match(regexp))
@@ -44,6 +45,7 @@ function Registration() {
               setMessage('Вы уже зарегистрированы')
             }
           })
+
         } else {
           console.log('dsklfdsjf')
           document.getElementById('invalidPhone').textContent = 'Неправильный номер телефона'

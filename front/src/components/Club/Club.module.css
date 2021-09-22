@@ -12,14 +12,24 @@
 }
 .phone {
   font-weight: 900;
-  color: #18bfef;
+  color: #00ffff;
 }
 .phone:hover {
+  color: #fff;
+}
+
+.hrefClub {
+  text-decoration: none;
+  color: #fff;
+}
+
+.hrefClub:hover {
+  text-decoration: none;
   color: #00ffff;
 }
 
 .hours {
-  color: rgb(43, 255, 0);
+  color: #00ffff;
 }
 
 .buttonFlex {
@@ -40,5 +50,5 @@
 }
 .buttonFlex button:hover { 
   color: #00ffff;
-  border: 2px solid #00ffff;
+  border: 1px solid #00ffff;
 }

@@ -1,0 +1,22 @@
+.container{
+  max-width: 800px;
+  margin: 0 auto;
+  color: white;
+  line-height: 1.5;
+  transform: translateY(10%);
+  max-height: 100%;
+}
+
+.article P { 
+  text-indent: 1.5em; /* Отступ первой строки */
+ }
+
+ .article h1 {
+   text-align: center;
+ }
+
+ .article img{
+   width: 100%;
+ }
+
+
