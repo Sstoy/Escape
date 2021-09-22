@@ -1,4 +1,4 @@
-import React, { useState, useSelector } from 'react';
+import React, { useState } from 'react';
 // подключение библиотеки yandex-map, на 22 строчке можно задать api-ключ
 import { YMaps, Map, Placemark, ZoomControl } from 'react-yandex-maps';
 import coords from './coords.json';
@@ -53,7 +53,6 @@ function YandexMap({ key }) {
               <>
                 <Placemark
                   key={coordinates.id}
-                  data-id={coordinates.id}
                   geometry={coordinates.coords}
                   options={{
                     iconLayout: "default#image",
