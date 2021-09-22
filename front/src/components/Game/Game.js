@@ -17,7 +17,7 @@ function Game() {
        <div className={`${styles.game} ${styles.games} ${styles.apex}`}><span className={styles.span}>Apex</span></div>   
        <div className={`${styles.game} ${styles.games} ${styles.mortal}`}><span className={styles.span}>Mortal</span></div>  
        <div className={`${styles.game} ${styles.games} ${styles.ufc}`}><span className={styles.span}>UFC</span></div>  
-       <div className={`${styles.game} ${styles.games} ${styles.fifa}`}><span className={styles.span}>FIFA 2021</span></div>               
+       <div className={`${styles.game} ${styles.games} ${styles.fifa}`}><span className={styles.span}>FIFA21</span></div>               
     </div>
    </div>
    </>

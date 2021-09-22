@@ -5,8 +5,8 @@
 }
 .span {
   font-size: 30px;
-  font-weight: 900;
-  color: rgb(220, 229, 238);
+  font-weight: 400;
+  color: rgba(255, 255, 255, 0.596);
 }
 .h1_game {
   text-align: center;
@@ -47,7 +47,7 @@
   background-image: url('https://youplay24.ru/wp-content/uploads/2019/08/dota_youplay.jpg');  
 }
 .dota:hover { 
-  background-image: linear-gradient(210deg , rgba(235, 11, 11, 0.137) 25%, #bd2f2f 100%), url('https://youplay24.ru/wp-content/uploads/2019/08/dota_youplay.jpg');
+  background-image: linear-gradient(210deg , rgba(235, 11, 11, 0.137) 25%, #bd2f2f 100%), url('https://svirtus.cdnvideo.ru/P8Lbr3URuFyD3bimJhYURlQk6vQ=/0x0:3840x2160/filters:quality(100)/https://hb.bizmrg.com/cybersportru-media/4c/4ccd56e6779eed018865848d746b0602.png?m=86ddc934dc80d4529b852128ac0dde4c');
   opacity: 0.9;
   -webkit-transform: scale(1.1);
   -moz-transform: scale(1.1);
@@ -68,7 +68,7 @@
   background-image: url('https://youplay24.ru/wp-content/uploads/2021/04/dcxkd39-dc94cfed-9c60-437f-883c-365be7cb5e98.jpeg');
 }
 .warface:hover {
-  background-image: linear-gradient(210deg , rgba(235, 11, 11, 0.137) 25%, #8f4f07 100%), url('https://youplay24.ru/wp-content/uploads/2021/04/dcxkd39-dc94cfed-9c60-437f-883c-365be7cb5e98.jpeg');
+  background-image: linear-gradient(210deg , rgba(235, 11, 11, 0.137) 25%, #8f4f07 100%), url('https://cdn2.unrealengine.com/egs-warface-allodsteam-g2-00-1920x1080-1693a44651e2.jpg');
   opacity: 0.9;
   -webkit-transform: scale(1.1);
   -moz-transform: scale(1.1);
@@ -87,7 +87,7 @@
   background-image: url('https://youplay24.ru/wp-content/uploads/2019/08/gta_youplay.jpg');
 }
 .gta:hover {
-  background-image: linear-gradient(210deg , rgba(235, 11, 11, 0.137) 25%, #0d8b22 100%), url('https://youplay24.ru/wp-content/uploads/2019/08/gta_youplay.jpg');
+  background-image: linear-gradient(210deg , rgba(235, 11, 11, 0.137) 25%, #0d8b22 100%), url('https://highandlow.ru/content/images/2021/05/XU19809xltkBZQIIKpWT1hrzEhYVP7xjYWSxHCI7.jpg');
   opacity: 0.9;
   -webkit-transform: scale(1.1);
   -moz-transform: scale(1.1);
@@ -125,7 +125,7 @@
   background-image: url('https://youplay24.ru/wp-content/uploads/2019/10/youplay_overwatch.jpg');
 }
 .overwatch:hover {
-  background-image: linear-gradient(210deg , rgba(235, 11, 11, 0.137) 25%, #ffd900 100%), url('https://youplay24.ru/wp-content/uploads/2019/10/youplay_overwatch.jpg');
+  background-image: linear-gradient(210deg , rgba(235, 11, 11, 0.137) 25%, #ffd900 100%), url('https://img.championat.com/news/big/c/h/v-overwatch-startovali-letnie-igry_16268582771319656555.jpg');
   opacity: 0.9;
   -webkit-transform: scale(1.1);
   -moz-transform: scale(1.1);
@@ -144,7 +144,7 @@
   background-image: url('https://youplay24.ru/wp-content/uploads/2019/07/pubg_youplay.jpg');
 }
 .pubg:hover {
-  background-image: linear-gradient(210deg , rgba(235, 11, 11, 0.137) 25%, #b1b1b1 100%), url('https://youplay24.ru/wp-content/uploads/2019/07/pubg_youplay.jpg');
+  background-image: linear-gradient(210deg , rgba(235, 11, 11, 0.137) 25%, #b1b1b1 100%), url('https://i.pinimg.com/originals/d1/c7/0f/d1c70f5971d555a366595e916add559e.jpg');
   opacity: 0.9;
   -webkit-transform: scale(1.1);
   -moz-transform: scale(1.1);
@@ -182,7 +182,7 @@
   background-image: url('https://youplay24.ru/wp-content/uploads/2019/08/mortalkombat_youplay.jpg');
 }
 .mortal:hover {
-  background-image: linear-gradient(210deg , rgba(235, 11, 11, 0.137) 25%, #f5d000 100%), url('https://youplay24.ru/wp-content/uploads/2019/08/mortalkombat_youplay.jpg');
+  background-image: linear-gradient(210deg , rgba(235, 11, 11, 0.137) 25%, #f5d000 100%), url('https://i.pinimg.com/originals/29/d8/67/29d8679da901cd33ea0e06a4fe4790a9.jpg');
   opacity: 0.9;
   -webkit-transform: scale(1.1);
   -moz-transform: scale(1.1);
@@ -201,7 +201,7 @@
   background-image: url('https://pbs.twimg.com/media/DUOTescVAAASeDn.jpg');
 }
 .fifa:hover {
-  background-image: linear-gradient(210deg , rgba(235, 11, 11, 0.137) 25%, #f0f0f0 100%), url('https://pbs.twimg.com/media/DUOTescVAAASeDn.jpg');
+  background-image: linear-gradient(210deg , rgba(235, 11, 11, 0.137) 25%, #f0f0f0 100%), url('https://www.gamerevolution.com/assets/uploads/2021/08/fifa-21-messi-psg-fut-ultimate-team-1280x720.jpg');
   opacity: 0.9;
   -webkit-transform: scale(1.1);
   -moz-transform: scale(1.1);
