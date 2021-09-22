@@ -1,7 +1,8 @@
-
 footer, section {
 	display: block;
-margin-top: 50px;
+  margin-top: 50px;
+  background: rgba(153, 80, 202, 0.2);
+
 }
 
 .footer ol, ul {
