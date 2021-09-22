@@ -92,7 +92,7 @@ function Footer(props) {
 
           <footer id={styles.footerMini}>
             <div className={styles.inner}>
-              <button type="button" onClick={redirectToYandexReviews} className={styles.primary} >Отзывы на Яндекс</button>
+              <input type="submit" onClick={redirectToYandexReviews} className={styles.primary} value="Отзывы на Яндекс"/>
               <ul className={styles.copyright}>
                 <li>&copy; Made by</li><li>Elbrus Team</li>
               </ul>

@@ -1,4 +1,3 @@
-import styles from './Modal.module.css';
 import { useParams } from 'react-router'
 import { useSelector } from 'react-redux'
 
@@ -10,8 +9,8 @@ function ModalClub({ club }) {
   const currentClub = clubs.find(el => el.id === +id)
 
   return (
-      <div className={styles.modal}>
-        <div className={styles.modalDialog}>
+      <div >
+        <div >
           <h2>
             {currentClub.name}
           </h2>
