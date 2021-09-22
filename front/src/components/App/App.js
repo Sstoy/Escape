@@ -11,7 +11,7 @@ import store from "../../redux/store";
 import Nav from '../Nav/Nav'
 import ClubList from '../ClubList/ClubList'
 import Registration from '../Registration/Registration'
-import Logo from "../Logo/Logo";
+// import Logo from "../Logo/Logo";
 import RunText from "../RunText/RunText";
 import NewsList from "../NewsList/NewsList";
 
@@ -34,7 +34,7 @@ function App() {
         <Switch>
           <Route path="/" exact>            
               <RunText />
-              <Logo />
+              {/* <Logo /> */}
               <YandexMap />
               <NewsList />
               <Promo />
