@@ -8,47 +8,50 @@ function Registration() {
   const inputPhone = useRef(null)
   const [modal, setModal] = useState(false)
   const [message, setMessage] = useState(null)
-  const [code, setCode] = useState('');
-  // const [showCodeInput, setShowCodeInput] = useState(false);
-
-
-  const updateCode = (event) => {
-    setCode(event.target.value);
-  }
 
   const handleBase = () => {
-    fetch('http://localhost:5000/api/user', {
-      method: 'POST',
-      body: JSON.stringify({ userPhone: inputPhone.current.value }),
-      headers: { 'Content-Type': 'application/json' },
-    })
-      .then(res => res.json())
-      .then(data => {
-        console.log(data)
-        if (data.message) {
-          let recaptcha = new firebase.auth.RecaptchaVerifier('recaptcha-container');
-          let number = inputPhone.current.value
-          setMessage(null)
-          firebase
-            .auth()
-            .signInWithPhoneNumber(number, recaptcha)
-            .then(function (e) {
-              // setShowCodeInput(true);
-              console.log('YandexMap(function(e))', e)
-              // let code = prompt('Enter your otp', '') //сделать не промпт, а инпут. как?????????????
-              if (code == null) return;
-              e.confirm(code).then(function (result) {
-                console.log(result.user, 'user')
-                setModal(true)
-              }).catch((error) => {
-                console.log(error)
-              })
-            })
+    const regexp = /[\+][7]\d{3}\d{3}\d{2}\d{2}/gm;
+    console.log(inputPhone.current.value)
+    console.log(inputPhone.current.value.match(regexp))
+    if (inputPhone.current.value.match(regexp)) {
+        fetch('http://localhost:5000/api/user', {
+          method: 'POST',
+          body: JSON.stringify({ userPhone: inputPhone.current.value }),
+          headers: { 'Content-Type': 'application/json' },
+        })
+          .then(res => res.json())
+          .then(data => {
+            console.log(data)
+            if (data.message) {
+              let recaptcha = new firebase.auth.RecaptchaVerifier('recaptcha-container');
+              let number = inputPhone.current.value
+              setMessage(null)
+              firebase
+                .auth()
+                .signInWithPhoneNumber(number, recaptcha)
+                .then(function (e) {
+                  console.log('YandexMap(function(e))', e)
+                  let code = prompt('Enter your otp', '')
+                  if (code == null) return;
+                  e.confirm(code).then(function (result) {
+                    console.log(result.user, 'user')
+                    setModal(true)
+                  }).catch((error) => {
+                    console.log(error)
+                  })
+                })
+            } else {
+              setMessage('Вы уже зарегистрированы')
+            }
+          })
         } else {
-          setMessage('Вы уже зарегистрированы')
+          console.log('dsklfdsjf')
+          document.getElementById('invalidPhone').textContent = 'Неправильный номер телефона'
         }
-      })
   }
+    
+
+
 
   return (
     <>
@@ -63,27 +66,17 @@ function Registration() {
                 className={styles.input}
                 type="tel"
                 placeholder=" "
-                pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" />
+                // pattern="/[\+][7]\d{3}\d{3}\d{2}\d{3}/gm"
+                reqired="true"
+              />
+
               <div className={styles.cut}></div>
               <label htmlFor="phone" className={styles.placeholder}>Телефон</label>
             </div><br />
             <div id="recaptcha-container"></div>
             <span>{message ? <Fail /> : ''}</span>
+            <span id="invalidPhone"></span>
             <button type="text" onClick={handleBase} className={styles.submit}>Отправить</button>
-            {/* {
-              showCodeInput && ( */}
-            <div className={`${styles.input_container} ${styles.ic2}`}>
-              <form>
-                <input
-                  className={styles.input}
-                  onChange={updateCode}
-                  value={code}
-                  placeholder="После проверки введите СМС"
-                />
-                <button className={styles.submitMini}>OK</button>
-              </form>
-            </div>
-            {/* )} */}
           </div>
 
         </>
