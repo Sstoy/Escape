@@ -2,7 +2,7 @@ import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 
 import Club from '../Club/Club';
-import './clubs.css'
+import styles from './ClubList.module.css'
 
 function ClubList() {
   
@@ -20,7 +20,7 @@ function ClubList() {
   }, [clubs.length, dispatch])
 
   return (
-    <div className="container">
+    <div className={styles.container}>
       {clubs?.map((club) => <Club key={club.id} id={club.id} club={club} />)}
     </div>
   );

@@ -5,7 +5,8 @@
 }
 .span {
   font-size: 30px;
-  color: aliceblue;
+  font-weight: 900;
+  color: rgb(220, 229, 238);
 }
 .h1_game {
   text-align: center;
@@ -17,21 +18,25 @@
   flex-direction: row;
 }
 .gameblock{
-
-  flex-direction: row;
-  height: 1400px;
-  width: 1800px;
   display: flex;
+  flex-direction: row;
+  /* height: 100vh; */
+  max-width: 200vh;
   justify-content: flex-start;
   flex-direction: column;
   align-items: center;
-  flex-wrap: wrap;
+  flex-wrap: wrap; 
 }
 .game {
   border-radius: 15px;
+  margin-right: 10px;
   text-align: center;
-  width: 250px;
-  height: 350px;  
+  width: 200px;
+  height: 300px;  
+}
+.games {
+  /* opacity: 0.7; */
+
 }
 .dota {  
   -webkit-transition: all 0.5s ease;
@@ -39,7 +44,7 @@
   transition: all 0.5s ease; 
   background-position: center center;
   background-size: cover;
-  background-image: url('https://youplay24.ru/wp-content/uploads/2019/08/dota_youplay.jpg');
+  background-image: url('https://youplay24.ru/wp-content/uploads/2019/08/dota_youplay.jpg');  
 }
 .dota:hover { 
   background-image: linear-gradient(210deg , rgba(235, 11, 11, 0.137) 25%, #bd2f2f 100%), url('https://youplay24.ru/wp-content/uploads/2019/08/dota_youplay.jpg');
@@ -98,7 +103,7 @@
   transition: all 0.5s ease;
   background-position: center center;
   background-size: cover;
-  background-image: url('https://youplay24.ru/wp-content/uploads/2019/10/counter-strike_youplay.jpg');
+  background-image: url('https://hb.bizmrg.com/cybersportru-media/35/358f4c9c19d92de777e3326875b2de31.jpg');
 }
 .csgo:hover {
   background-image: linear-gradient(210deg , rgba(235, 11, 11, 0.137) 25%, #bea82a 100%), url('https://youplay24.ru/wp-content/uploads/2019/10/counter-strike_youplay.jpg');
@@ -155,7 +160,7 @@
   transition: all 0.5s ease;
   background-position: center center;
   background-size: cover;
-  background-image: url('https://youplay24.ru/wp-content/uploads/2019/07/Alex-Legends.jpg');
+  background-image: url('https://gmedia.playstation.com/is/image/SIEPDC/apex-legends-season-10-screen-10-ps4-en-27july21?$native$');
 }
 .apex:hover {
   background-image: linear-gradient(210deg , rgba(235, 11, 11, 0.137) 25%, #292929 100%), url('https://youplay24.ru/wp-content/uploads/2019/07/Alex-Legends.jpg');
@@ -212,7 +217,7 @@
   transition: all 0.5s ease;
   background-position: center center;
   background-size: cover;
-  background-image: url('https://clicktoplay.ru/uploads/posts/2020-12/1609165992_fc4.jpg');
+  background-image: url('https://www.a11.ru/upload/resize_cache/iblock/31a/420_420_0/31aea7c6b5e3bd4121528412110ee711.png');
 }
 .ufc:hover {
   background-image: linear-gradient(210deg , rgba(235, 11, 11, 0.137) 25%, #f51d00 100%), url('https://clicktoplay.ru/uploads/posts/2020-12/1609165992_fc4.jpg');

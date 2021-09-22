@@ -1,4 +1,4 @@
-const { prices } = require('../SeedArray');
+const { prices } = require('./SeedArray');
 
 module.exports = {
   up: async (queryInterface, Sequelize) => {

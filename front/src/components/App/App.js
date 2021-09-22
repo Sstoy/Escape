@@ -8,7 +8,7 @@ import store from "../../redux/store";
 import Nav from '../LogoClub/LogoClub'
 import ClubList from '../ClubList/ClubList'
 import Registration from '../Registration/Registration'
-import Logo from "../Logo/Logo";
+// import Logo from "../Logo/Logo";
 import RunText from "../RunText/RunText";
 import NewsList from "../NewsList/NewsList";
 import Game from "../Game/Game";
@@ -19,6 +19,7 @@ import NavBurg from "../NavBurg/NavBurg";
 import ClubInfo from "../ClubInfo/ClubInfo";
 import LogoClub from "../LogoClub/LogoClub";
 import Quest from "../Quest/Quest";
+import MainPage from "../MainPage/MainPage";
 
 function App() {
 
@@ -30,12 +31,7 @@ function App() {
         <NavBurg/>     
         <Switch>
           <Route path="/" exact>            
-              <RunText />
-              {/* <Logo /> */}
-              <YandexMap />
-              <NewsList />
-              <Promo />
-              <Footer />         
+              <MainPage />        
           </Route>
 
           <Route path="/clubs" exact>

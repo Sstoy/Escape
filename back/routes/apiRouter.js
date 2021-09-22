@@ -1,5 +1,7 @@
 const router = require('express').Router();
 const parse = require('../parsers/parser');
+
+const sendDataToMail = require('../mailer/mailer');
 const {
   Club, Price, News, User, Computer,
 } = require('../database/models');
@@ -128,6 +130,18 @@ router.get('/computers', async (req, res) => {
     res.json(computers);
   } catch (error) {
     console.error(error);
+  }
+});
+
+router.post('/message', async (req, res) => {
+  const { email, message, name } = req.body;
+  // console.log(req.body);
+  try {
+    await sendDataToMail(email, message, name);
+  } catch (error) {
+    console.log(error);
+    console.error(error);
+    res.status(404).send(error);
   }
 });
 
