@@ -10,8 +10,6 @@ function ModalClub({ club }) {
   const currentClub = clubs.find(el => el.id === +id)
 
   return (
-
-
       <div className={styles.modal}>
         <div className={styles.modalDialog}>
           <h2>
@@ -25,7 +23,6 @@ function ModalClub({ club }) {
           <button>Компьютеры</button>
         </div>
       </div>
-
   );
 }
 

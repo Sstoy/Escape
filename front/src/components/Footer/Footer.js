@@ -35,8 +35,8 @@ function Footer(props) {
                     </div>
                   </div>
                   <ul className={styles.actions}>
-                    <li><input type="submit" value="Отправить сообщение" className={styles.primary} /></li>
-                    <li><input type="reset" value="Отменить" style={{ "color": "white" }} /></li>
+                    <li><input type="submit" value="Отправить сообщение" className={styles.button} style={{ "color": "white" }} /></li>
+                    <li><input type="reset" value="Отменить" className={styles.button} style={{ "color": "white" }} /></li>
                   </ul>
                 </form>
               </section>
@@ -76,7 +76,7 @@ function Footer(props) {
           <footer id={styles.footerMini}>
             <div className={styles.inner}>
 
-              <button type="button" onClick={redirectToYandexReviews} style={{ "color": "white" }}>Отзывы на Яндекс</button>
+              <button type="button" onClick={redirectToYandexReviews} className={styles.button} style={{ "color": "white" }}>Отзывы на Яндекс</button>
               <ul className={styles.copyright}>
                 <li>&copy; Made by</li><li>Elbrus Team</li>
               </ul>
