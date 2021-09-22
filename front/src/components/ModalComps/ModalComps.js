@@ -1,6 +1,4 @@
-import styles from './Modal.module.css';
-import React, { useEffect } from 'react';
-import { useDispatch } from 'react-redux';
+import React from 'react';
 
 function ModalComps({ active, setActive, computers }) {
   return (
@@ -9,7 +7,11 @@ function ModalComps({ active, setActive, computers }) {
         {computers?.map((el) => {
           return <div className="prices">
             <div className="price">
-              <p>Зал: {el.room}</p>
+              {
+                el.room === 'common' ?              
+                <p>Общий зал:</p> : 
+                <p>VIP зал:</p> 
+              }
               <p>Видеокарта: {el.graphics}</p>
               <p>Процессор: {el.cpu}</p>
               <p>Монитор: {el.monitor}</p>
