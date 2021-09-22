@@ -1,9 +1,36 @@
 @import url(https://fonts.googleapis.com/css?family=Montserrat:700);
 body{
+  /* margin:0; */
+  background:hsla(0, 5%, 5%, 1);
+
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-image: url('https://phonoteka.org/uploads/posts/2021-05/1620162517_3-phonoteka_org-p-fon-dlya-strima-komnata-3.jpg');
 }
-svg{
-  width:50%;
+
+.neon {
+  color: #fff;
+  text-shadow:
+    0 0 5px #fff,
+    0 0 10px #fff,
+    0 0 20px #fff,
+    0 0 40px #0ff,
+    0 0 80px #0ff,
+    0 0 90px #0ff,
+    0 0 100px #0ff,
+    0 0 150px #0ff;
+}
+/* general styling */
+:root {
+  font-size: 20px;
+}
+
+.container {
+  margin: 0 auto;
+}
+
+h1 {
+  font-weight: 400;
+  text-align: center;
+  text-transform: uppercase;
 }
