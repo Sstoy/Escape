@@ -9,7 +9,7 @@ function Registration() {
   const [modal, setModal] = useState(false)
   const [message, setMessage] = useState(null)
   const [code, setCode] = useState('');
-  const [showCodeInput, setShowCodeInput] = useState(false);
+  // const [showCodeInput, setShowCodeInput] = useState(false);
 
 
   const updateCode = (event) => {
@@ -33,8 +33,8 @@ function Registration() {
             .auth()
             .signInWithPhoneNumber(number, recaptcha)
             .then(function (e) {
-              setShowCodeInput(true);
-              console.log(e)
+              // setShowCodeInput(true);
+              console.log('YandexMap(function(e))', e)
               // let code = prompt('Enter your otp', '') //сделать не промпт, а инпут. как?????????????
               if (code == null) return;
               e.confirm(code).then(function (result) {
@@ -66,24 +66,24 @@ function Registration() {
                 pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" />
               <div className={styles.cut}></div>
               <label htmlFor="phone" className={styles.placeholder}>Телефон</label>
-            </div><br/>
+            </div><br />
             <div id="recaptcha-container"></div>
             <span>{message ? <Fail /> : ''}</span>
             <button type="text" onClick={handleBase} className={styles.submit}>Отправить</button>
             {/* {
               showCodeInput && ( */}
-                <div className={`${styles.input_container} ${styles.ic2}`}>
-                  <form>
-                    <input
-                      className={styles.input}
-                      onChange={updateCode}
-                      value={code}
-                      placeholder="После проверки введите СМС"
-                    />
-                    <button className={styles.submitMini}>OK</button>
-                  </form>
-                </div>
-              {/* )} */}
+            <div className={`${styles.input_container} ${styles.ic2}`}>
+              <form>
+                <input
+                  className={styles.input}
+                  onChange={updateCode}
+                  value={code}
+                  placeholder="После проверки введите СМС"
+                />
+                <button className={styles.submitMini}>OK</button>
+              </form>
+            </div>
+            {/* )} */}
           </div>
 
         </>
