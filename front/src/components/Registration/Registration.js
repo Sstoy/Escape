@@ -8,13 +8,6 @@ function Registration() {
   const inputPhone = useRef(null)
   const [modal, setModal] = useState(false)
   const [message, setMessage] = useState(null)
-  const [code, setCode] = useState('');
-  const [showCodeInput, setShowCodeInput] = useState(false);
-
-
-  const updateCode = (event) => {
-    setCode(event.target.value);
-  }
 
   const handleBase = () => {
     fetch('http://localhost:5000/api/user', {
@@ -33,9 +26,8 @@ function Registration() {
             .auth()
             .signInWithPhoneNumber(number, recaptcha)
             .then(function (e) {
-              setShowCodeInput(true);
-              console.log(e)
-              // let code = prompt('Enter your otp', '') //сделать не промпт, а инпут. как?????????????
+
+              let code = prompt('Enter your otp', '') 
               if (code == null) return;
               e.confirm(code).then(function (result) {
                 console.log(result.user, 'user')
@@ -70,20 +62,6 @@ function Registration() {
             <div id="recaptcha-container"></div>
             <span>{message ? <Fail /> : ''}</span>
             <button type="text" onClick={handleBase} className={styles.submit}>Отправить</button>
-            {/* {
-              showCodeInput && ( */}
-                <div className={`${styles.input_container} ${styles.ic2}`}>
-                  <form>
-                    <input
-                      className={styles.input}
-                      onChange={updateCode}
-                      value={code}
-                      placeholder="После проверки введите СМС"
-                    />
-                    <button className={styles.submitMini}>OK</button>
-                  </form>
-                </div>
-              {/* )} */}
           </div>
 
         </>

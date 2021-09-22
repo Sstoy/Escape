@@ -1,5 +1,7 @@
 footer, section {
-	display: block;}
+	display: block;
+margin-top: 50px;
+}
 
 .footer ol, ul {
 	list-style: none;
