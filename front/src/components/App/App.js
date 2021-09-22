@@ -17,15 +17,27 @@ import Promo from '../Promo/Promo';
 import YandexReview from "../YandexReview/YandexReview";
 import NavBurg from "../NavBurg/NavBurg";
 import ClubInfo from "../ClubInfo/ClubInfo";
+
+
+import ClubNumberOne from "../ClubNumberOne/ClubNumberOne";
+import Blog from "../Blog/Blog";
+import ArticleOne from "../BlogArticles/ArticleOne";
+import ArticleTwo from "../BlogArticles/ArticleTwo";
+import ArticleThree from "../BlogArticles/ArticleThree";
+import OurComputers from "../OurComputers/OurComputers";
+import About from "../About/About";
+
 import LogoClub from "../LogoClub/LogoClub";
 import Quest from "../Quest/Quest";
 import MainPage from "../MainPage/MainPage";
+
 
 function App() {
 
   return (
     <Provider store={store}>
       <Router>
+
         <Loader />  
         <LogoClub/> 
         <NavBurg/>     
@@ -37,6 +49,7 @@ function App() {
           <Route path="/clubs" exact>
               <ClubList />
               <Game />                            
+
           </Route>
 
           <Route path="/galery" exact>
@@ -52,8 +65,31 @@ function App() {
             <Footer />
           </Route>
 
+          <Route path="/about" exact>
+            <ClubNumberOne />
+            <Blog />
+            <OurComputers />
+            <About/>
+            <Footer />
+          </Route>
+
           <Route path="/clubs/:id" exact>
             <ClubInfo />
+          </Route>
+
+          <Route path="/blog/1" exact>
+            <ArticleOne />
+            <Footer />
+          </Route>
+
+          <Route path="/blog/2" exact>
+            <ArticleTwo />
+            <Footer />
+          </Route>
+
+          <Route path="/blog/3" exact>
+            <ArticleThree/>
+            <Footer />
           </Route>
 
           <Route exact path="/register">
@@ -63,9 +99,7 @@ function App() {
         </Switch>
       </Router>
     </Provider>
-
   );
-
 }
 
 export default App
