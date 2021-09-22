@@ -40,8 +40,8 @@ function YandexMap() {
       {/* <YMaps query={{ apikey: '27544797-3131-4759-9f4b-54f17c827eb2&lang=ru_RU', }} version={"2.1"}> */}
       <YMaps>
         <div className='mapContainer'>
-          <Map state={mapState} width='40%'
-            height='450px' >
+          <Map state={mapState} width='35em'
+            height='27em' >
             <ZoomControl options={{ float: 'left' }} />
             <Placemark geometry={[lat, lng]} />
 
