@@ -1,6 +1,7 @@
 const express = require('express');
 const session = require('express-session');
 const morgan = require('morgan');
+const path = require('path');
 const FileStore = require('session-file-store')(session);
 const cors = require('cors');
 const apiRouter = require('./routes/apiRouter');
@@ -30,6 +31,8 @@ const sessionConfig = {
 };
 
 app.use(session(sessionConfig));
+
+app.use(express.static(path.join(__dirname, 'public')));
 
 app.use(morgan('dev'));
 

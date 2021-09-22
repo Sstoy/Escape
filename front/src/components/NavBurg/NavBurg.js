@@ -7,7 +7,7 @@ function NavBurg() {
   return ( 
     <div className ='menunav'>
       <input type="checkbox" id="active"/>
-      <label for="active" className='menu-btn'><i className="fas fa-bars"></i></label>
+      <label htmlFor="active" className='menu-btn'><i className="fas fa-bars"></i></label>
       <div className='wrapper'>
         <ul>
           <li><Link  to="/">Главная</Link></li>
