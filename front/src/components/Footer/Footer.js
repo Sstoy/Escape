@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useRef } from 'react';
 import styles from './Footer.module.css'
 import { useHistory } from 'react-router-dom'
 import { faHome, faPhone, faEnvelope } from "@fortawesome/free-solid-svg-icons";
@@ -7,7 +7,25 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 function Footer(props) {
 
   const history = useHistory();
+  const messageInput = useRef(null);
+  const emailInput = useRef(null);
+  const nameInput = useRef(null)
 
+  const sendMessage =(event) => {
+    event.preventDefault();
+    fetch('http://localhost:5000/api/message', {
+          method: 'POST',
+          body: JSON.stringify({
+             email: emailInput.current.value,
+             message: messageInput.current.value,
+             name: nameInput.current.value,
+            }),
+          headers: { 'Content-Type': 'application/json' },
+        });
+        emailInput.current.value = '';
+        messageInput.current.value = '';
+        nameInput.current.value = '';
+  }
   const redirectToYandexReviews = () => {
     history.push('/yandexreview');
   }
@@ -23,19 +41,21 @@ function Footer(props) {
                   <div className={styles.fields}>
                     <div className={`${styles.field} ${styles.half}`}>
                       <label htmlFor="name">Ваше имя</label>
-                      <input type="text" name="name" id="name" />
+                      <input ref={nameInput} type="text" name="name" id="name" />
                     </div>
                     <div className={`${styles.field} ${styles.half}`}>
                       <label htmlFor="email">Ваш email</label>
-                      <input type="text" name="email" id="email" />
+                      <input ref={emailInput} type="text" name="email" id="email" />
                     </div>
                     <div className={styles.field}>
                       <label htmlFor="message">Оставьте сообщение</label>
-                      <textarea name="message" id="message" rows="6"></textarea>
+                      <textarea ref={messageInput} name="message" id="message" rows="6"></textarea>
                     </div>
                   </div>
                   <ul className={styles.actions}>
+
                     <li><input type="submit" value="Отправить сообщение" className={styles.primary} /></li>
+                    <li><input onClick={sendMessage} type="submit" value="Отправить сообщение" className={styles.primary} /></li>
                   </ul>
                 </form>
               </section>
@@ -74,8 +94,7 @@ function Footer(props) {
 
           <footer id={styles.footerMini}>
             <div className={styles.inner}>
-
-              <button className={styles.primary} type="button" onClick={redirectToYandexReviews} >Отзывы на Яндекс</button>
+              <button type="button" onClick={redirectToYandexReviews} className={styles.primary} >Отзывы на Яндекс</button>
               <ul className={styles.copyright}>
                 <li>&copy; Made by</li><li>Elbrus Team</li>
               </ul>
