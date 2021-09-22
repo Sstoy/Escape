@@ -40,8 +40,7 @@ function App() {
 
           <Route path="/clubs" exact>
               <ClubList />
-              <Game />  
-              <Quest/>                
+              <Game />                            
           </Route>
 
           <Route path="/galery" exact>
