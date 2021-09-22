@@ -30,8 +30,9 @@ function ClubInfo(props) {
       <div className="face face1">
         <div className="content">
           <h2>
-            {club[0]?.name}
+            
           </h2>
+          <img src={`http://localhost:5000/club-imgs/${id}.jpeg`} alt="" />
           <p>{club[0]?.address}</p>
           <a href={`tel:${club[0]?.phone}`}>{club[0]?.phone}</a>
           <p>{club[0]?.computers} игровых PC</p>
@@ -68,7 +69,8 @@ function ClubInfo(props) {
           }
         </div>
       </div>
-    </div>
+    </div> 
+    // </>
   );
 }
 
