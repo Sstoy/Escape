@@ -1,6 +1,7 @@
 footer,
 section {
   display: block;
+  background: rgba(153, 80, 202, 0.2);
 }
 
 .footer ol,
