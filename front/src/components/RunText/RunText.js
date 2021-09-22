@@ -3,8 +3,8 @@ import './runText.css'
 
 function RunText(props) {
   return (
-    <div class="container">
-      <h1 class="neon">Сеть компьютерных клубов Escape</h1>
+    <div className="container">
+      <h1 className="neon">Сеть компьютерных клубов Escape</h1>
     </div>
   );
 }
