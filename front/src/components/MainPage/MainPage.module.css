@@ -1,0 +1,15 @@
+.mainpage {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+.runtext {
+  display: block;
+  margin: 0 1000px 0 auto;
+ 
+}
+.map_promo {
+  display: flex;
+  align-self: stretch;
+}
+
