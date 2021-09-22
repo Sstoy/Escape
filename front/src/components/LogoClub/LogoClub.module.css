@@ -1,0 +1,30 @@
+.logo_img{
+  opacity: .4;
+  height: 90px;
+  margin-top: 10px;
+  margin-left: 40px;
+}
+.logo_img:hover{
+  opacity: 1;
+}
+
+
+header * {
+  display: inline;
+}
+
+.li {
+  margin: 20px;
+}
+
+.a {
+  color: white;
+  text-decoration: none;
+  font-size: 25px;
+}
+.a:hover {
+color: rgb(146, 65, 221);
+}
+.a:active {
+  color: white;
+}

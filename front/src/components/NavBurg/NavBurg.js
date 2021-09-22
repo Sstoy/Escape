@@ -1,22 +1,24 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import './NavBurg.css'
 
 function NavBurg() {
-  return (   
+
+  return ( 
     <div className ='menunav'>
       <input type="checkbox" id="active"/>
-      <label for="active" className="menu-btn"><i className="fas fa-bars"></i></label>
-      <div className="wrapper">
+      <label for="active" className='menu-btn'><i className="fas fa-bars"></i></label>
+      <div className='wrapper'>
         <ul>
-      <li><a href="#">Home</a></li>
-      <li><a href="#">About</a></li>
-      <li><a href="#">Services</a></li>
-      <li><a href="#">Gallery</a></li>
-      <li><a href="#">Feedback</a></li>
+          <li><Link  to="/">Главная</Link></li>
+          <li><Link to="/clubs">Клубы</Link></li>
+          <li><Link to="/about">О нас</Link></li>
+          <li><Link to="/galery">Галерея</Link></li>
+          <li><Link to="/contacts">Контакты</Link></li>
       </ul>
       </div>
-      <div className="content">
-            <div className="title">
+    <div className="content">
+        <div className="title">
     </div>
       <p>
       </p>

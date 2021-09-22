@@ -5,7 +5,7 @@ import Footer from "../Footer/Footer";
 import { Provider } from "react-redux"
 import YandexMap from "../YandexMap/YandexMap";
 import store from "../../redux/store";
-import Nav from '../Nav/Nav'
+import Nav from '../LogoClub/LogoClub'
 import ClubList from '../ClubList/ClubList'
 import Registration from '../Registration/Registration'
 import Logo from "../Logo/Logo";
@@ -17,17 +17,16 @@ import Promo from '../Promo/Promo';
 import YandexReview from "../YandexReview/YandexReview";
 import NavBurg from "../NavBurg/NavBurg";
 import ClubInfo from "../ClubInfo/ClubInfo";
-
-
+import LogoClub from "../LogoClub/LogoClub";
 
 function App() {
 
   return (
     <Provider store={store}>
       <Router>
-        <Loader />   
-        <NavBurg/>
-        {/* <Nav /> */}
+        <Loader />  
+        <LogoClub/> 
+        <NavBurg/>     
         <Switch>
           <Route path="/" exact>            
               <RunText />
