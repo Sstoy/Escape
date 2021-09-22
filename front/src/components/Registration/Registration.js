@@ -11,8 +11,8 @@ function Registration() {
 
   const handleBase = () => {
     const regexp = /[\+][7]\d{3}\d{3}\d{2}\d{2}/gm;
-    console.log(inputPhone.current.value)
-    console.log(inputPhone.current.value.match(regexp))
+    // console.log(inputPhone.current.value)
+    // console.log(inputPhone.current.value.match(regexp))
     if (inputPhone.current.value.match(regexp)) {
         fetch('http://localhost:5000/api/user', {
           method: 'POST',
@@ -21,7 +21,7 @@ function Registration() {
         })
           .then(res => res.json())
           .then(data => {
-            console.log(data)
+            // console.log(data)
             if (data.message) {
               let recaptcha = new firebase.auth.RecaptchaVerifier('recaptcha-container');
               let number = inputPhone.current.value
