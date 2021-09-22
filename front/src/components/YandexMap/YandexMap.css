@@ -18,7 +18,7 @@
   -webkit-border-radius: 50px;
      -moz-border-radius: 50px;
           border-radius: 50px;
-          -webkit-mask-box-image: url('SaintP.png') 850 0 0 0 round round;
+          -webkit-mask-box-image: url('SaintP.png') 0 0 0 0 round round;
 }
 
 .ymaps-2-1-79-gotoymaps__text, .ymaps-2-1-79-controls-pane, .ymaps-2-1-79-map-copyrights-promo{

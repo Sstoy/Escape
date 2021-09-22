@@ -8,7 +8,7 @@ import store from "../../redux/store";
 import Nav from '../LogoClub/LogoClub'
 import ClubList from '../ClubList/ClubList'
 import Registration from '../Registration/Registration'
-import Logo from "../Logo/Logo";
+// import Logo from "../Logo/Logo";
 import RunText from "../RunText/RunText";
 import NewsList from "../NewsList/NewsList";
 import Game from "../Game/Game";
