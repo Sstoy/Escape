@@ -36,7 +36,7 @@ function App() {
 
           <Route path="/clubs" exact>
               <ClubList />
-              <Game />                  
+              <Game />                            
           </Route>
 
           <Route path="/galery" exact>
