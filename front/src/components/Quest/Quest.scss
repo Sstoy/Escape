@@ -1,0 +1,27 @@
+.faqcont {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 150px;
+  opacity: .8;
+}
+.faq-row-wrapper {
+  border-radius: 13px;
+  width: 500px;
+  background-color: rgb(162, 52, 212);
+  .faq-title { 
+ 
+  }
+  .faq-body {    
+      .faq-row {       
+          .row-title { 
+            font-size: 20px;           
+            color: rgb(3, 0, 0);                     
+          }
+          .row-content {           
+              .row-content-text {
+                color: aliceblue; 
+              }
+          }
+      }
+  }
+}
