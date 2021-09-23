@@ -1,0 +1,54 @@
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 250px;
+  text-align: center;
+  padding: 5px;
+  color: #fff;
+  margin-top: 50px;
+  border: 2px solid #fff;
+  border-radius: 20px;
+}
+.phone {
+  font-weight: 900;
+  color: #00ffff;
+}
+.phone:hover {
+  color: #fff;
+}
+
+.hrefClub {
+  text-decoration: none;
+  color: #fff;
+}
+
+.hrefClub:hover {
+  text-decoration: none;
+  color: #00ffff;
+}
+
+.hours {
+  color: #00ffff;
+}
+
+.buttonFlex {
+  display: flex;
+  justify-content: center;
+}
+.buttonFlex button {
+  margin: 5px;
+  background: none;
+  border: none;
+  border: 2px solid #fff;
+  color: #fff;
+  font-size: 17px;
+  font-family: 'Raleway', sans-serif;
+  border-radius: 5px;
+  cursor: pointer;
+  
+}
+.buttonFlex button:hover { 
+  color: #00ffff;
+  border: 1px solid #00ffff;
+}

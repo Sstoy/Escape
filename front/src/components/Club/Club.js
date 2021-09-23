@@ -1,8 +1,9 @@
-import React, { useState, useEffect }from 'react';
+import React, { useState, useEffect } from 'react';
 import ModalPrices from '../ModalPrices/ModalPrices'
 import ModalComps from '../ModalComps/ModalComps'
 import { useSelector, useDispatch } from 'react-redux';
-import '../ClubList/clubs.css'
+import styles from '../Club/Club.module.css';
+import { Link } from 'react-router-dom';
 
 function Club({ club }) {
   const [modalActive, setModalActive] = useState(false);
@@ -29,21 +30,26 @@ function Club({ club }) {
   const clubPrice = prices.filter((el) => el.ClubId === club.id);
 
   return (
-      <div className="face face1">
-        <div className="content">
+    <div className={styles.card}>
+      <div>
+
+        <Link to={`clubs/${club.id}`} className={styles.hrefClub}>
           <h2>
             {club?.name}
           </h2>
-          <p>{club?.address}</p>
-          <a href={`tel:${club?.phone}`}>{club?.phone}</a>
-          <p>{club?.computers} игровых PC</p>
-          <p>Круглосуточно (24/7)</p>
+        </Link>
+        <p>{club?.address}</p>
+        <a className={styles.phone} href={`tel:${club?.phone}`}>{club?.phone}</a>
+        <p>{club?.computers} игровых PC</p>
+        <p className={styles.hours}>Круглосуточно (24/7)</p>
+        <div className={styles.buttonFlex}>
           <button onClick={() => setModalActive(true)}>Цены</button>
           <button onClick={() => setModalCompActive(true)}>Компьютеры</button>
-          <ModalPrices prices={clubPrice} active={modalActive} setActive={setModalActive}/>
-          <ModalComps computers={clubComputers} active={modalCompActive} setActive={setModalCompActive}/>
         </div>
+        <ModalPrices club={club} prices={clubPrice} active={modalActive} setActive={setModalActive} />
+        <ModalComps club={club} computers={clubComputers} active={modalCompActive} setActive={setModalCompActive} />
       </div>
+    </div>
   );
 }
 

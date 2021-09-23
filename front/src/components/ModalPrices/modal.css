@@ -1,21 +1,3 @@
-/* Два класса ниже (modalForm, form) уже работают
-.modalForm {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: 2rem;
-  background-color: rgba(0, 0, 0, 0.55);
-  
-}
-
-.form {
-  background-color: white;
-  max-height: 80%;
-  height: 80%;
-} */
-
 .modal {
   width: 100vw;
   height: 100vh;
@@ -23,13 +5,25 @@
   position: fixed;
   top: 0;
   left: 0;
-  /* z-index: 9999; */
   display: flex;
   align-items: center;
   justify-content: center;
   opacity: 0;
   pointer-events: none;
   transition: 0.5s;
+}
+.bigFlex {
+  display: flex;
+  justify-content: center;
+
+  /* align-items:  */
+}
+.noneFlex {
+  margin-top: 15px;
+  font-weight: 700;
+  font-size: 30px;
+  color: #00ffff;
+
 }
 
 .modal.active {
@@ -40,19 +34,33 @@
 
 .modal__content {
   width: 50vw;
-  
-  height: 100%;
+  height: 55%;
   max-height: 500px;
-  background: white;
+  background: rgba(44, 5, 54, 0.9);
   border-radius: 12px;
   transition: 0.4s all;
   margin: 0 20px;
-  
   text-align: center;
-  display: flex;
+  /* display: flex; */
   flex-direction: row;
   justify-content: space-around;
   align-items: center;
+  color: #fff;
+  /* opacity: 0.9; */
+}
+.roomStyle {
+  font-weight: 900;
+  color: #00ffff;
+
+}
+.modal__content p {
+  max-width: 220px;
+  /* border: 2px solid #000; */
+}
+
+.modal__content p span {
+  color: #00ffff;
+  font-weight: 900;
 }
 
 .modal__content.active {
@@ -65,5 +73,6 @@
 }
 
 .price {
-  display: column;
+  margin: 20px;
+  /* display: column; */
 }
