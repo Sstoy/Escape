@@ -204,9 +204,9 @@ section {
 .footer .button.primary {
   opacity: 0.75;
   box-shadow: none;
-  background-color: rebeccapurple;
+  background-color: rgba(41, 7, 38, 0.322);
   color: #eee;
-  border: 0;
+  border: 1 px solid rgba(41, 7, 38, 0.322);;
   border-radius: 12px;
   cursor: pointer;
   font-size: 18px;
@@ -220,7 +220,7 @@ section {
 .footer input[type="button"].primary:active,
 .footer button.primary:active,
 .button.primary:active {
-  background-color: #53e3fb;
+  color: #00ffff;
 }
 
 ul.actions {
