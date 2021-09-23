@@ -4,7 +4,8 @@ import { useHistory } from 'react-router-dom'
 import { faHome, faPhone, faEnvelope } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faInstagram, faVk } from "@fortawesome/free-brands-svg-icons"
-
+import style1 from '../Review/Review.module.css'
+import SocialLink from '../SocialLink/SocialLink';
 function Footer(props) {
 
   const history = useHistory();
@@ -56,13 +57,15 @@ function Footer(props) {
                   <ul className={styles.actions}>
                     <li><input onClick={sendMessage} type="submit" value="Отправить" className={styles.primary} /></li>
                   </ul>
-                  <div className={styles.inner}>
-                    <div className={styles.icons}>
-                      <p><a href="https://www.instagram.com/cyberclub_escape/" ><FontAwesomeIcon icon={faInstagram} style={{ "color": "white", "font-size": "52px"  }} /></a></p>
-                      <p><a href="https://vk.com/cyberclubspb_escape" ><FontAwesomeIcon icon={faVk} style={{ "color": "white", "font-size": "60px" }} /></a></p>
-                    </div>
-                    <input type="submit" onClick={redirectToYandexReviews} className={styles.primary} value="Отзывы на Яндекс" />
-                    <input type="submit" onClick={redirectToYandexReviews} className={styles.primary} value="Отзывы Вконтакте" />
+                   <div className={style1.review}>
+                    <h1 className={style1.h1}>Отзывы наших клиентов :</h1>
+                    <review-lab data-widgetid="614c5a40d1a4a0e86235c846"></review-lab>
+                  </div>
+                  <SocialLink/>
+                  <div className={styles.inner}>                
+                    
+                    {/* <input type="submit" onClick={redirectToYandexReviews} className={styles.primary} value="Отзывы на Яндекс" />
+                    <input type="submit" onClick={redirectToYandexReviews} className={styles.primary} value="Отзывы Вконтакте" /> */}
                     <footer id={styles.footerMini}>
                       <ul className={styles.copyright}>
                         <li>&copy; Made by</li><li>Elbrus Team</li>
@@ -70,6 +73,7 @@ function Footer(props) {
                     </footer>
                   </div>
                 </form>
+                 
               </section>
               <section className={styles.split}>
                 <section>

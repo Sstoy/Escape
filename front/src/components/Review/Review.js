@@ -1,13 +1,11 @@
 import React from 'react';
+import style from './Review.module.css'
 
-function Review(props) {
+function Review() {
   return (
-    <div>
-        <div className='yandex_review'>
-        <div className='reviewsmap'>
-          <iframe className='iframe' src="https://yandex.ru/maps-reviews-widget/175271499615?comments"></iframe>
-          <a className='amap' href="https://yandex.ru/maps/org/kompyuterny_klub_escape/175271499615/" target="_blank" >Компьютерный клуб Escape на карте Санкт‑Петербурга — Яндекс.Карты</a></div>
-      </div>
+    <div className={style.review}>
+      <h1 className={style.h1}>Отзывы наших клиентов :</h1>
+      <review-lab data-widgetid="614c5a40d1a4a0e86235c846"></review-lab>
     </div>
   );
 }
