@@ -1,4 +1,4 @@
-import React, { useState, useSelector } from 'react';
+import React, { useState } from 'react';
 // подключение библиотеки yandex-map, на 22 строчке можно задать api-ключ
 import { YMaps, Map, Placemark, ZoomControl } from 'react-yandex-maps';
 import coords from './coords.json';
@@ -7,7 +7,7 @@ import { useHistory } from 'react-router-dom'
 // стили задаем для изменения цвета фона карты, фильтр меняет также цвет лого-меток, поэтому перезаписываем стили на лого, чтобы вернуть прежний цвет лого
 import './YandexMap.css';
 
-function YandexMap({ key }) {
+function YandexMap() {
   const [lat, setLat] = useState(0);
   const [lng, setLng] = useState(0);
 
@@ -16,7 +16,8 @@ function YandexMap({ key }) {
 
   // задает центровые координаты при загрузке карты
   const mapState = {
-    center: [59.91807199347784, 30.304908500000003],
+    center: [59.95675075776964,30.355681500000006],
+    // [59.91807199347784, 30.304908500000003],
     zoom: 9
   }
 
@@ -39,8 +40,8 @@ function YandexMap({ key }) {
       {/* <YMaps query={{ apikey: '27544797-3131-4759-9f4b-54f17c827eb2&lang=ru_RU', }} version={"2.1"}> */}
       <YMaps>
         <div className='mapContainer'>
-          <Map state={mapState} width='40%'
-            height='450px' >
+          <Map state={mapState} width='35em'
+            height='27em' instanceRef={ref => { ref && ref.behaviors.disable('scrollZoom'); }}>
             <ZoomControl options={{ float: 'left' }} />
             <Placemark geometry={[lat, lng]} />
 
@@ -52,7 +53,6 @@ function YandexMap({ key }) {
               <>
                 <Placemark
                   key={coordinates.id}
-                  data-id={coordinates.id}
                   geometry={coordinates.coords}
                   options={{
                     iconLayout: "default#image",

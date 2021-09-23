@@ -4,7 +4,7 @@ import styles from './Success.module.css'
 function Success() {
   return (
     <div className={styles.success}>
-      <span className={styles.span}>Спасибо за регистрацию! Скажите администратору Ваш номер телефона.</span>
+      <span className={styles.span}>СПАСИБО ЗА РЕГИСТРАЦИЮ! СКАЖИТЕ АДМИНИСТРАТОРУ КЛУБА ВАШ НОМЕР ТЕЛЕФОНА.</span>
     </div>
   );
 }

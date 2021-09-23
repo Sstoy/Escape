@@ -1,0 +1,77 @@
+.modal {
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.301);
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  pointer-events: none;
+  transition: 0.5s; 
+}
+
+.bigFlex {
+  display: flex;
+  justify-content: center;
+}
+
+.noneFlex {
+  margin-top: 15px;
+  font-weight: 700;
+  font-size: 30px;
+  color: #00ffff;
+}
+
+.modal.active {
+  opacity: 1;
+  pointer-events: all;
+  transform: scale(1);
+}
+
+.modal__content {
+  /* width: 50vw;
+  height: 60%; */
+  max-height: 500px;
+  background: rgba(32, 6, 39, 0.9);
+  border-radius: 12px;
+  transition: 0.4s all;
+  margin: 0 20px;
+  text-align: center;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  color: #fff;
+  font-size: 17px;  
+  padding: 10px 30px;
+
+}
+
+.roomStyle {
+  font-weight: 900;
+  color: #00ffff;
+}
+
+.modal__content p {
+  max-width: 220px;
+}
+
+.modal__content p span {
+  color: #00ffff;
+  font-weight: 900;
+}
+
+.modal__content.active {
+  transform: scale(1);
+}
+
+.prices {
+  display: flex;
+  flex-direction: row;
+}
+
+.price {
+  margin: 20px;
+}

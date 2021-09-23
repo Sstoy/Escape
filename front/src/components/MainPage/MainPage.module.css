@@ -1,0 +1,21 @@
+.mainpage {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.runtext {
+  display: flex;
+  align-self: center;
+}
+
+.map_promo {
+  display:flex;
+  justify-content: space-evenly;
+  align-self: stretch;
+}
+
+.news {
+  display:flex;
+  align-self: center;
+}
