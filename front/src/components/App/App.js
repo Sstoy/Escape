@@ -30,6 +30,7 @@ import About from "../About/About";
 import LogoClub from "../LogoClub/LogoClub";
 import Quest from "../Quest/Quest";
 import MainPage from "../MainPage/MainPage";
+import Review from "../Review/Review";
 
 
 function App() {
@@ -37,11 +38,12 @@ function App() {
   return (
     <Provider store={store}>
       <Router>
-
         <Loader />  
         <LogoClub/> 
-        <NavBurg/>     
+        <NavBurg/>  
+
         <Switch>
+          
           <Route path="/" exact>            
               <MainPage />        
           </Route>
@@ -56,13 +58,13 @@ function App() {
             <Slider />
           </Route>
 
-          <Route path="/contacts" exact>
-            <SocialLink />
+          <Route path="/contacts" exact>            
+            <Review/>
           </Route>
 
           <Route path="/yandexreview" exact>
-            <YandexReview />
-            <Footer />
+             <Review/>
+             <Footer />
           </Route>
 
           <Route path="/about" exact>

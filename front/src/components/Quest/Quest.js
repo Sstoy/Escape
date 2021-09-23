@@ -36,7 +36,7 @@ function Quest() {
 
 const config = {
     animate: true,
-    arrowIcon: "V",
+    arrowIcon: "",
     tabFocus: true
 };
 

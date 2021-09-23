@@ -1,0 +1,9 @@
+ .widget__src {
+  opacity: 0;
+  font-size: 0px;
+ }
+ 
+.widget__count {
+  opacity: 0;
+  font-size: 0px;
+}
