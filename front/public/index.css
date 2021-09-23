@@ -12,16 +12,17 @@
     display: none; 
 }
 .review__title {
-  font-size: 9px;
+  font-size: 12px;
 }
 .Review_h1__1MDkd{
   font-size: 28px;
 }
 
 .review__rating { 
-  width: 50px;
+  width: 80px;
   height:20px;
 }
 a .review__title {
  font-size: 8px;
 }
+
