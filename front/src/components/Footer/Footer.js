@@ -3,6 +3,7 @@ import styles from './Footer.module.css'
 import { useHistory } from 'react-router-dom'
 import { faHome, faPhone, faEnvelope } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faInstagram, faVk } from "@fortawesome/free-brands-svg-icons"
 
 function Footer(props) {
 
@@ -92,6 +93,8 @@ function Footer(props) {
 
           <footer id={styles.footerMini}>
             <div className={styles.inner}>
+            <a href="https://www.instagram.com/cyberclub_escape/" className={`${styles.icon} ${styles.solid} ${styles.alt} `}><FontAwesomeIcon icon={faInstagram} style={{ "color": "white" }} /></a>
+            <a href="https://vk.com/cyberclubspb_escape" className={`${styles.icon} ${styles.solid} ${styles.alt} `}><FontAwesomeIcon icon={faVk} style={{ "color": "white", "margin-left": "10px" }} /></a>
               <input type="submit" onClick={redirectToYandexReviews} className={styles.primary} value="Отзывы на Яндекс"/>
               <ul className={styles.copyright}>
                 <li>&copy; Made by</li><li>Elbrus Team</li>

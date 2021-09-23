@@ -64,7 +64,8 @@ function App() {
             <ClubNumberOne />
             <Blog />
             <OurComputers />
-            <About />
+            <About/>
+            <Quest />
             <Footer />
           </Route>
 
