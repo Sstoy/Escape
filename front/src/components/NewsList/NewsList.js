@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import uuid from 'react-uuid';
+import styles from './NewsList.module.css'
 
 import News from '../News/News';
 
@@ -18,6 +19,7 @@ function NewsList() {
 
   return (
     <div className='news-list'>
+      <span className={styles.span}>Актуальные новости игровой индустрии:</span>
       <ol className="gradient-list">
         {allNews?.map((news) => <li> < News key={uuid()} news={news} /> </li>)}
       </ol>

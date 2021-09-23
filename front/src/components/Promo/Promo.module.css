@@ -15,7 +15,6 @@
 }
 
 .span {
-  font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
   font-size: 40px;
   font-weight: 600;
   color:rebeccapurple;
@@ -29,11 +28,11 @@
   border-radius: 10px;
   position: relative;
   cursor: pointer;
-  font-family: "Roboto", sans-serif;
+  
   margin: 0 auto;
 }
 .button::after {
-  content: "БЕСПЛАТНО";
+  content: "ПОЛУЧИТЬ";
   position: absolute;
   top: 41%;
   left: 50%;
@@ -83,7 +82,7 @@
   animation: star 1.3s linear infinite;
 }
 .button:hover::after {
-  content: "ПОЛУЧИТЬ!";
+  content: "GAME!";
   text-shadow: 0 0 10px #fff, 0 0 10px #fff, 0 0 20px #82bedc, 0 0 30px #82bedc,
     0 0 40px #82bedc, 0 0 50px #82bedc, 0 0 60px #82bedc;
 }
