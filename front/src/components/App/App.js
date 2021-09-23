@@ -33,17 +33,17 @@ function App() {
     <Provider store={store}>
       <Router>
 
-        <Loader />  
-        <LogoClub/> 
-        <NavBurg/>     
+        <Loader />
+        <LogoClub />
+        <NavBurg />
         <Switch>
           <Route path="/" exact>
             <MainPage />
           </Route>
 
           <Route path="/clubs" exact>
-              <ClubList />
-              <Game />                            
+            <ClubList />
+            <Game />
 
           </Route>
 
@@ -64,7 +64,7 @@ function App() {
             <ClubNumberOne />
             <Blog />
             <OurComputers />
-            <About/>
+            <About />
             <Footer />
           </Route>
 
@@ -83,7 +83,7 @@ function App() {
           </Route>
 
           <Route path="/blog/3" exact>
-            <ArticleThree/>
+            <ArticleThree />
             <Footer />
           </Route>
 
