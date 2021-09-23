@@ -57,6 +57,7 @@ function Footer(props) {
                   <ul className={styles.actions}>
                     <li><input onClick={sendMessage} type="submit" value="Отправить" className={styles.primary} /></li>
                   </ul>
+                  {/* Widget Яндекс отзывы */}
                   <div className={style1.review}>
                     <h1 className={style1.h1}>Отзывы наших клиентов :</h1>
                     <review-lab data-widgetid="614c5a40d1a4a0e86235c846"></review-lab>
@@ -64,8 +65,6 @@ function Footer(props) {
                   <SocialLink />
                   <div className={styles.inner}>
 
-                    {/* <input type="submit" onClick={redirectToYandexReviews} className={styles.primary} value="Отзывы на Яндекс" />
-                    <input type="submit" onClick={redirectToYandexReviews} className={styles.primary} value="Отзывы Вконтакте" /> */}
                     <footer id={styles.footerMini}>
                       <ul className={styles.copyright}>
                         <li>&copy; Made by</li><li>Elbrus Team</li>
@@ -75,7 +74,7 @@ function Footer(props) {
                 </form>
 
               </section>
-              <section className={styles.split}>
+              <section className={styles.split} id='footer'>
                 <section>
                   <div className={styles.contact_method} >
                     <span className={`${styles.icon} ${styles.solid} ${styles.alt} `}><FontAwesomeIcon icon={faEnvelope} style={{ "color": "white" }} /></span>
