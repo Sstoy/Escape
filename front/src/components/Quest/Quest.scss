@@ -1,22 +1,24 @@
 .faqcont {
+  
   display: flex;
   justify-content: center;
   margin-top: 80px;
-  opacity: .7;
+  opacity: .65;
 }
 .faq-row-wrapper {
+
   padding: 8px;
   border-radius: 13px;
   width: 550px;
   background-color: rgb(162, 52, 212);
   .faq-title { 
-    color: beige;
+    color: #ffffff;
   }
   .faq-body {    
       .faq-row {       
           .row-title { 
             font-size: 20px;           
-            color: rgb(255, 255, 255);                     
+            color: #00ffff;;                     
           }
           .row-content {           
               .row-content-text {
@@ -37,4 +39,7 @@
 }
 footer, section {
   margin-top: 10px;
+}
+.styles_faq-row-wrapper__3vA1D h2{
+  color: var(--arrow-color, white);
 }
