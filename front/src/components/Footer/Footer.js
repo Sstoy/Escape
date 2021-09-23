@@ -33,7 +33,7 @@ function Footer(props) {
 
   return (
     <>
-      <div className={styles.footer}>
+      <div className={styles.footer} >
         <div id={styles.wrapper}>
           <section id={styles.contact}>
             <div className={styles.inner}>
@@ -60,14 +60,14 @@ function Footer(props) {
               </section>
               <section className={styles.split}>
                 <section>
-                  <div className={styles.contact_method}>
+                  <div className={styles.contact_method} >
                     <span className={`${styles.icon} ${styles.solid} ${styles.alt} `}><FontAwesomeIcon icon={faEnvelope} style={{ "color": "white" }} /></span>
                     <h3>Email</h3>
                     <span style={{ "color": "white" }}>georgy@escape24.ru</span>
                   </div>
                 </section>
                 <section>
-                  <div className={styles.contact_method}>
+                  <div className={styles.contact_method} id="footer">
                     <span className={`${styles.icon} ${styles.solid} ${styles.alt} `}><FontAwesomeIcon icon={faPhone} style={{ "color": "white" }} /></span>
                     <h3>Наши телефоны</h3>
                     <span style={{ "color": "white" }}>
