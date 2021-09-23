@@ -31,7 +31,10 @@ $white: #fafafa;
 .newsLinkStyle {
   text-decoration: none;
   color: #ffff;
+}
 
+.newsLinkStyle:hover {
+  color: #00ffff;
 }
 
 ol.gradient-list {

@@ -1,6 +1,6 @@
 
 .wrapper{
-  opacity: .8;
+  opacity: .0001;
   z-index: 500;
   position: fixed;
   top: 0;
@@ -13,6 +13,7 @@
 }
 
 #active:checked ~ .wrapper{
+  opacity: .6;
   clip-path: circle(27%);
 }
 
@@ -40,18 +41,18 @@
   text-align: center;
   line-height: 68px;
   border-radius: 50%;
-  font-size: 39px;
+  font-size: 35px;
   color: #fff;
   cursor: pointer;
-  background: rgb(153, 80, 202);
+  background: rgba(59, 27, 80, 0.432);
   transition: all 0.3s ease-in-out;
 }
 .menu-btn:hover{ 
   opacity: 1;
-  font-size: 46px;
+  font-size: 40px;
 }
 #active:checked ~ .menu-btn{
-  color: rgb(187, 34, 34);
+  color: #00ffff;
 }
 
 #active:checked ~ .menu-btn i:before{
