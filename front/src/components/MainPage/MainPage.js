@@ -12,7 +12,7 @@ function MainPage(props) {
   // const footerRef = useRef();
   
   return (
-    <div className={styles.mainpage}>
+    <div className={styles.mainpage} id="mainPage">
       <div className={styles.runtext}>
         <RunText />
       </div>

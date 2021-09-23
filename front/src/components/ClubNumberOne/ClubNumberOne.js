@@ -3,7 +3,7 @@ import styles from './ClubNumberOne.module.css'
 
 function ClubNumberOne(props) {
   return (
-    <div className={styles.club_number_one}>
+    <div className={styles.club_number_one} id="aboutHeader">
       <div className={styles.club_number_one_content}>
         <h1 className={styles.club_number_one_title}>Компьютерный клуб №1 в Санкт-Петербурге</h1>
         <p className={styles.club_number_one_text}>
