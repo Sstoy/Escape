@@ -28,14 +28,19 @@ $white: #fafafa;
   box-sizing: border-box;
 }
 
+.newsLinkStyle {
+  text-decoration: none;
+  color: #ffff;
+
+}
+
 ol.gradient-list {
   counter-reset: gradient-counter;
   list-style: none;
   margin: 1.75rem;
   padding-left: 1rem;
   > li {
-    background: white;
-    opacity: .75;
+    background: rgba(53, 5, 54, 0.452);
     border-radius: 0 0.5rem 0.5rem 0.5rem;
     @extend %boxshadow;
     counter-increment: gradient-counter;
@@ -59,7 +64,7 @@ ol.gradient-list {
       align-items: flex-end;
       @extend %boxshadow;
       content: counter(gradient-counter);
-      color: $black;
+      color: #fff;
       display: flex;
       font: 900 1.5em/1 'Montserrat';
       justify-content: flex-end;

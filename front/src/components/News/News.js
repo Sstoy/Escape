@@ -4,7 +4,7 @@ import './news.scss'
 
 function News({ news }) {
   return (
-    <a href={news?.href} target="_blank" rel="noreferrer">{news?.text}</a>
+    <a className="newsLinkStyle" href={news?.href} target="_blank" rel="noreferrer">{news?.text}</a>
   );
 }
 
