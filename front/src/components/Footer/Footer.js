@@ -4,7 +4,7 @@ import { useHistory } from 'react-router-dom'
 import { faHome, faPhone, faEnvelope } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faInstagram, faVk } from "@fortawesome/free-brands-svg-icons"
-
+import style1 from '../Review/Review.module.css'
 function Footer(props) {
 
   const history = useHistory();
@@ -54,9 +54,13 @@ function Footer(props) {
                     </div>
                   </div>
                   <ul className={styles.actions}>
-                    <li><input onClick={sendMessage} type="submit" value="Отправить сообщение" className={styles.primary} /></li>
+                    <li><input onClick={sendMessage} type="submit" value="Отправить" className={styles.primary} /></li>
                   </ul>
                 </form>
+                  <div className={style1.review}>
+                    <h1 className={style1.h1}>Отзывы наших клиентов :</h1>
+                    <review-lab data-widgetid="614c5a40d1a4a0e86235c846"></review-lab>
+                  </div>
               </section>
               <section className={styles.split}>
                 <section>

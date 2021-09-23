@@ -1,6 +1,9 @@
 .review { 
+  font-size: 10px;
+  height: 500px;
+  width: 100%;
   opacity: .7;
-  margin-top : 10%
+  /* margin-top : 10% */
 }
 .h1 {
   color: aliceblue;

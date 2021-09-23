@@ -7,3 +7,21 @@
   opacity: 0;
   font-size: 0px;
 }
+
+.review__src {
+    display: none; 
+}
+.review__title {
+  font-size: 9px;
+}
+.Review_h1__1MDkd{
+  font-size: 28px;
+}
+
+.review__rating { 
+  width: 50px;
+  height:20px;
+}
+a .review__title {
+ font-size: 8px;
+}
