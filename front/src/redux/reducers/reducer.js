@@ -14,8 +14,10 @@ const reducer = (state = initialState, action) => {
       return { ...state, prices: action.payload }
 
     case 'INIT_COMPUTERS':
-      console.log('INIT_COMPUTERS');
       return { ...state, computers: action.payload }
+    
+    case 'INIT_ADMIN':
+      return { ...state, isAdmin: action.payload.isAdmin }
 
     default:
       return state;

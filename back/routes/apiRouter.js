@@ -3,7 +3,7 @@ const parse = require('../parsers/parser');
 
 const sendDataToMail = require('../mailer/mailer');
 const {
-  Club, Price, News, User, Computer,
+  Club, Price, News, User, Computer, Admin
 } = require('../database/models');
 
 // eslint-disable-next-line consistent-return
@@ -135,11 +135,42 @@ router.get('/computers', async (req, res) => {
 
 router.post('/message', async (req, res) => {
   const { email, message, name } = req.body;
-  // console.log(req.body);
   try {
     await sendDataToMail(email, message, name);
   } catch (error) {
     console.log(error);
+    console.error(error);
+    res.status(404).send(error);
+  }
+});
+
+router.post('/admin', async (req, res) => {
+  const {
+    email, password, login, phone,
+  } = req.body;
+  console.log(req.body);
+  try {
+    const admin = await Admin.findOne({
+      where: {
+        login,
+        email,
+        phone,
+        password,
+      },
+      raw: true,
+    });
+    const isAdmin = (
+      admin.login === login
+      && admin.password === password
+      && admin.phone === phone
+      && admin.email === email
+    );
+    if (isAdmin) {
+      res.status(200).json({ isAdmin: true });
+    } else {
+      res.status(404).json({ isAdmin: false });
+    }
+  } catch (error) {
     console.error(error);
     res.status(404).send(error);
   }

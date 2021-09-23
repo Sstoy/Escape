@@ -2,16 +2,15 @@ import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import { Provider } from "react-redux";
 
 import Loader from "../Loader/Loader";
-import SocialLink from "../SocialLink/SocialLink";
 import Footer from "../Footer/Footer";
 import store from "../../redux/store";
 import ClubList from '../ClubList/ClubList';
 import Registration from "../Registration/Registration";
 import Game from "../Game/Game";
 import Slider from "../Slider/Slider";
-import YandexReview from "../YandexReview/YandexReview";
 import NavBurg from "../NavBurg/NavBurg";
 import ClubInfo from "../ClubInfo/ClubInfo";
+import AdminForm from "../AdminForm/AdminForm";
 
 
 import ClubNumberOne from "../ClubNumberOne/ClubNumberOne";
@@ -25,6 +24,7 @@ import About from "../About/About";
 import LogoClub from "../LogoClub/LogoClub";
 import Quest from "../Quest/Quest";
 import MainPage from "../MainPage/MainPage";
+import AdminTable from "../AdminTable/AdminTable";
 
 
 function App() {
@@ -36,7 +36,9 @@ function App() {
         <Loader />
         <LogoClub />
         <NavBurg />
+
         <Switch>
+
           <Route path="/" exact>
             <MainPage />
           </Route>
@@ -44,20 +46,10 @@ function App() {
           <Route path="/clubs" exact>
             <ClubList />
             <Game />
-
           </Route>
 
           <Route path="/galery" exact>
             <Slider />
-          </Route>
-
-          <Route path="/contacts" exact>
-            <SocialLink />
-          </Route>
-
-          <Route path="/yandexreview" exact>
-            <YandexReview />
-            <Footer />
           </Route>
 
           <Route path="/about" exact>
@@ -66,7 +58,7 @@ function App() {
             <OurComputers />
             <About />
             <Quest />
-            < Footer />
+            <Footer />
           </Route>
 
           <Route path="/clubs/:id" exact>
@@ -90,6 +82,14 @@ function App() {
 
           <Route exact path="/register">
             <Registration />
+          </Route>
+
+          <Route exact path="/admin">
+            <AdminForm />
+          </Route>
+
+          <Route exact path="/admin-site">
+            <AdminTable />
           </Route>
 
         </Switch>
