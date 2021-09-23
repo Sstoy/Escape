@@ -1,0 +1,44 @@
+ .widget__src {
+  opacity: 0;
+  font-size: 0px;
+ }
+ 
+.widget__count {
+  opacity: 0;
+  font-size: 0px;
+}
+
+.review__src {
+    display: none; 
+}
+.review__title {
+  font-size: 10px;
+}
+.Review_h1__1MDkd{
+  font-size: 28px;
+}
+
+.review__rating { 
+  width: 50px;
+  height:20px;
+}
+a .review__title {
+ font-size: 7px;
+}
+
+/* .review__header-left { 
+  width: 25px;
+  height:25px;
+}
+img .review__photo  {
+  width: 100%;
+  height: 100%;
+}
+.review__header-left { 
+  width: 30px;
+  height:30px;
+} */
+
+ .review {
+  padding: 5px !important;
+}

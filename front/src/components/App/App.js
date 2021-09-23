@@ -25,17 +25,18 @@ import LogoClub from "../LogoClub/LogoClub";
 import Quest from "../Quest/Quest";
 import MainPage from "../MainPage/MainPage";
 import AdminTable from "../AdminTable/AdminTable";
+import Review from "../Review/Review";
 
 
 function App() {
 
   return (
     <Provider store={store}>
-      <Router >
-
+      <Router>
         <Loader />
         <LogoClub />
         <NavBurg />
+
 
         <Switch>
 
@@ -50,6 +51,15 @@ function App() {
 
           <Route path="/galery" exact>
             <Slider />
+          </Route>
+
+          <Route path="/contacts" exact>            
+            <Review/>
+          </Route>
+
+          <Route path="/yandexreview" exact>
+             <Review/>
+             <Footer />
           </Route>
 
           <Route path="/about" exact>
@@ -92,9 +102,9 @@ function App() {
             <AdminTable />
           </Route>
 
-        </Switch>
-      </Router>
-    </Provider>
+        </Switch >
+      </Router >
+    </Provider >
   );
 }
 

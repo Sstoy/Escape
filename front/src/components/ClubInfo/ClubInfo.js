@@ -1,13 +1,19 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { useParams } from 'react-router';
-import styles from './ClubInfo.module.css'
+import styles from './ClubInfo.module.css';
+import ModalComps from '../ModalComps/ModalComps';
+import ModalPrices from '../ModalPrices/ModalPrices';
 
-function ClubInfo(props) {
+function ClubInfo() {
   const { id } = useParams();
   const clubs = useSelector(state => state.clubs);
   const prices = useSelector(state => state.prices);
+  const computers = useSelector(state => state.computers);
 
+  const [modalActive, setModalActive] = useState(false);
+  const [modalCompActive, setModalCompActive] = useState(false);
+  
   const dispatch = useDispatch();
 
   useEffect(() => {
@@ -21,52 +27,38 @@ function ClubInfo(props) {
         .then((res) => res.json())
         .then((data) => dispatch({ type: 'INIT_PRICES', payload: data }))
     }
-  }, [clubs.length, prices.length, dispatch])
+    if (computers.length === 0) {
+      fetch('http://localhost:5000/api/computers', { credential: true })
+        .then((res) => res.json())
+        .then((data) => dispatch({ type: 'INIT_COMPUTERS', payload: data }))
+    }
+  }, [clubs.length, prices.length, computers.length, dispatch])
 
-  const club = clubs.filter((club) => club.id === Number(id))
+  const club = clubs.filter((club) => club.id === Number(id));
+  const currentClub = club[0];
+  
   const clubPrice = prices.filter((price) => price.ClubId === Number(id))
+  const clubComputers = computers.filter((comp) => comp.ClubId === Number(id));
 
   return (
     <div className={styles.contentClub}>
-      <div>
-        <h2>
-
-        </h2>
+      <div className={styles.imgClubInfo}>
         <img src={`http://localhost:5000/club-imgs/${id}.jpeg`} alt="" />
-        <p>{club[0]?.address}</p>
-        <a href={`tel:${club[0]?.phone}`}>{club[0]?.phone}</a>
-        <p>{club[0]?.computers} игровых PC</p>
-        <p>Круглосуточно (24/7)</p>
       </div>
-      <div className="prices">
-        <div className="price">
-          <p>Зал: {clubPrice[0]?.room}</p>
-          <p>Цена за 1 час: {clubPrice[0]?.onehour}</p>
-          <p>Цена за 5 часов: {clubPrice[0]?.fivehours}</p>
-          <p>Ночной пакет будни: {clubPrice[0]?.nightweekday}</p>
-          <p>Ночной пакет выходные: {clubPrice[0]?.nightweekend}</p>
-          <p>Утренний пакет: {clubPrice[0]?.morning}</p>
-          <p>Цена за сутки: {clubPrice[0]?.twentyfourhours}</p>
-          {clubPrice[0]?.PS ?
-            <p> Playstation за 1 час: {clubPrice[0]?.PS}</p>
-            :
-            <p></p>
-          }
+      <div className={styles.infoClub}>
+        <div className={styles.clubName}>
+        Escape {currentClub?.name}
         </div>
-        <div className="price">
-          <p>Зал: {clubPrice[1]?.room}</p>
-          <p>Цена за 1 час: {clubPrice[1]?.onehour}</p>
-          <p>Цена за 5 часов: {clubPrice[1]?.fivehours}</p>
-          <p>Ночной пакет будни: {clubPrice[1]?.nightweekday}</p>
-          <p>Ночной пакет выходные: {clubPrice[1]?.nightweekend}</p>
-          <p>Утренний пакет: {clubPrice[1]?.morning}</p>
-          <p>Цена за сутки: {clubPrice[1]?.twentyfourhours}</p>
-          {clubPrice[1]?.PS ?
-            <p> Playstation за 1 час: {clubPrice[1]?.PS}</p>
-            :
-            <p></p>
-          }
+        <div>
+          <button onClick={() => setModalActive(true)}>Цены</button>
+          <button onClick={() => setModalCompActive(true)}>Компьютеры</button>
         </div>
+        <p>{currentClub?.address}</p>
+        <a className={styles.phoneHref}href={`tel:${currentClub?.phone}`}>{currentClub?.phone}</a>
+        <p>{currentClub?.computers} игровых PC</p>
+        <p>Круглосуточно (24/7)</p>
+        <ModalPrices club={currentClub} prices={clubPrice} active={modalActive} setActive={setModalActive} />
+        <ModalComps club={currentClub} computers={clubComputers} active={modalCompActive} setActive={setModalCompActive} />
       </div>
     </div>
   );
