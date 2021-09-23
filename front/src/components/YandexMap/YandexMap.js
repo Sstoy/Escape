@@ -41,7 +41,7 @@ function YandexMap() {
       <YMaps>
         <div className='mapContainer'>
           <Map state={mapState} width='35em'
-            height='27em' >
+            height='27em' instanceRef={ref => { ref && ref.behaviors.disable('scrollZoom'); }}>
             <ZoomControl options={{ float: 'left' }} />
             <Placemark geometry={[lat, lng]} />
 

@@ -20,7 +20,7 @@ function ClubList() {
   }, [clubs.length, dispatch])
 
   return (
-    <div className={styles.container}>
+    <div className={styles.container} id="clubs">
       {clubs?.map((club) => <Club key={club.id} id={club.id} club={club} />)}
     </div>
   );

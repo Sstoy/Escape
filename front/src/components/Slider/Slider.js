@@ -35,7 +35,7 @@ function Slider(props) {
 
   return (
     <>
-      <h1 className={style.h1}>Наша атмосфера</h1>
+      <h1 className={style.h1} id ="galeryHeader">Наша атмосфера</h1>
     <div className={style.container}>
       {images.map((slide) => < Slide  key={uuid()} slideActive= {slideActive} setSlideActive ={setSlideActive} src ={slide.src} id={slide.id}/>)}
     </div>

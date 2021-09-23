@@ -1,19 +1,14 @@
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import { Provider } from "react-redux";
+
 import Loader from "../Loader/Loader";
 import SocialLink from "../SocialLink/SocialLink";
 import Footer from "../Footer/Footer";
-import { Provider } from "react-redux"
-import YandexMap from "../YandexMap/YandexMap";
 import store from "../../redux/store";
-import Nav from '../LogoClub/LogoClub'
-import ClubList from '../ClubList/ClubList'
-import Registration from '../Registration/Registration'
-// import Logo from "../Logo/Logo";
-import RunText from "../RunText/RunText";
-import NewsList from "../NewsList/NewsList";
+import ClubList from '../ClubList/ClubList';
+import Registration from "../Registration/Registration";
 import Game from "../Game/Game";
 import Slider from "../Slider/Slider";
-import Promo from '../Promo/Promo';
 import YandexReview from "../YandexReview/YandexReview";
 import NavBurg from "../NavBurg/NavBurg";
 import ClubInfo from "../ClubInfo/ClubInfo";
@@ -49,8 +44,8 @@ function App() {
           </Route>
 
           <Route path="/clubs" exact>
-              <ClubList />
-              <Game />                            
+            <ClubList />
+            <Game />
 
           </Route>
 
@@ -71,9 +66,9 @@ function App() {
             <ClubNumberOne />
             <Blog />
             <OurComputers />
-            <About/>
+            <About />
             <Quest />
-            <Footer />
+            < Footer />
           </Route>
 
           <Route path="/clubs/:id" exact>
@@ -91,7 +86,7 @@ function App() {
           </Route>
 
           <Route path="/blog/3" exact>
-            <ArticleThree/>
+            <ArticleThree />
             <Footer />
           </Route>
 

@@ -7,8 +7,12 @@
   padding: 5px;
   color: #fff;
   margin-top: 50px;
-  border: 2px solid #fff;
+  /* border: 2px solid #fff; */
   border-radius: 20px;
+  background-position: center center;
+  background-size: cover;
+  background-color: rgba(0, 0, 0, 0.253);
+  
 }
 .phone {
   font-weight: 900;
@@ -40,7 +44,8 @@
   margin: 5px;
   background: none;
   border: none;
-  border: 2px solid #fff;
+  /* border: 1px solid rgba(40, 8, 41, 0.247); */
+  background-color: rgba(41, 7, 38, 0.322);
   color: #fff;
   font-size: 17px;
   font-family: 'Raleway', sans-serif;
@@ -50,5 +55,5 @@
 }
 .buttonFlex button:hover { 
   color: #00ffff;
-  border: 1px solid #00ffff;
+  /* border: 1px solid #00ffff; */
 }
