@@ -1,8 +1,10 @@
 import React from 'react';
 import styles from "./Article.module.css"
 import CompClubTwo from './CompClubTwo.jpg'
+import { useHistory } from 'react-router'
 
 function ArticleTwo(props) {
+  const history = useHistory()
   return (
     <div className={styles.container}>
       <div className={styles.article}>
@@ -36,6 +38,9 @@ function ArticleTwo(props) {
           <p><b>Итог</b></p>
           <p>Хоть открытие компьютерного клуба требует терпения, так как реализация такого плана действительно занимает много времени и требует большого количества материальных вложений, его непосредственная деятельность может приносить хорошие доходы при грамотном и правильном подходе.
           </p>
+        </div>
+        <div className={styles.buttonFlex}>
+        <button onClick={() => history.goBack()}>Назад!</button>
         </div>
       </div>
     </div>
