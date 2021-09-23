@@ -61,7 +61,7 @@ function Footer(props) {
                     <h1 className={style1.h1}>Отзывы наших клиентов :</h1>
                     <review-lab data-widgetid="614c5a40d1a4a0e86235c846"></review-lab>
                   </div>
-                  <SocialLink/>
+               
                   <div className={styles.inner}>                
                     
                     {/* <input type="submit" onClick={redirectToYandexReviews} className={styles.primary} value="Отзывы на Яндекс" />
@@ -90,6 +90,7 @@ function Footer(props) {
                         <p>Escape Чкаловская: </p> <a href="tel:+79315808281">+7 (931) 580 82 81</a><br />
                         <p>Escape Ленинский проспект: </p>  <a href="tel:+79533410192">+7 (953) 341 01 92</a><br />
                       </span>
+                         <SocialLink/>
                     </div>
                   </div>
                 </section>
