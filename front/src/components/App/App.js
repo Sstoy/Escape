@@ -70,6 +70,7 @@ function App() {
             <Blog />
             <OurComputers />
             <About/>
+            <Quest />
             <Footer />
           </Route>
 
