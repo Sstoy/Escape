@@ -13,7 +13,7 @@ function Promo() {
   return (
     <>
     {modal ? <Registration /> : <div className={styles.promo}>
-      <span className={styles.span}>Новым клиентам два часа игры бесплатно!</span>
+      <span className={styles.span}>Зарегистрируйся и получи 2 часа игры в любом из наших компьютерных клубов!</span>
       <div className={styles.button} onClick={getModal}></div>
     </div>}
     </>
