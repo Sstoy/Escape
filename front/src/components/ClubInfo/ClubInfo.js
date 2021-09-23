@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { useParams } from 'react-router';
+import styles from './ClubInfo.module.css'
 
 function ClubInfo(props) {
   const { id } = useParams();
@@ -26,18 +27,16 @@ function ClubInfo(props) {
   const clubPrice = prices.filter((price) => price.ClubId === Number(id))
 
   return (
-    <div>
-      <div className="face face1">
-        <div className="content">
-          <h2>
-            
-          </h2>
-          <img src={`http://localhost:5000/club-imgs/${id}.jpeg`} alt="" />
-          <p>{club[0]?.address}</p>
-          <a href={`tel:${club[0]?.phone}`}>{club[0]?.phone}</a>
-          <p>{club[0]?.computers} игровых PC</p>
-          <p>Круглосуточно (24/7)</p>
-        </div>
+    <div className={styles.contentClub}>
+      <div>
+        <h2>
+
+        </h2>
+        <img src={`http://localhost:5000/club-imgs/${id}.jpeg`} alt="" />
+        <p>{club[0]?.address}</p>
+        <a href={`tel:${club[0]?.phone}`}>{club[0]?.phone}</a>
+        <p>{club[0]?.computers} игровых PC</p>
+        <p>Круглосуточно (24/7)</p>
       </div>
       <div className="prices">
         <div className="price">
@@ -69,8 +68,7 @@ function ClubInfo(props) {
           }
         </div>
       </div>
-    </div> 
-    // </>
+    </div>
   );
 }
 
