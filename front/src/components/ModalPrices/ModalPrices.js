@@ -7,7 +7,7 @@ function ModalPrices({ club, active, setActive, prices }) {
 
     <div className={active ? "modal active" : "modal"} onClick={() => setActive(false)}>
       <div className={active ? "modal__content active" : "modal__content"} onClick={e => e.stopPropagation()}>
-        <div className="noneFlex">Escape {club.name}</div>
+        <div className="noneFlex">Escape {club?.name}</div>
         <div className="bigFlex">
           {prices?.map((el) => {
             return <div className="prices">
