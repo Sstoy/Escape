@@ -123,6 +123,10 @@ background-color: rgba(36, 0, 107, 0.5)
 }
 
 .container .card:hover .face.face2 h2 {
-  font-size: 2em;
+  font-size: 1em;
 }
 
+.card .content {
+margin-top: 30px;
+font-size: 14px;
+}
