@@ -6,6 +6,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faInstagram, faVk } from "@fortawesome/free-brands-svg-icons"
 import style1 from '../Review/Review.module.css'
 import SocialLink from '../SocialLink/SocialLink';
+
 function Footer(props) {
 
   const history = useHistory();
@@ -55,14 +56,16 @@ function Footer(props) {
                     </div>
                   </div>
                   <ul className={styles.actions}>
-                    <li><input onClick={sendMessage} type="submit" value="Отправить" className={styles.primary} /></li>
+                    <li>
+                      <button onClick={sendMessage} className={styles.primary}>Отправить</button>
+                      {/* <input onClick={sendMessage} type="submit" value="Отправить" className={styles.primary} /> */}
+                      </li>
                   </ul>
                   {/* Widget Яндекс отзывы */}
                   <div className={style1.review}>
                     <h1 className={style1.h1}>Отзывы наших клиентов :</h1>
                     <review-lab data-widgetid="614c5a40d1a4a0e86235c846"></review-lab>
                   </div>
-                  <SocialLink />
                   <div className={styles.inner}>
 
                     <footer id={styles.footerMini}>
