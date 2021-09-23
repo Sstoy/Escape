@@ -31,7 +31,7 @@ function App() {
 
   return (
     <Provider store={store}>
-      <Router>
+      <Router >
 
         <Loader />
         <LogoClub />
@@ -64,9 +64,9 @@ function App() {
             <ClubNumberOne />
             <Blog />
             <OurComputers />
-            <About/>
+            <About />
             <Quest />
-            <Footer />
+            < Footer />
           </Route>
 
           <Route path="/clubs/:id" exact>

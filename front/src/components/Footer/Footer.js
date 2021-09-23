@@ -33,7 +33,7 @@ function Footer(props) {
 
   return (
     <>
-      <div className={styles.footer}>
+      <div className={styles.footer} id="footer">
         <div id={styles.wrapper}>
           <section id={styles.contact}>
             <div className={styles.inner}>
