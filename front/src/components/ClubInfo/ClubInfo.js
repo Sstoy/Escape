@@ -4,6 +4,7 @@ import { useParams } from 'react-router';
 import styles from './ClubInfo.module.css';
 import ModalComps from '../ModalComps/ModalComps';
 import ModalPrices from '../ModalPrices/ModalPrices';
+import { useHistory } from 'react-router-dom'
 
 function ClubInfo() {
   const { id } = useParams();
@@ -11,6 +12,7 @@ function ClubInfo() {
   const prices = useSelector(state => state.prices);
   const computers = useSelector(state => state.computers);
 
+  const history = useHistory();
   const [modalActive, setModalActive] = useState(false);
   const [modalCompActive, setModalCompActive] = useState(false);
   
@@ -57,6 +59,8 @@ function ClubInfo() {
         <a className={styles.phoneHref}href={`tel:${currentClub?.phone}`}>{currentClub?.phone}</a>
         <p>{currentClub?.computers} игровых PC</p>
         <p>Круглосуточно (24/7)</p>
+        <button className={styles.buttonGoback} onClick={() => history.goBack()}>Назад</button>
+
         <ModalPrices club={currentClub} prices={clubPrice} active={modalActive} setActive={setModalActive} />
         <ModalComps club={currentClub} computers={clubComputers} active={modalCompActive} setActive={setModalCompActive} />
       </div>

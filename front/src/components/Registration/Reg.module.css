@@ -1,22 +1,28 @@
 .form {
-  background-color: #21211d;
   border-radius: 20px;
-  box-sizing: border-box;
-  margin-top: 2em;
-  height: 25em;
+  background-color: #1a031d49;
+  background-position: center center;
+  border-color: transparent;
+  border-style: solid;
   width: 30%;
-  opacity: 0.75;
+  margin-top: 4em;
+  height: 320px;
   display: flex;
+  align-items: center;
   flex-direction: column;
-  justify-content:center;
+  justify-content: space-around;
+}
+#invalidPhone {
+  color:rgb(237, 232, 241);
 }
 
 .title {
-  color: #eee;
-
+  margin-top: 50px;
+  padding: 10px;
   font-size: 15px;
   font-weight: 600;
-  margin-top: 30px;
+  text-align: center;
+  color:rgb(237, 232, 241);
 }
 
 .subtitle {
@@ -41,9 +47,10 @@
 }
 
 .input {
-  background-color: #303245;
+  background-color: rgba(41, 7, 38, 0.322);
   border-radius: 12px;
   border: 0;
+  font-family: 'Jura', sans-serif;
   box-sizing: border-box;
   color: #eee;
   font-size: 18px;
@@ -54,7 +61,7 @@
 }
 
 .cut {
-  background-color: #15172b;
+  background-color: #8a0c9657;
   border-radius: 10px;
   height: 20px;
   left: 20px;
@@ -75,11 +82,12 @@
 }
 
 .placeholder {
-  color: #65657b;
+  color: #ffffffc9;
   font-family: sans-serif;
   left: 20px;
   line-height: 14px;
   pointer-events: none;
+  font-family: 'Jura', sans-serif;
   position: absolute;
   transform-origin: 0 50%;
   transition: transform 200ms, color 200ms;
@@ -92,26 +100,26 @@
 }
 
 .input:not(:placeholder-shown) ~ .placeholder {
-  color: #808097;
+  color: #ffffffc9;
 }
 
 .input:focus ~ .placeholder {
-  color: #074DAA;
+  color: #ffffffc9;
 }
 
 .submit {
-  background-color: rebeccapurple;
+  background-color: rgba(41, 7, 38, 0.322);
   border-radius: 12px;
   border: 0;
   box-sizing: border-box;
   color: #eee;
   cursor: pointer;
   font-size: 18px;
+  width: 50%;
+  font-family: 'Jura', sans-serif;
   height: 50px;
-  margin-top: 38px;
   outline: 0;
   text-align: center;
-  width: 100%;
 }
 
 .submit:active {

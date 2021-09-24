@@ -1,10 +1,10 @@
 .blog{
 height: 800px;
-  width: 99vw;
+  width: 100vw;
   align-items: center;
   min-height: 100vh;
   background: linear-gradient(45deg);
-background-color: rgba(36, 0, 107, 0.5)
+background-color: rgba(36, 0, 107, 0.404)
 }
 
 .blog_content{
