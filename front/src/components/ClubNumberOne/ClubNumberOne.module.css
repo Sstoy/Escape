@@ -1,5 +1,8 @@
 .club_number_one{
   background-image: url("https://thumb.tildacdn.com/tild6437-6437-4331-a235-663833643766/-/format/webp/Kompy-Spb.jpg");
+  opacity: .7;
+  border-top: 5px solid rgba(44, 6, 41, 0.363);
+
   height: 650px;
   width: 100vw;
   background-repeat: no-repeat;
@@ -28,5 +31,4 @@
   color: black;
   font-size: 36px;
   font-weight: 900;
-  font-family: "Open Sans", "Helvetica Neue", Helvetica;
 }

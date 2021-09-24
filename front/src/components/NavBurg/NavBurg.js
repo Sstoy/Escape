@@ -29,7 +29,7 @@ function NavBurg() {
           <li
             onClick={() => setCheckedInput(false)}
           ><HashLink
-            to="/about#footer"
+            to="/#mainPage"
             scroll={(el) => el.scrollIntoView({ behavior: 'auto', block: 'end' })}
           >Контакты</HashLink></li>
         </ul>
