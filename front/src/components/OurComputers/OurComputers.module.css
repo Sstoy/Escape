@@ -1,6 +1,6 @@
 .our_computers{
   height: 800px;
-  width: 99vw;
+  width: 100vw;
   align-items: center;
   min-height: 100vh;
   background-color:rgba(190, 168, 178, 0.5);
@@ -26,7 +26,6 @@
   color: black;
   font-size: 36px;
   font-weight: 900;
-  font-family: "Open Sans", "Helvetica Neue", Helvetica
 }
 
 .our_computers_types{
