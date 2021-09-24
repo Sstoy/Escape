@@ -61,7 +61,7 @@ function AdminTable(props) {
         :
         <>
           <div className={styles.adminForm}>
-            <h3>Пройдите аутентификацию</h3>
+            <h2>Пройдите аутентификацию</h2>
             <div className={styles.form}>
               <button onClick={() => history.push('/admin')} type="text" className={styles.submit}>К форме аутентификации</button>
             </div>
