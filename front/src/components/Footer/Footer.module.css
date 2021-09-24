@@ -1,4 +1,4 @@
-section {
+.footer section {
 	display: flex;
   flex-direction: column;
   margin-top: 20px;
@@ -133,6 +133,7 @@ section {
 
 #footerMini .copyright {
   font-size: 0.8em;
+  color: white;
   list-style: none;
   padding-left: 0;
 }
@@ -206,7 +207,7 @@ section {
   box-shadow: none;
   background-color: rgba(41, 7, 38, 0.322);
   color: #eee;
-  border: 1 px solid rgba(41, 7, 38, 0.322);;
+  border: none;
   border-radius: 12px;
   cursor: pointer;
   font-size: 18px;
@@ -453,8 +454,8 @@ input[type="reset"]:hover,
 input[type="button"]:hover,
 button:hover,
 .button:hover {
-  box-shadow: inset 0 0 0 2px #18bfef;
-  color: #18bfef !important;
+  box-shadow: inset 0 0 0 2px #00ffff;
+  color: #00ffff !important;
 }
 
 input[type="submit"].primary,
@@ -465,7 +466,7 @@ button.primary,
   background-color: #212931;
   font-family: 'Jura', sans-serif;
   box-shadow: none;
-  color: #ffffff !important;
+  color: #ffffff;
 }
 
 input[type="submit"].primary:hover,
@@ -473,7 +474,9 @@ input[type="reset"].primary:hover,
 input[type="button"].primary:hover,
 button.primary:hover,
 .button.primary:hover {
-  background-color: #18bfef;
+  border: 2px solid #00ffff;
+  color: #00ffff;
+
 }
 
 .icons {

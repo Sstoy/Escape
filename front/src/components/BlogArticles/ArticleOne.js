@@ -1,9 +1,11 @@
 import React from 'react';
 import styles from "./Article.module.css"
 import CompClubOne from './CompClubOne.jpeg'
+import { useHistory } from 'react-router'
 
 
 function ArticleOne(props) {
+  const history = useHistory()
   return (
     <div className={styles.container}>
       <div className={styles.article}>
@@ -69,6 +71,9 @@ function ArticleOne(props) {
           <p>      Сравнение с компьютерным клубом показывает, что его расположение важно, однако имеют значение и продвинутое компьютерное оборудование и удобные комфортабельные места. Ориентация на молодежную аудиторию предполагает круглосуточный график работы, а это требует привлечения дополнительного персонала — системных администраторов для трех смен и охрану.
           </p>
           <p>Компьютерный клуб Escape ждет вас в гости!</p>
+        </div>
+        <div className={styles.buttonFlex}>
+        <button onClick={() => history.goBack()}>Назад!</button>
         </div>
       </div>
     </div>

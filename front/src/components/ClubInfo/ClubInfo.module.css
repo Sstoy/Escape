@@ -39,6 +39,10 @@
   color: #ffffff;
 }
 
+.buttonGoback {
+  width: 100px;
+}
+
 .infoClub button {
   margin: 5px;
   margin-left: 0px;

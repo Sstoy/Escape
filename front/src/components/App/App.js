@@ -24,6 +24,8 @@ import MainPage from "../MainPage/MainPage";
 import AdminTable from "../AdminTable/AdminTable";
 import Review from "../Review/Review";
 import User from "../User/User";
+import RunText from "../RunText/RunText";
+
 
 
 function App() {
@@ -35,7 +37,6 @@ function App() {
         <LogoClub />
         <NavBurg />
 
-
         <Switch>
 
           <Route path="/" exact>
@@ -43,24 +44,26 @@ function App() {
           </Route>
 
           <Route path="/clubs" exact>
+            <RunText />
             <ClubList />
             <Game />
+
+            <Footer />
+
           </Route>
 
           <Route path="/galery" exact>
+            <RunText />
             <Slider />
+            <Footer />
           </Route>
 
-          <Route path="/contacts" exact>            
-            <Review/>
-          </Route>
-
-          <Route path="/yandexreview" exact>
-             <Review/>
-             <Footer />
+          <Route path="/contacts" exact>
+            <Review />
           </Route>
 
           <Route path="/about" exact>
+            <RunText />
             <ClubNumberOne />
             <Blog />
             <OurComputers />
@@ -70,26 +73,33 @@ function App() {
           </Route>
 
           <Route path="/clubs/:id" exact>
+            <RunText />
             <ClubInfo />
+            <Footer />
           </Route>
 
           <Route path="/blog/1" exact>
+            <RunText />
             <ArticleOne />
             <Footer />
           </Route>
 
           <Route path="/blog/2" exact>
+            <RunText />
             <ArticleTwo />
             <Footer />
           </Route>
 
           <Route path="/blog/3" exact>
+            <RunText />
             <ArticleThree />
             <Footer />
           </Route>
 
           <Route exact path="/register">
+            <RunText />
             <Registration />
+            <Footer />
           </Route>
 
           <Route exact path="/admin">

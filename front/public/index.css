@@ -30,19 +30,8 @@ a .review__title {
  font-size: 7px;
 }
 
-/* .review__header-left { 
-  width: 25px;
-  height:25px;
-}
-img .review__photo  {
-  width: 100%;
-  height: 100%;
-}
-.review__header-left { 
-  width: 30px;
-  height:30px;
-} */
 
- .review {
-  padding: 5px !important;
+textarea, input {
+  font-family: 'Jura', sans-serif;
+  font-weight: 500;
 }

@@ -1,7 +1,7 @@
 .about{
   background-color:rgba(9, 12, 23, 0.5);
   height: 1350px;
-  width: 99vw;
+  width: 100vw;
   margin: 0 auto;
 }
 
@@ -25,7 +25,6 @@
   color: black;
   font-size: 36px;
   font-weight: 900;
-
 }
 
 .about_text{

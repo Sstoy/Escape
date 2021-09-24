@@ -1,28 +1,30 @@
 .promo {
   border-radius: 20px;
-  background-color: #21211d;
+  background-color: #1a031d49;
   background-position: center center;
   border-color: transparent;
   border-style: solid;
   width: 30%;
-  margin-top: 2em;
-  height: 25em;
+  margin-top: 4em;
+  height: 300px;
   display: flex;
   align-items: center;
   flex-direction: column;
   justify-content: space-around;
-  opacity: 0.75;
 }
 
 .span {
-  font-size: 40px;
+  margin-top: 50px;
+  padding: 10px;
+  font-size: 26px;
   font-weight: 600;
-  color:rebeccapurple;
+  text-align: center;
+  color:rgb(237, 232, 241);
   
 }
 
 .button {
-  border: 2px solid #d2bdff;
+  /* border: 2px solid #d2bdff; */
   height: 80px;
   width: 200px;
   border-radius: 10px;
@@ -37,7 +39,7 @@
   top: 41%;
   left: 50%;
   transform: translate(-50%);
-  color: #d2bdff;
+  color: #00ffff;
   transition: all 0.1s linear;
 }
 .button::before {
@@ -82,7 +84,7 @@
   animation: star 1.3s linear infinite;
 }
 .button:hover::after {
-  content: "GAME!";
+  content: "ESCAPE!";
   text-shadow: 0 0 10px #fff, 0 0 10px #fff, 0 0 20px #82bedc, 0 0 30px #82bedc,
     0 0 40px #82bedc, 0 0 50px #82bedc, 0 0 60px #82bedc;
 }

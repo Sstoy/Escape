@@ -1,8 +1,10 @@
 import React from 'react';
 import styles from "./Article.module.css"
 import CompClubThree from './CompClubThree.jpg'
+import { useHistory } from 'react-router'
 
 function ArticleThree(props) {
+  const history = useHistory()
   return (
     <div className={styles.container}>
       <div className={styles.article}>
@@ -25,6 +27,9 @@ function ArticleThree(props) {
             <li>возможность получения бесплатных консультаций при необходимости.</li>
           </ul>
           <p>Разумеется, посетить киберспортивный салон сумеет запросто любой желающий пользователь.</p>
+        </div>
+        <div className={styles.buttonFlex}>
+        <button onClick={() => history.goBack()}>Назад!</button>
         </div>
       </div>
     </div>
