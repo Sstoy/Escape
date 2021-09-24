@@ -54,6 +54,7 @@ function User(props) {
             <div>
               <p> "2 часа бесплатной игры в любом из клубов за регистрацию" : </p>
               <p> Заявка подана </p>
+              <p><h2>Статус:</h2></p>
               <p> Услуга НЕ ОКАЗАНА </p>
               <div className={styles.form}>
                 <button onClick={changeStatus} type="text" className={styles.submit}>Изменить статус акции</button>

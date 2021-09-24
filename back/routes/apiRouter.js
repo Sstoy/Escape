@@ -117,13 +117,13 @@ router.put('/vip-prices', async (req, res) => {
         id,
       },
     });
-    prices.onehour = vipPrice1;
-    prices.fivehours = vipPrice5;
-    prices.nightweekday = vipPriceDay;
-    prices.nightweekend = vipPriceWeekend;
-    prices.morning = vipPriceMorning;
-    prices.twentyfourhours = vipPrice24Hours;
-    prices.PS = vipPricePS;
+    prices.onehour = Number(vipPrice1);
+    prices.fivehours = Number(vipPrice5);
+    prices.nightweekday = Number(vipPriceDay);
+    prices.nightweekend = Number(vipPriceWeekend);
+    prices.morning = Number(vipPriceMorning);
+    prices.twentyfourhours = Number(vipPrice24Hours);
+    prices.PS = Number(vipPricePS);
 
     await prices.save();
 
@@ -150,13 +150,13 @@ router.put('/general-prices', async (req, res) => {
         id,
       },
     });
-    prices.onehour = Price1;
-    prices.fivehours = Price5;
-    prices.nightweekday = PriceDay;
-    prices.nightweekend = PriceWeekend;
-    prices.morning = PriceMorning;
-    prices.twentyfourhours = Price24Hours;
-    prices.PS = PricePS;
+    prices.onehour = Number(Price1);
+    prices.fivehours = Number(Price5);
+    prices.nightweekday = Number(PriceDay);
+    prices.nightweekend = Number(PriceWeekend);
+    prices.morning = Number(PriceMorning);
+    prices.twentyfourhours = Number(Price24Hours);
+    prices.PS = Number(PricePS);
 
     await prices.save();
 
