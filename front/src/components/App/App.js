@@ -10,8 +10,7 @@ import Game from "../Game/Game";
 import Slider from "../Slider/Slider";
 import NavBurg from "../NavBurg/NavBurg";
 import ClubInfo from "../ClubInfo/ClubInfo";
-
-
+import AdminForm from "../AdminForm/AdminForm";
 import ClubNumberOne from "../ClubNumberOne/ClubNumberOne";
 import Blog from "../Blog/Blog";
 import ArticleOne from "../BlogArticles/ArticleOne";
@@ -19,12 +18,14 @@ import ArticleTwo from "../BlogArticles/ArticleTwo";
 import ArticleThree from "../BlogArticles/ArticleThree";
 import OurComputers from "../OurComputers/OurComputers";
 import About from "../About/About";
-
 import LogoClub from "../LogoClub/LogoClub";
 import Quest from "../Quest/Quest";
 import MainPage from "../MainPage/MainPage";
+import AdminTable from "../AdminTable/AdminTable";
 import Review from "../Review/Review";
+import User from "../User/User";
 import RunText from "../RunText/RunText";
+
 
 
 function App() {
@@ -46,7 +47,9 @@ function App() {
             <RunText />
             <ClubList />
             <Game />
+
             <Footer />
+
           </Route>
 
           <Route path="/galery" exact>
@@ -99,9 +102,22 @@ function App() {
             <Footer />
           </Route>
 
-        </Switch>
-      </Router>
-    </Provider>
+          <Route exact path="/admin">
+            <AdminForm />
+          </Route>
+
+          <Route exact path="/admin-site">
+            <AdminTable />
+          </Route>
+
+          <Route exact path="/user/:id">
+            <User />
+          </Route>
+          
+
+        </Switch >
+      </Router >
+    </Provider >
   );
 }
 
