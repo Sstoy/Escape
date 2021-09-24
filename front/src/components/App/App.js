@@ -25,7 +25,7 @@ import AdminTable from "../AdminTable/AdminTable";
 import Review from "../Review/Review";
 import User from "../User/User";
 import RunText from "../RunText/RunText";
-
+import AdminClubList from "../AdminClubList/AdminClubList"
 
 
 function App() {
@@ -108,6 +108,10 @@ function App() {
 
           <Route exact path="/admin-site">
             <AdminTable />
+          </Route>
+
+          <Route exact path="/admin/prices">
+            <AdminClubList />
           </Route>
 
           <Route exact path="/user/:id">

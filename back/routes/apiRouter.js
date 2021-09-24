@@ -59,6 +59,113 @@ router.get('/clublist', async (req, res) => {
   }
 });
 
+router.put('/club', async (req, res) => {
+  const { id, phone, computers } = req.body;
+
+  try {
+    const club = await Club.findOne({
+      where: {
+        id,
+      },
+    });
+    club.phone = phone;
+    await club.save();
+    club.computers = computers;
+    await club.save();
+    res.json(club);
+  } catch (error) {
+    console.error(error);
+  }
+});
+
+router.get('/prices', async (req, res) => {
+  try {
+    const prices = await Price.findAll({
+      attributes: [
+        'id',
+        'ClubId',
+        'room',
+        'onehour',
+        'fivehours',
+        'nightweekday',
+        'nightweekend',
+        'morning',
+        'twentyfourhours',
+        'PS',
+      ],
+    });
+    res.json(prices);
+  } catch (error) {
+    console.error(error);
+  }
+});
+
+router.put('/vip-prices', async (req, res) => {
+  const {
+    id,
+    vipPrice1,
+    vipPrice5,
+    vipPrice24Hours,
+    vipPriceDay,
+    vipPriceWeekend,
+    vipPricePS,
+    vipPriceMorning,
+  } = req.body;
+  try {
+    const prices = await Price.findOne({
+      where: {
+        id,
+      },
+    });
+    prices.onehour = Number(vipPrice1);
+    prices.fivehours = Number(vipPrice5);
+    prices.nightweekday = Number(vipPriceDay);
+    prices.nightweekend = Number(vipPriceWeekend);
+    prices.morning = Number(vipPriceMorning);
+    prices.twentyfourhours = Number(vipPrice24Hours);
+    prices.PS = Number(vipPricePS);
+
+    await prices.save();
+
+    res.json(prices);
+  } catch (error) {
+    console.error(error);
+  }
+});
+
+router.put('/general-prices', async (req, res) => {
+  const {
+    id,
+    Price1,
+    Price5,
+    Price24Hours,
+    PriceDay,
+    PriceWeekend,
+    PricePS,
+    PriceMorning,
+  } = req.body;
+  try {
+    const prices = await Price.findOne({
+      where: {
+        id,
+      },
+    });
+    prices.onehour = Number(Price1);
+    prices.fivehours = Number(Price5);
+    prices.nightweekday = Number(PriceDay);
+    prices.nightweekend = Number(PriceWeekend);
+    prices.morning = Number(PriceMorning);
+    prices.twentyfourhours = Number(Price24Hours);
+    prices.PS = Number(PricePS);
+
+    await prices.save();
+
+    res.json(prices);
+  } catch (error) {
+    console.error(error);
+  }
+});
+
 router.get('/prices', async (req, res) => {
   try {
     const prices = await Price.findAll({
@@ -182,6 +289,35 @@ router.post('/user-check', async (req, res) => {
       res.status(200).json(user);
     } else {
       res.status(404).json({ message: 'Пользователь не найден' });
+    }
+  } catch (error) {
+    console.error(error);
+    res.status(404).send(error);
+  }
+});
+
+router.post('/user-new', async (req, res) => {
+  const { phone } = req.body;
+  console.log('phone', phone);
+  try {
+    const user = await User.findOne({
+      where: {
+        phone,
+      },
+    });
+    // const isUser = (user.phone === phone);
+    if (user) {
+      res.status(401).json({ message: 'Пользователь уже существует в базе' });
+    } else {
+      const newUser = await User.create({
+        email: null,
+        phone,
+      });
+      if (newUser) {
+        res.status(200).json(newUser);
+      } else {
+        res.status(404).json({ message: 'Нет связи с Базой данных' });
+      }
     }
   } catch (error) {
     console.error(error);
