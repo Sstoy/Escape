@@ -11,6 +11,7 @@ function Registration() {
 
   const handleBase = () => {
 
+    // eslint-disable-next-line no-useless-escape
     const regexp = /[\+][7]\d{3}\d{3}\d{2}\d{2}/gm;
     // console.log(inputPhone.current.value)
     // console.log(inputPhone.current.value.match(regexp))

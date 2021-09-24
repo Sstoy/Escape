@@ -3,14 +3,13 @@ const parse = require('../parsers/parser');
 
 const sendDataToMail = require('../mailer/mailer');
 const {
-  Club, Price, News, User, Computer,
+  Club, Price, News, User, Computer, Admin,
 } = require('../database/models');
 
 // eslint-disable-next-line consistent-return
 router.get('/news', async (req, res) => {
   try {
     const news = await News.findAll({
-      raw: true,
     });
 
     if (news.length > 0) {
@@ -53,7 +52,6 @@ router.get('/clublist', async (req, res) => {
   try {
     const clubs = await Club.findAll({
       attributes: ['id', 'name', 'address', 'phone', 'computers'],
-      raw: true,
     });
     res.json(clubs);
   } catch (error) {
@@ -76,7 +74,6 @@ router.get('/prices', async (req, res) => {
         'twentyfourhours',
         'PS',
       ],
-      raw: true,
     });
     res.json(prices);
   } catch (error) {
@@ -86,7 +83,6 @@ router.get('/prices', async (req, res) => {
 
 router.post('/user', async (req, res) => {
   const { userPhone } = req.body;
-  console.log(userPhone);
   try {
     const user = await User.findOne(
       {
@@ -95,7 +91,6 @@ router.post('/user', async (req, res) => {
         },
       },
     );
-    console.log(user);
     if (user) {
       res.json({ message: false });
     } else {
@@ -125,7 +120,6 @@ router.get('/computers', async (req, res) => {
         'keyboard',
         'mouse',
       ],
-      raw: true,
     });
     res.json(computers);
   } catch (error) {
@@ -135,11 +129,88 @@ router.get('/computers', async (req, res) => {
 
 router.post('/message', async (req, res) => {
   const { email, message, name } = req.body;
-  // console.log(req.body);
   try {
     await sendDataToMail(email, message, name);
   } catch (error) {
     console.log(error);
+    console.error(error);
+    res.status(404).send(error);
+  }
+});
+
+router.post('/admin', async (req, res) => {
+  const {
+    email, password, login, phone,
+  } = req.body;
+  console.log(req.body);
+  try {
+    const admin = await Admin.findOne({
+      where: {
+        login,
+        email,
+        phone,
+        password,
+      },
+    });
+    const isAdmin = (
+      admin.login === login
+      && admin.password === password
+      && admin.phone === phone
+      && admin.email === email
+    );
+    if (isAdmin) {
+      res.status(200).json({ isAdmin: true });
+    } else {
+      res.status(404).json({ isAdmin: false });
+    }
+  } catch (error) {
+    console.error(error);
+    res.status(404).send(error);
+  }
+});
+
+router.post('/user-check', async (req, res) => {
+  const { phone } = req.body;
+  try {
+    const user = await User.findOne({
+      where: {
+        phone,
+      },
+    });
+    const isUser = (user.phone === phone);
+    if (isUser) {
+      res.status(200).json(user);
+    } else {
+      res.status(404).json({ message: 'Пользователь не найден' });
+    }
+  } catch (error) {
+    console.error(error);
+    res.status(404).send(error);
+  }
+});
+
+router.put('/user-check', async (req, res) => {
+  const { user } = req.body;
+  try {
+    const currentUser = await User.findOne({
+      where: {
+        id: user.id,
+      },
+    });
+
+    const invertedStatus = !currentUser.promoActivated;
+    currentUser.promoActivated = invertedStatus;
+
+    await currentUser.save();
+
+    const isUser = (currentUser.id === user.id);
+
+    if (isUser) {
+      res.status(200).json(currentUser);
+    } else {
+      res.status(404).json({ message: 'Акция не найдена' });
+    }
+  } catch (error) {
     console.error(error);
     res.status(404).send(error);
   }
