@@ -19,7 +19,7 @@ function NavBurg() {
           ><HashLink to="/#mainPage">Главная</HashLink></li>
           <li
             onClick={() => setCheckedInput(false)}
-          ><HashLink to="/clubs#clubs">Клубы</HashLink></li>
+          ><HashLink to="/clubs">Клубы</HashLink></li>
           <li
             onClick={() => setCheckedInput(false)}
           ><HashLink to="/about#aboutHeader">О нас</HashLink></li>
