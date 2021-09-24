@@ -272,6 +272,7 @@ ul.actions li {
   text-align: center;
   width: 100%;
   opacity: 0.75;
+  font-family: 'Jura';
 }
 
 .footer input[type="text"]:invalid,

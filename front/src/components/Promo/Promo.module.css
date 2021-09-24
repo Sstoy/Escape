@@ -27,6 +27,7 @@
   /* border: 2px solid #d2bdff; */
   height: 80px;
   width: 200px;
+  font-weight: 900;
   border-radius: 10px;
   position: relative;
   cursor: pointer;
