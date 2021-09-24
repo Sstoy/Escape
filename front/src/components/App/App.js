@@ -11,8 +11,6 @@ import Slider from "../Slider/Slider";
 import NavBurg from "../NavBurg/NavBurg";
 import ClubInfo from "../ClubInfo/ClubInfo";
 import AdminForm from "../AdminForm/AdminForm";
-
-
 import ClubNumberOne from "../ClubNumberOne/ClubNumberOne";
 import Blog from "../Blog/Blog";
 import ArticleOne from "../BlogArticles/ArticleOne";
@@ -20,12 +18,12 @@ import ArticleTwo from "../BlogArticles/ArticleTwo";
 import ArticleThree from "../BlogArticles/ArticleThree";
 import OurComputers from "../OurComputers/OurComputers";
 import About from "../About/About";
-
 import LogoClub from "../LogoClub/LogoClub";
 import Quest from "../Quest/Quest";
 import MainPage from "../MainPage/MainPage";
 import AdminTable from "../AdminTable/AdminTable";
 import Review from "../Review/Review";
+import User from "../User/User";
 
 
 function App() {
@@ -101,6 +99,11 @@ function App() {
           <Route exact path="/admin-site">
             <AdminTable />
           </Route>
+
+          <Route exact path="/user/:id">
+            <User />
+          </Route>
+          
 
         </Switch >
       </Router >
