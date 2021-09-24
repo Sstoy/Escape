@@ -1,3 +1,12 @@
+.adminForm {
+  color: #eee;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
 .form {
   border-radius: 20px;
   background-color: #1a031d49;
@@ -6,23 +15,19 @@
   border-style: solid;
   width: 30%;
   margin-top: 4em;
-  height: 320px;
+  height: 400px;
   display: flex;
   align-items: center;
   flex-direction: column;
   justify-content: space-around;
 }
-span {
-  color:rgb(237, 232, 241);
-}
 
 .title {
-  margin-top: 50px;
-  padding: 10px;
+  color: #eee;
+
   font-size: 15px;
   font-weight: 600;
-  text-align: center;
-  color:rgb(237, 232, 241);
+  margin-top: 30px;
 }
 
 .subtitle {
@@ -35,8 +40,11 @@ span {
 .input_container {
   height: 50px;
   position: relative;
-  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  width: 70%;
 }
+
 
 .ic1 {
   margin-top: 40px;
@@ -50,18 +58,19 @@ span {
   background-color: rgba(41, 7, 38, 0.322);
   border-radius: 12px;
   border: 0;
-  font-family: 'Jura', sans-serif;
   box-sizing: border-box;
-  color: #eee;
+  color: rgb(255, 255, 255);
   font-size: 18px;
+  padding: 10px;
   height: 100%;
   outline: 0;
   padding: 4px 20px 0;
   width: 100%;
+  margin: 10px;
 }
 
 .cut {
-  background-color: #8a0c9657;
+  background-color: #15172b;
   border-radius: 10px;
   height: 20px;
   left: 20px;
@@ -82,12 +91,11 @@ span {
 }
 
 .placeholder {
-  color: #ffffffc9;
-  font-family: sans-serif;
+  color: #ffffff;
+  font-family: 'Jura', sans-serif;
   left: 20px;
   line-height: 14px;
   pointer-events: none;
-  font-family: 'Jura', sans-serif;
   position: absolute;
   transform-origin: 0 50%;
   transition: transform 200ms, color 200ms;
@@ -100,26 +108,29 @@ span {
 }
 
 .input:not(:placeholder-shown) ~ .placeholder {
-  color: #ffffffc9;
+  color: #ffffff;
 }
 
 .input:focus ~ .placeholder {
-  color: #ffffffc9;
+  color: #ffffff;
 }
 
 .submit {
   background-color: rgba(41, 7, 38, 0.322);
   border-radius: 12px;
   border: 0;
+  padding: 10px;
+  font-family: 'Jura', sans-serif;
   box-sizing: border-box;
   color: #eee;
   cursor: pointer;
   font-size: 18px;
-  width: 50%;
-  font-family: 'Jura', sans-serif;
   height: 50px;
+  margin-top: 38px;
+  margin-bottom: 30px;
   outline: 0;
   text-align: center;
+  width: 60%;
 }
 
 .submit:active {

@@ -1,6 +1,6 @@
 import React from 'react';
 import './SocialLink.css'
-// import './review.css'
+
 function SocialLink() {
   return (
     <>

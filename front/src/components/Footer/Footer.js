@@ -5,6 +5,7 @@ import { faHome, faPhone, faEnvelope } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import style1 from '../Review/Review.module.css'
 import SocialLink from '../SocialLink/SocialLink';
+
 function Footer(props) {
 
   const history = useHistory();
@@ -51,22 +52,28 @@ function Footer(props) {
                     </div>
                   </div>
                   <ul className={styles.actions}>
-                    <li><input onClick={sendMessage} type="submit" value="Отправить" className={styles.primary} /></li>
+                    <li>
+                      <button onClick={sendMessage} className={styles.primary}>Отправить</button>
+                      {/* <input onClick={sendMessage} type="submit" value="Отправить" className={styles.primary} /> */}
+                      </li>
                   </ul>
-                   <div className={style1.review}>
+                  {/* Widget Яндекс отзывы */}
+                  <div className={style1.review}>
                     <h1 className={style1.h1}>Отзывы наших клиентов :</h1>
                     <review-lab data-widgetid="614c5a40d1a4a0e86235c846"></review-lab>
-                  </div>               
-                  <div className={styles.inner}>                    
+
+                  </div>
+                  <div className={styles.inner}>
                     <footer id={styles.footerMini}>
                       <ul className={styles.copyright}>
                         <li>&copy; Made by</li><li>Elbrus Team</li>
                       </ul>
                     </footer>
                   </div>
-                </form>                 
+                </form>
+
               </section>
-              <section className={styles.split}>
+              <section className={styles.split} id='footer'>
                 <section>
                   <div className={styles.contact_method} >
                     <span className={`${styles.icon} ${styles.solid} ${styles.alt} `}><FontAwesomeIcon icon={faEnvelope} style={{ "color": "white" }} /></span>
@@ -99,6 +106,7 @@ function Footer(props) {
           </section>
         </div >
       </div>
+
     </>
   );
 }
