@@ -47,7 +47,9 @@ function App() {
             <RunText />
             <ClubList />
             <Game />
+
             <Footer />
+
           </Route>
 
           <Route path="/galery" exact>

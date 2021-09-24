@@ -8,17 +8,18 @@
 }
 
 .form {
-  background-color: #21211d;
   border-radius: 20px;
-  box-sizing: border-box;
-  margin-top: 2em;
-  height: 18em;
-  width: 50%;
-  opacity: 0.75;
+  background-color: #1a031d49;
+  background-position: center center;
+  border-color: transparent;
+  border-style: solid;
+  width: 30%;
+  margin-top: 4em;
+  height: 400px;
   display: flex;
-  flex-direction: column;
   align-items: center;
-  justify-content:center;
+  flex-direction: column;
+  justify-content: space-around;
 }
 
 .title {
@@ -54,16 +55,18 @@
 }
 
 .input {
-  background-color: #303245;
+  background-color: rgba(41, 7, 38, 0.322);
   border-radius: 12px;
   border: 0;
   box-sizing: border-box;
-  color: #eee;
+  color: rgb(255, 255, 255);
   font-size: 18px;
+  padding: 10px;
   height: 100%;
   outline: 0;
   padding: 4px 20px 0;
   width: 100%;
+  margin: 10px;
 }
 
 .cut {
@@ -88,8 +91,8 @@
 }
 
 .placeholder {
-  color: #65657b;
-  font-family: sans-serif;
+  color: #ffffff;
+  font-family: 'Jura', sans-serif;
   left: 20px;
   line-height: 14px;
   pointer-events: none;
@@ -105,17 +108,19 @@
 }
 
 .input:not(:placeholder-shown) ~ .placeholder {
-  color: #808097;
+  color: #ffffff;
 }
 
 .input:focus ~ .placeholder {
-  color: #074DAA;
+  color: #ffffff;
 }
 
 .submit {
-  background-color: rebeccapurple;
+  background-color: rgba(41, 7, 38, 0.322);
   border-radius: 12px;
   border: 0;
+  padding: 10px;
+  font-family: 'Jura', sans-serif;
   box-sizing: border-box;
   color: #eee;
   cursor: pointer;

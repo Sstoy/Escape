@@ -5,7 +5,7 @@
   border-color: transparent;
   border-style: solid;
   width: 30%;
-  margin-top: 4em;
+  margin-top: 3em;
   height: 300px;
   display: flex;
   align-items: center;
@@ -19,7 +19,7 @@
   font-size: 26px;
   font-weight: 600;
   text-align: center;
-  color:rgb(237, 232, 241);
+  color:rgb(179, 178, 180);
   
 }
 

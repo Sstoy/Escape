@@ -8,17 +8,18 @@
 }
 
 .form {
-  background-color: #21211d;
   border-radius: 20px;
-  box-sizing: border-box;
-  margin-top: 2em;
-  height: 18em;
-  width: 50%;
-  opacity: 0.75;
+  background-color: #1a031d49;
+  background-position: center center;
+  border-color: transparent;
+  border-style: solid;
+  width: 30%;
+  margin-top: 4em;
+  height: 200px;
   display: flex;
-  flex-direction: column;
   align-items: center;
-  justify-content:center;
+  flex-direction: column;
+  justify-content: space-around;
 }
 
 .title {
@@ -54,15 +55,16 @@
 }
 
 .input {
-  background-color: #303245;
+  background-color: rgba(41, 7, 38, 0.322);
   border-radius: 12px;
   border: 0;
+  font-family: 'Jura', sans-serif;
   box-sizing: border-box;
   color: #eee;
   font-size: 18px;
-  height: 100%;
+  height: 40%;
   outline: 0;
-  padding: 4px 20px 0;
+  padding: 4px 25px 0;
   width: 100%;
 }
 
@@ -113,20 +115,18 @@
 }
 
 .submit {
-  font-family: 'Jura', sans-serif !important;
-  background-color: rebeccapurple;
+  background-color: rgba(41, 7, 38, 0.322);
   border-radius: 12px;
   border: 0;
   box-sizing: border-box;
   color: #eee;
   cursor: pointer;
   font-size: 18px;
+  width: 50%;
+  font-family: 'Jura', sans-serif;
   height: 50px;
-  margin-top: 38px;
-  margin-bottom: 30px;
   outline: 0;
   text-align: center;
-  width: 60%;
 }
 
 .submit:active {
