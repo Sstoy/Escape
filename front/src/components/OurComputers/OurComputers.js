@@ -9,8 +9,8 @@ function OurComputers(props) {
       </div>
       <div className={styles.our_computers_text}>
         <div className={styles.our_computers_types}>
+          <h2>Обычный зал </h2>
           <h2>Вип зал</h2>
-          <h2>Обычный зал</h2>
         </div>
         <div className={styles.our_computers_types}>
           <img src={"https://thumb.tildacdn.com/tild3934-3430-4235-a164-626261333166/-/resize/360x/-/format/webp/00001234.png"} alt="" />

@@ -30,8 +30,6 @@ function User(props) {
 
     } 
   
-
-
   return (
     <>
     { user ?
