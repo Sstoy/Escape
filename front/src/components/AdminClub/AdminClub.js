@@ -113,7 +113,7 @@ function AdminClub({ club }) {
   }
 
   return (
-    <>
+    <div className={styles.container}>
     <div className={styles.buttonFlex}>
       <button onClick={() => history.goBack()}>Назад</button>
     </div>
@@ -191,7 +191,7 @@ function AdminClub({ club }) {
         </div>
       </div>
     </>}
-    </>
+    </div>
   );
 }
 
