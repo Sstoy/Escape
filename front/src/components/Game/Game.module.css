@@ -220,7 +220,7 @@
   background-image: url('https://www.a11.ru/upload/resize_cache/iblock/31a/420_420_0/31aea7c6b5e3bd4121528412110ee711.png');
 }
 .ufc:hover {
-  background-image: linear-gradient(210deg , rgba(235, 11, 11, 0.137) 25%, #f51d00 100%), url('https://clicktoplay.ru/uploads/posts/2020-12/1609165992_fc4.jpg');
+  background-image: linear-gradient(210deg , rgba(235, 11, 11, 0.137) 25%, #f51d00 100%), url('./IMG_2636.JPG');
   opacity: 0.9;
   -webkit-transform: scale(1.1);
   -moz-transform: scale(1.1);

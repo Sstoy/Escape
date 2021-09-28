@@ -1,8 +1,9 @@
 .contentClub {
   display: flex;
-  margin: 150px 100px 0px 100px;
+  margin: 150px 100px 0px 400px;
+  width:1000px;
   align-items: center;
-  /* justify-content: space-between; */
+  justify-content: space-between;
   /* margin-right: 20px; */
   color: #fff;
   background-color: rgba(31, 5, 39, 0.445);
@@ -14,7 +15,6 @@
   border-radius: 40px;
   width: 600px;
   height: 400px;
-  margin-top: 4px;
   margin-right: 100px;
   margin-bottom: 0px;
   /* padding: 20px; */
@@ -23,6 +23,7 @@
 .infoClub {
   display: flex;
   flex-direction: column;
+  padding-right: 50px;
 }
 
 .clubName {
@@ -39,6 +40,10 @@
   color: #ffffff;
 }
 
+.buttonGoback {
+  width: 100px;
+}
+
 .infoClub button {
   margin: 5px;
   margin-left: 0px;
@@ -48,7 +53,7 @@
   background-color: rgba(41, 7, 38, 0.322);
   color: #fff;
   font-size: 17px;
-  font-family: 'Raleway', sans-serif;
+  font-family: 'Jura', sans-serif;
   border-radius: 10px;
   cursor: pointer;
   
