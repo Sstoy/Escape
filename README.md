@@ -1,32 +1,27 @@
-Веб - приложение для сети компьютерных клубов Escape24 в г.Санкт - Петербург.
+## Escape
 
-Стек технологий:
+### Веб - приложение для сети компьютерных клубов Escape24 в г.Санкт - Петербург.
+
+## Стек технологий:
 JavaScript
 
-DB: PostgreSQL, Sequelize ORM
+**DB**: PostgreSQL, Sequelize ORM
 
-Back: Node.js, Express, Sessions, Bcrypt, Cors, Firebase, Yandex UI, Nodemailer, Cheerio
+**Back**: Node.js, Express, Sessions, Bcrypt, Cors, Firebase, Yandex UI, Nodemailer, Cheerio
 
-Front: React + Redux, Redux Saga, SVG, HTML5, SCSS/CSS, UI Kit
+**Front**: React + Redux, SVG, HTML5, CSS/SCSS
 
-Планы развития:
-Интеграция с системами автоматизации IIKO и RKeeper
 
-Использование Redux Toolkit
-
-Полнофункциональное внедрение оплаты с другими СО Интеграция со службами доставки
-
-Установка:
+### Установка:
 В директории 2 папки:
-
-back Отвечает за back-end.
-cd back
-npm ci
-npx sequelize db:create
-npx sequelize db:migrate
-npx sequelize db:seed:all
-npm run dev
-front - front-end.
-cd front
-npm ci
-npm start
+* back Отвечает за back-end. 
+ 1. cd back
+ 2. npm ci
+ 3. npx sequelize db:create
+ 4. npx sequelize db:migrate
+ 5. npx sequelize db:seed:all
+ 6. npm run dev
+* front - front-end. 
+ 1. cd front 
+ 2. npm ci
+ 3. npm start
