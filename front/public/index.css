@@ -1,0 +1,36 @@
+ body {
+  font-size: 1rem;
+  font-family: 'Jura', sans-serif !important;
+ }
+ .widget__src {
+  opacity: 0;
+  font-size: 0px;
+ }
+ 
+.widget__count {
+  opacity: 0;
+  font-size: 0px;
+}
+
+.review__src {
+    display: none; 
+}
+.review__title {
+  font-size: 10px;
+}
+.Review_h1__1MDkd{
+  font-size: 28px;
+}
+
+.review__rating { 
+  width: 50px;
+  height:20px;
+}
+a .review__title {
+ font-size: 7px;
+}
+
+textarea, input {
+  font-family: 'Jura', sans-serif;
+  font-weight: 500;
+}

@@ -1,0 +1,36 @@
+.container{
+  max-width: 800px;
+  margin: 0 auto;
+  color: white;
+  line-height: 1.5;
+  transform: translateY(10%);
+  max-height: 100%;
+}
+.article{
+  margin-bottom: 150px;
+}
+
+.article P { 
+  text-indent: 1.5em; /* Отступ первой строки */
+ }
+
+ .article h1 {
+   text-align: center;
+ }
+
+ .article img{
+   width: 100%;
+ }
+ .buttonFlex button {
+  margin: 5px;
+  background: none;
+  border: none;
+  /* border: 1px solid rgba(40, 8, 41, 0.247); */
+  background-color: rgba(41, 7, 38, 0.322);
+  color: #fff;
+  font-size: 17px;
+  font-family: 'Raleway', sans-serif;
+  border-radius: 5px;
+  cursor: pointer; 
+}
+

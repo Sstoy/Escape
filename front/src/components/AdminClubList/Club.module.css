@@ -1,0 +1,59 @@
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 250px;
+  text-align: center;
+  padding: 5px;
+  color: #fff;
+  margin-top: 50px;
+  /* border: 2px solid #fff; */
+  border-radius: 20px;
+  background-position: center center;
+  background-size: cover;
+  background-color: rgba(0, 0, 0, 0.253);
+  
+}
+.phone {
+  font-weight: 900;
+  color: #00ffff;
+}
+.phone:hover {
+  color: #fff;
+}
+
+.hrefClub {
+  text-decoration: none;
+  color: #fff;
+}
+
+.hrefClub:hover {
+  text-decoration: none;
+  color: #00ffff;
+}
+
+.hours {
+  color: #00ffff;
+}
+
+.buttonFlex {
+  display: flex;
+  justify-content: center;
+}
+.buttonFlex button {
+  margin: 5px;
+  background: none;
+  border: none;
+  /* border: 1px solid rgba(40, 8, 41, 0.247); */
+  background-color: rgba(41, 7, 38, 0.322);
+  color: #fff;
+  font-size: 17px;
+  font-family: 'Jura', sans-serif;
+  border-radius: 5px;
+  cursor: pointer;
+  
+}
+.buttonFlex button:hover { 
+  color: #00ffff;
+  /* border: 1px solid #00ffff; */
+}

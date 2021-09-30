@@ -1,0 +1,34 @@
+.club_number_one{
+  background-image: url("https://thumb.tildacdn.com/tild6437-6437-4331-a235-663833643766/-/format/webp/Kompy-Spb.jpg");
+  opacity: .7;
+  border-top: 5px solid rgba(44, 6, 41, 0.363);
+
+  height: 650px;
+  width: 100vw;
+  background-repeat: no-repeat;
+  background-size:cover;
+  background-position: center;
+  margin: 0 auto;
+}
+
+.club_number_one_content{
+  width: 600px;
+  text-align: center;
+  color: black;
+  font-size: 16px;
+  line-height: 1.5;
+  font-weight: 700;
+  background-color: rgba(255, 255, 255, 0.5);
+  border-radius: 25% 10%;
+  padding: 30px;
+  position: relative;
+  left: 50%;
+  top: 160px;
+  transform: translateX(-50%);
+}
+
+.club_number_one_title{
+  color: black;
+  font-size: 36px;
+  font-weight: 900;
+}

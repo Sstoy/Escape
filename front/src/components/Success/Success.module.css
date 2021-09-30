@@ -1,0 +1,20 @@
+.success {
+  border-radius: 20px;
+  background-color: #1a031d49;
+  background-position: center center;
+  border-color: transparent;
+  border-style: solid;
+  width: 30%;
+  margin-top: 4em;
+  height: 320px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.span {
+  font-family: 'Jura', sans-serif;
+  color: white;
+  text-align: center;
+}

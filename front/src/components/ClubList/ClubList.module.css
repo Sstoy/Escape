@@ -1,0 +1,11 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900');
+
+.container {
+  max-width: 200vh;
+  display: flex;
+  justify-content: center;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  grid-gap: 15px;
+  color: #fff;
+  margin-top: 50px;
+}

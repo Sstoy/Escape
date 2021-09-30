@@ -1,0 +1,30 @@
+.ymaps-2-1-79-inner-panes {
+	filter: invert(100%);
+	-ms-filter: invert(100%);
+	-webkit-filter: invert(100%);
+	-moz-filter: invert(100%);
+	-o-filter: invert(100%);
+}
+.ymaps-2-1-79-image
+{
+	filter:  invert(1) contrast(1.3) saturate(1.4);
+	-ms-filter:  invert(1) contrast(1.3) saturate(1.4);
+	-webkit-filter: invert(1) contrast(1.3) saturate(1.4);
+	-moz-filter:  invert(1) contrast(1.3) saturate(1.4);
+	-o-filter:  invert(1) contrast(1.3) saturate(1.4);
+}
+.mapContainer, .ymaps-2-1-79-map{
+  opacity: .85;
+  -webkit-border-radius: 50px;
+     -moz-border-radius: 50px;
+          border-radius: 50px;
+          -webkit-mask-box-image: url('SaintP.png') 0 0 0 0;
+}
+
+.ymaps-2-1-79-gotoymaps__text, .ymaps-2-1-79-map-copyrights-promo, .ymaps-2-1-79-copyright__wrap{
+  display: none;
+}
+
+.ymaps-2-1-79-controls__control{
+  inset: 112px auto auto 342px!important;
+}

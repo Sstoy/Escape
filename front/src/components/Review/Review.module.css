@@ -1,0 +1,15 @@
+.review { 
+  font-size: 10px;
+  max-height: 500px;
+  max-width: 900px;
+  opacity: .8;
+  /* margin-top : 10% */
+}
+ .h1  {
+  color: aliceblue;
+  
+}
+.widget__src {
+
+ color: aliceblue;
+}
